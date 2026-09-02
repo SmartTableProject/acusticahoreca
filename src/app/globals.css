@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --nrs-dark: #1a1a1a;
+  --nrs-dark-elevated: #2a2a2a;
+  --nrs-grey: #8a8a8a;
+  --nrs-grey-light: #c4c4c4;
+  --nrs-white: #ffffff;
+  --nrs-bg: #f5f5f4;
+  --nrs-foreground: #1a1a1a;
+}
+
+@theme inline {
+  --color-nrs-dark: var(--nrs-dark);
+  --color-nrs-elevated: var(--nrs-dark-elevated);
+  --color-nrs-grey: var(--nrs-grey);
+  --color-background: var(--nrs-bg);
+  --color-foreground: var(--nrs-foreground);
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background: var(--nrs-bg);
+  color: var(--nrs-foreground);
+}
+
+::selection {
+  background: #d4d4d4;
+  color: #1a1a1a;
+}
