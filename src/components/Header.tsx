@@ -13,16 +13,18 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-stone-200 bg-nrs-header text-nrs-hero">
       <div className="border-b border-stone-200 bg-stone-50">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1.5 text-[11px] tracking-wide text-nrs-grey md:px-6">
-          <span className="italic text-stone-600">{site.clientMessage}</span>
-          <span className="hidden font-medium uppercase tracking-wider sm:inline">
-            {site.marketArea}
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 text-[10px] tracking-wide text-nrs-grey md:px-6">
+          <span className="font-semibold uppercase tracking-[0.14em] text-stone-600">
+            {site.clientSubline}
+          </span>
+          <span className="hidden font-semibold uppercase tracking-[0.16em] text-nrs-accent sm:inline">
+            {site.logoCategory}
           </span>
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 md:px-6">
-        <Logo />
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 md:px-6 md:py-2.5">
+        <Logo compact />
 
         <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (

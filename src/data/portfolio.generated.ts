@@ -1162,7 +1162,7 @@ export const portfolioProjects: PortfolioProject[] = [
       },
       {
         "id": "progetti-3d-3",
-        "src": "/portfolio/V2-2.jpg",
+        "src": "/portfolio/v2-2.jpg",
         "alt": "Progetti 3D — NRS Soluzioni Acustiche"
       }
     ],
@@ -2853,7 +2853,7 @@ export const portfolioItemsGenerated = [
   },
   {
     "id": "progetti-3d-3",
-    "src": "/portfolio/V2-2.jpg",
+    "src": "/portfolio/v2-2.jpg",
     "title": "Progetti 3D (3)",
     "category": "render",
     "description": "Correzione acustica — Progetti 3D",

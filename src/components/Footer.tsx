@@ -16,9 +16,10 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3 md:px-6">
         <div>
           <Logo variant="dark" />
-          <p className="mt-4 text-sm italic leading-relaxed text-stone-200">
-            {site.clientSubline}
+          <p className="mt-4 text-sm font-medium leading-relaxed text-stone-200">
+            {site.clientMessage}
           </p>
+          <p className="mt-2 text-xs leading-relaxed text-stone-400">{site.clientSubline}</p>
           <p className="mt-3 text-xs text-stone-400">{site.legalName}</p>
           <p className="mt-2 text-xs text-stone-400">
             Partner {site.supplier} — {site.partnerMarket}

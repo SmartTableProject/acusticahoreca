@@ -1,9 +1,10 @@
 export const site = {
   name: "NRS Soluzioni Acustiche",
   legalName: "NRS — Noise Reduction System",
-  logoSubline: "Soluzioni acustiche",
-  clientMessage: "Il tuo locale, finalmente comodo.",
-  clientSubline: "Come nei ristoranti che ammiri — con la stessa cura per il tuo.",
+  logoSubline: "Roma e Centro Italia · Facciamo sul serio",
+  logoCategory: "Soluzioni acustiche",
+  clientMessage: "Roma e Centro Italia. Facciamo sul serio.",
+  clientSubline: "Sopralluogo in zona, online altrove. Onesti sui tempi.",
   tagline: "Acustica per ristoranti e locali HoReCa. Roma e Centro Italia.",
   domain: "https://acusticahoreca.it",
   email: "info@acusticahoreca.it",

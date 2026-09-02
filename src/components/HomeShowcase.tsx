@@ -102,18 +102,18 @@ export function HomeShowcase() {
       />
 
       <div className="relative z-[3] mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-8 pt-28 md:min-h-[92vh] md:px-6 md:pb-12 md:pt-32">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-nrs-accent">
-          {site.logoSubline} · {site.marketArea}
+        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-nrs-accent">
+          {site.logoCategory} · {site.marketArea}
         </p>
-        <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 max-w-3xl font-serif text-4xl font-bold uppercase leading-[1.05] tracking-[0.02em] md:text-5xl lg:text-[3.5rem]">
           {site.clientMessage}
-          <span className="mt-3 block text-xl font-normal italic text-stone-200 md:text-2xl">
-            {site.clientSubline}
-          </span>
         </h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-stone-200 md:text-lg">
+        <p className="mt-4 max-w-2xl text-lg font-medium leading-snug text-stone-200 md:text-xl">
+          {site.clientSubline}
+        </p>
+        <p className="mt-5 max-w-xl text-sm leading-relaxed text-stone-300 md:text-base">
           {site.yearsExperience} anni di interventi reali. Partner ufficiale{" "}
-          {site.supplier}. Preventivo online o consulenza a distanza.
+          {site.supplier}.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link

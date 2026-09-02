@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Source_Serif_4 } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
 import "./globals.css";
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const barlow = Barlow({
+  variable: "--font-barlow",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const sourceSerif = Source_Serif_4({
-  variable: "--font-source-serif",
+const barlowCondensed = Barlow_Condensed({
+  variable: "--font-barlow-condensed",
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "NRS Soluzioni Acustiche: il tuo locale, finalmente comodo. Pannelli SoundOff per ristoranti e HoReCa. Roma e Centro Italia. Preventivo online.",
+    "NRS Soluzioni Acustiche: Roma e Centro Italia. Sopralluogo in zona, online altrove. Pannelli SoundOff per ristoranti e HoReCa. Onesti sui tempi.",
   keywords: [
     "correzione acustica ristorante Roma",
     "pannelli fonoassorbenti Lazio",
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="it" className={`${geist.variable} ${sourceSerif.variable} h-full`}>
+    <html lang="it" className={`${barlow.variable} ${barlowCondensed.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <Header />
         <main className="flex-1">{children}</main>

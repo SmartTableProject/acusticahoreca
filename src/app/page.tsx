@@ -20,12 +20,12 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-nrs-hero/78" />
         <div className="relative mx-auto max-w-6xl px-4 py-20 text-white md:px-6 md:py-24">
-          <h2 className="max-w-2xl font-serif text-2xl font-bold md:text-4xl">
-            Roma e Centro Italia. Onestà sui tempi, precisione sulla soluzione.
+          <h2 className="max-w-2xl font-serif text-2xl font-bold uppercase tracking-[0.02em] md:text-4xl">
+            Facciamo sul serio. Onesti sui tempi.
           </h2>
           <p className="mt-4 max-w-xl text-stone-200">
-            Non promettiamo sopralluoghi ovunque: preferiamo essere chiari su cosa
-            possiamo fare subito e cosa richiede appuntamento in zona Roma.
+            Sopralluogo in zona Roma, consulenza online altrove. Preferiamo dirti subito
+            cosa possiamo fare e quando — senza promesse impossibili.
           </p>
           <Link
             href="/contatti"

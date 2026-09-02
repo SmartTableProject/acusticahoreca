@@ -28,8 +28,9 @@
   --color-nrs-grey: var(--nrs-grey);
   --color-background: var(--nrs-bg);
   --color-foreground: var(--nrs-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-serif: var(--font-source-serif);
+  --font-sans: var(--font-barlow);
+  --font-serif: var(--font-barlow-condensed);
+  --font-condensed: var(--font-barlow-condensed);
 }
 
 body {
@@ -41,7 +42,15 @@ h1,
 h2,
 h3,
 .font-logo {
-  font-family: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  font-family: var(--font-barlow-condensed), Impact, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.font-logo {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
 @keyframes ken-burns {

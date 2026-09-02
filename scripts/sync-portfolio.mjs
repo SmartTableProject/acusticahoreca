@@ -47,6 +47,22 @@ function slugify(originalName) {
   );
 }
 
+/** Rinomina file esistenti al lowercase (Linux/Vercel è case-sensitive) */
+function normalizeExistingFilenames() {
+  for (const file of fs.readdirSync(DEST)) {
+    if (!/\.(jpe?g|png|webp)$/i.test(file)) continue;
+    const lower = file.toLowerCase();
+    if (file === lower) continue;
+
+    const from = path.join(DEST, file);
+    const via = path.join(DEST, `__rename__${Date.now()}__${lower}`);
+    const to = path.join(DEST, lower);
+
+    fs.renameSync(from, via);
+    fs.renameSync(via, to);
+  }
+}
+
 function parseLocale(name) {
   let base = path.basename(name, path.extname(name));
   base = base.replace(/\s*\(\d+\)\s*$/, "").trim();
@@ -99,6 +115,7 @@ if (!fs.existsSync(SOURCE)) {
 }
 
 fs.mkdirSync(DEST, { recursive: true });
+normalizeExistingFilenames();
 
 const sourceFiles = fs
   .readdirSync(SOURCE)
@@ -138,7 +155,7 @@ for (const file of fs.readdirSync(DEST)) {
 
   const locale = parseLocale(file);
   slugToMeta.set(key, {
-    slug: file,
+    slug: file.toLowerCase(),
     locale,
     category: guessCategory(locale, file),
     title: titleCase(locale.replace(/-/g, " ")),
