@@ -1,31 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
-import { site } from "@/data/site";
+import { contactTierLinks, site } from "@/data/site";
 
 const steps = [
   {
     step: "01",
     title: "Scegli online",
-    text: "Configura pannelli standard e ricevi il prezzo senza sopralluogo.",
+    text: `Indica prodotto e metratura. Preventivo entro ${site.responseTime}, senza sopralluogo.`,
     image: "/portfolio/20180608_100932.jpg",
+    href: contactTierLinks.online,
   },
   {
     step: "02",
     title: "Consulenza a distanza",
-    text: "Invia foto e planimetria. Report tecnico con mq e posizionamento.",
+    text: "Invia foto e planimetria. Report con mq consigliati e posizionamento.",
     image: "/portfolio/render_v1_21_060812.jpg",
+    href: contactTierLinks.remote,
   },
   {
     step: "03",
     title: "Sopralluogo Roma",
     text: `Progetti complessi in ${site.surveyArea}: misurazioni e posa in opera.`,
     image: "/portfolio/20190128_160113.jpg",
+    href: contactTierLinks.roma,
   },
   {
     step: "04",
     title: "Partner installazione",
     text: "Fuori Roma coordiniamo partner tecnici per la sola installazione.",
     image: "/portfolio/20180215_141107.jpg",
+    href: contactTierLinks.partner,
   },
 ];
 
@@ -37,12 +41,16 @@ export function HowItWorks() {
           Come lavoriamo
         </p>
         <h2 className="mt-2 font-serif text-3xl font-bold text-nrs-hero">
-          Tecnico, trasparente, senza sprechi di tempo
+          Chiaro fin da subito: cosa, dove, quando
         </h2>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((item) => (
-            <article key={item.step} className="group overflow-hidden border border-stone-200">
+            <Link
+              key={item.step}
+              href={item.href}
+              className="group overflow-hidden border border-stone-200 transition hover:border-nrs-accent/40"
+            >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
                   src={item.image}
@@ -59,7 +67,7 @@ export function HowItWorks() {
                 <h3 className="font-serif font-bold text-nrs-hero">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-stone-600">{item.text}</p>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
 

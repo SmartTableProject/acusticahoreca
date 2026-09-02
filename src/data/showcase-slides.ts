@@ -1,4 +1,4 @@
-/** Foto curate per homepage — ambienti locali, non primi piani tecnici sul soffitto */
+/** Foto curate per homepage — ambienti locali, nomi reali */
 export type ShowcaseSlide = {
   id: string;
   src: string;
@@ -50,14 +50,14 @@ export const showcaseSlides: ShowcaseSlide[] = [
     title: "Dal Vignola",
   },
   {
-    id: "sala-2019",
-    src: "/portfolio/20190128-160113.jpg",
-    title: "Locale HoReCa",
+    id: "la-botte",
+    src: "/portfolio/la-botte-10.jpg",
+    title: "La Botte",
     objectPosition: "center 40%",
   },
   {
-    id: "vista-insieme",
-    src: "/portfolio/20180215-142359.jpg",
-    title: "Vista d'insieme",
+    id: "hotel-nazionale",
+    src: "/portfolio/hotel-nazionale.jpg",
+    title: "Hotel Nazionale",
   },
 ];

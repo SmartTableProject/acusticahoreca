@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { installLabels, standardProducts } from "@/data/products";
-import { site } from "@/data/site";
+import { contactTierLinks, site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Servizi",
-  description:
-    "Ecommerce pannelli acustici, consulenza a distanza e sopralluogo Roma. NRS Soluzioni Acustiche.",
+  description: `Tre livelli: prodotti online, consulenza a distanza, sopralluogo ${site.surveyArea}. ${site.name}.`,
 };
 
 const tiers = [
@@ -14,16 +13,17 @@ const tiers = [
     id: "online",
     name: "Livello 1 — Acquisto online",
     subtitle: "Senza sopralluogo · Spedizione",
-    price: "Da listino SoundOff",
+    price: site.priceLabel,
     ideal: "Ristoratori che sanno già cosa serve, piccoli interventi, fai-da-te con guida",
     includes: [
       "Pannelli standard a catalogo (Hexagon, Basfon, Wave, isole)",
       "Configurazione colore e dimensioni",
-      "Prezzo immediato online",
+      "Preventivo entro 24–48h via email",
       "Guida montaggio PDF/video",
       "Spedizione in area di competenza",
     ],
-    cta: "Configura prodotto",
+    cta: "Richiedi preventivo",
+    href: contactTierLinks.online,
     highlight: true,
   },
   {
@@ -40,6 +40,7 @@ const tiers = [
       "Supporto email/telefono",
     ],
     cta: "Invia planimetria",
+    href: contactTierLinks.remote,
     highlight: false,
   },
   {
@@ -52,10 +53,11 @@ const tiers = [
       "Sopralluogo e misurazioni in loco",
       "Progetto acustico su misura",
       "Fornitura e posa in opera",
-      "Collaudo acustico post-intervento",
+      "Verifica post-intervento",
       "Slot limitati — prenotazione anticipata",
     ],
     cta: "Prenota sopralluogo",
+    href: contactTierLinks.roma,
     highlight: false,
   },
 ];
@@ -70,9 +72,9 @@ export default function ServiziPage() {
         Tre livelli. Un solo obiettivo: acustica che funziona.
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-stone-600">
-        Strategia pensata per offrirti il massimo con tempi realistici: ecommerce per
-        partire subito, consulenza remota per la maggior parte dei casi, sopralluogo
-        riservato a Roma dove possiamo essere presenti di persona.
+        Strategia pensata per offrirti il massimo con tempi realistici: prodotti
+        standard per partire subito, consulenza remota per la maggior parte dei
+        casi, sopralluogo riservato a Roma dove possiamo essere presenti di persona.
       </p>
 
       <div className="mt-12 space-y-8">
@@ -89,7 +91,7 @@ export default function ServiziPage() {
               <div>
                 <p
                   className={`text-xs font-semibold uppercase tracking-widest ${
-                    tier.highlight ? "text-nrs-grey-light" : "text-nrs-grey"
+                    tier.highlight ? "text-stone-300" : "text-nrs-grey"
                   }`}
                 >
                   {tier.subtitle}
@@ -119,13 +121,13 @@ export default function ServiziPage() {
                     tier.highlight ? "text-stone-200" : "text-stone-600"
                   }`}
                 >
-                  <span className="text-nrs-grey">—</span>
+                  <span className="text-nrs-accent">—</span>
                   {item}
                 </li>
               ))}
             </ul>
             <Link
-              href="/contatti"
+              href={tier.href}
               className={`mt-8 inline-block px-6 py-3 text-sm font-semibold uppercase tracking-wide ${
                 tier.highlight
                   ? "bg-nrs-accent text-white hover:bg-nrs-accent-hover"
@@ -142,11 +144,16 @@ export default function ServiziPage() {
         <h2 className="text-xl font-bold text-nrs-hero">Catalogo prodotti online</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {standardProducts.map((p) => (
-            <div key={p.id} className="border border-stone-200 bg-stone-50 p-5">
+            <Link
+              key={p.id}
+              href={`${contactTierLinks.online}&prodotto=${p.id}`}
+              className="border border-stone-200 bg-stone-50 p-5 transition hover:border-nrs-accent/40"
+            >
               <h3 className="font-bold">{p.name}</h3>
               <p className="mt-1 text-sm text-stone-600">{p.description}</p>
               <p className="mt-2 text-xs text-nrs-grey">{installLabels[p.install]}</p>
-            </div>
+              <p className="mt-2 text-sm font-semibold text-nrs-accent">{p.priceFrom}</p>
+            </Link>
           ))}
         </div>
       </div>

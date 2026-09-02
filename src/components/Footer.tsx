@@ -17,12 +17,12 @@ export function Footer() {
         <div>
           <Logo variant="dark" />
           <p className="mt-4 text-sm font-medium leading-relaxed text-stone-200">
-            {site.clientMessage}
+            {site.tagline}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-stone-400">{site.clientSubline}</p>
           <p className="mt-3 text-xs text-stone-400">{site.legalName}</p>
           <p className="mt-2 text-xs text-stone-400">
-            Partner {site.supplier} — {site.partnerMarket}
+            {site.partnerLabel} — {site.partnerMarket}
           </p>
         </div>
 
@@ -38,6 +38,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link href="/privacy" className="hover:text-nrs-accent">
+                Privacy policy
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -56,6 +61,16 @@ export function Footer() {
                 {site.phone}
               </a>
             </li>
+            <li>
+              <a
+                href={site.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-nrs-accent"
+              >
+                WhatsApp
+              </a>
+            </li>
             <li>Sopralluoghi: {site.surveyArea}</li>
             <li>Area commerciale: {site.marketArea}</li>
           </ul>
@@ -63,7 +78,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-xs text-stone-500">
-        © {new Date().getFullYear()} {site.name} — P.IVA 10847041000
+        © {new Date().getFullYear()} {site.name} — P.IVA {site.piva}
       </div>
     </footer>
   );

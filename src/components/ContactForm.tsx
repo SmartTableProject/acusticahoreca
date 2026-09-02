@@ -1,13 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/data/site";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
-export function ContactForm() {
+type Props = {
+  defaultTipo?: string;
+  defaultProdotto?: string;
+};
+
+export function ContactForm({ defaultTipo = "prodotto-online", defaultProdotto }: Props) {
   const [state, setState] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
+  const [tipo, setTipo] = useState(defaultTipo);
+
+  useEffect(() => {
+    setTipo(defaultTipo);
+  }, [defaultTipo]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -23,6 +33,7 @@ export function ContactForm() {
       citta: data.get("citta"),
       tipoRichiesta: data.get("tipoRichiesta"),
       locale: data.get("locale"),
+      prodotto: data.get("prodotto"),
       messaggio: data.get("messaggio"),
     };
 
@@ -36,18 +47,23 @@ export function ContactForm() {
       if (!res.ok) throw new Error("Invio fallito");
 
       setState("success");
-      setMessage("Richiesta inviata. Ti rispondiamo entro 24–48 ore lavorative.");
+      setMessage(`Richiesta inviata. Ti rispondiamo entro ${site.responseTime}.`);
       form.reset();
+      setTipo(defaultTipo);
     } catch {
       setState("error");
       setMessage(
-        `Errore di invio. Scrivi a ${site.emailPreventivi} o chiama ${site.phone}.`,
+        `Errore di invio. Scrivi a ${site.email} o chiama ${site.phone}.`,
       );
     }
   }
 
   const inputClass =
     "w-full border border-stone-300 px-4 py-3 text-stone-900 outline-none focus:border-nrs-accent focus:ring-1 focus:ring-nrs-accent";
+
+  const defaultMessaggio = defaultProdotto
+    ? `Mi interessa il prodotto: ${defaultProdotto}. `
+    : "";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -81,7 +97,7 @@ export function ContactForm() {
             id="citta"
             name="citta"
             required
-            placeholder="Es. Roma, Latina, Firenze..."
+            placeholder="Es. Roma, Latina, Perugia..."
             className={inputClass}
           />
         </div>
@@ -97,9 +113,10 @@ export function ContactForm() {
             name="tipoRichiesta"
             required
             className={inputClass}
-            defaultValue="prodotto-online"
+            value={tipo}
+            onChange={(e) => setTipo(e.target.value)}
           >
-            <option value="prodotto-online">Prodotto standard — prezzo online</option>
+            <option value="prodotto-online">Prodotto standard — preventivo rapido</option>
             <option value="consulenza-remota">Consulenza a distanza (foto/planimetria)</option>
             <option value="sopralluogo-roma">Sopralluogo Roma e provincia</option>
             <option value="installazione-partner">Installazione con partner (fuori Roma)</option>
@@ -119,6 +136,10 @@ export function ContactForm() {
         </div>
       </div>
 
+      {defaultProdotto && (
+        <input type="hidden" name="prodotto" value={defaultProdotto} />
+      )}
+
       <div>
         <label htmlFor="messaggio" className="mb-1.5 block text-xs font-bold uppercase tracking-wide text-nrs-grey">
           Messaggio *
@@ -128,7 +149,8 @@ export function ContactForm() {
           name="messaggio"
           required
           rows={5}
-          placeholder="Descrivi il problema acustico o il prodotto che ti interessa. Per consulenza remota indica se puoi inviare foto/planimetria."
+          defaultValue={defaultMessaggio}
+          placeholder="Descrivi il problema: troppo eco, non si sentono le conversazioni, musica alta... Per consulenza remota indica se puoi inviare foto/planimetria."
           className={inputClass}
         />
       </div>

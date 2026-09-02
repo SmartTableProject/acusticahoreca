@@ -1,4 +1,4 @@
-/** Prodotti standard ordinabili online — fase 1 ecommerce (senza sopralluogo) */
+/** Prodotti standard — preventivo online (fase 1, senza checkout) */
 export type Product = {
   id: string;
   name: string;
@@ -15,7 +15,7 @@ export const standardProducts: Product[] = [
     name: "Hexagon Kit",
     description:
       "Moduli esagonali in poliestere, tessuto personalizzabile. Ideale per pareti in sala ristorante.",
-    priceFrom: "Su preventivo online",
+    priceFrom: "Preventivo online · 24–48h",
     install: "fai-da-te",
     badge: "Più richiesto",
     image: "/portfolio/alla-lampara.jpg",
@@ -24,8 +24,8 @@ export const standardProducts: Product[] = [
     id: "basfon",
     name: "Basfon — Melammina",
     description:
-      "Pannelli a soffitto ignifughi B-s1-d0. Soluzione performante ed economica per HoReCa.",
-    priceFrom: "Su preventivo online",
+      "Pannelli a soffitto ignifughi, certificati per locali pubblici. Soluzione performante ed economica per HoReCa.",
+    priceFrom: "Preventivo online · 24–48h",
     install: "partner",
     image: "/portfolio/20180608_100932.jpg",
   },
@@ -34,7 +34,7 @@ export const standardProducts: Product[] = [
     name: "Wave High Performance",
     description:
       "Profilo onda ad alto rendimento acustico. Per sale con forte riverbero e poca superficie.",
-    priceFrom: "Su preventivo online",
+    priceFrom: "Preventivo online · 24–48h",
     install: "fai-da-te",
     image: "/portfolio/20170802_134723.jpg",
   },
@@ -43,7 +43,7 @@ export const standardProducts: Product[] = [
     name: "Isole acustiche sospese",
     description:
       "Pannelli flottanti a soffitto. Intervento estetico con impatto acustico immediato.",
-    priceFrom: "Su preventivo online",
+    priceFrom: "Preventivo online · 24–48h",
     install: "partner",
     badge: "Design",
     image: "/portfolio/20180215_141018.jpg",

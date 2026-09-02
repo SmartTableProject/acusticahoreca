@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { installLabels, standardProducts } from "@/data/products";
+import { contactTierLinks, site } from "@/data/site";
 
 export function ProductTeaser() {
   return (
@@ -8,29 +9,31 @@ export function ProductTeaser() {
       <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
-            Acquista online
+            Catalogo SoundOff
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-nrs-hero">
-            Pannelli standard — prezzo immediato
+            Pannelli standard — preventivo rapido
           </h2>
           <p className="mt-3 max-w-xl text-stone-600">
-            Prodotti a catalogo SoundOff ordinabili senza sopralluogo. Ideali per
-            chi vuole intervenire subito con costi contenuti e montaggio guidato.
+            Prodotti a catalogo ordinabili senza sopralluogo. Ideali per chi vuole
+            intervenire subito con costi contenuti e montaggio guidato. Risposta entro{" "}
+            {site.responseTime}.
           </p>
         </div>
         <Link
-          href="/contatti"
+          href={contactTierLinks.online}
           className="shrink-0 rounded-sm bg-nrs-accent px-6 py-3 text-sm font-semibold text-white hover:bg-nrs-accent-hover"
         >
-          Configura e richiedi prezzo
+          Richiedi preventivo
         </Link>
       </div>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {standardProducts.map((product) => (
-          <article
+          <Link
             key={product.id}
-            className="group flex flex-col overflow-hidden border border-stone-200 bg-white"
+            href={`${contactTierLinks.online}&prodotto=${product.id}`}
+            className="group flex flex-col overflow-hidden border border-stone-200 bg-white transition hover:border-nrs-accent/50"
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
               <Image
@@ -58,7 +61,7 @@ export function ProductTeaser() {
                 {product.priceFrom}
               </p>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>

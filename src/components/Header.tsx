@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
-import { navLinks, site } from "@/data/site";
+import { contactTierLinks, navLinks, site } from "@/data/site";
 
 export function Header() {
   const pathname = usePathname();
@@ -13,13 +13,26 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-stone-200 bg-nrs-header text-nrs-hero">
       <div className="border-b border-stone-200 bg-stone-50">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-1 text-[10px] tracking-wide text-nrs-grey md:px-6">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-1 text-[10px] tracking-wide text-nrs-grey md:px-6">
           <span className="font-semibold uppercase tracking-[0.14em] text-stone-600">
             {site.clientSubline}
           </span>
-          <span className="hidden font-semibold uppercase tracking-[0.16em] text-nrs-accent sm:inline">
-            {site.logoCategory}
-          </span>
+          <div className="hidden items-center gap-4 sm:flex">
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold uppercase tracking-[0.14em] text-nrs-accent hover:underline"
+            >
+              WhatsApp
+            </a>
+            <a
+              href={`tel:${site.phoneTel}`}
+              className="font-semibold tracking-wide text-stone-600 hover:text-nrs-hero"
+            >
+              {site.phone}
+            </a>
+          </div>
         </div>
       </div>
 
@@ -41,7 +54,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="/contatti"
+            href={contactTierLinks.online}
             className="rounded-sm bg-nrs-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-nrs-accent-hover"
           >
             Preventivo
@@ -77,8 +90,16 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-medium text-nrs-accent"
+            >
+              Scrivici su WhatsApp
+            </a>
             <Link
-              href="/contatti"
+              href={contactTierLinks.online}
               onClick={() => setOpen(false)}
               className="mt-2 inline-block rounded-sm bg-nrs-accent px-5 py-2 text-center text-sm font-semibold text-white"
             >

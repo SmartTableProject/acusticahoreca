@@ -39,7 +39,7 @@ export function PortfolioFeatured() {
             Portfolio · {portfolioStats.photos} foto
           </p>
           <h2 className="mt-2 font-serif text-3xl font-semibold text-nrs-hero md:text-4xl">
-            Altri locali, stessa cura
+            {portfolioStats.projects} locali documentati
           </h2>
         </div>
         <Link

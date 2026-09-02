@@ -4,10 +4,25 @@ import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contatti",
-  description: `Preventivo acustica HoReCa — ${site.marketArea}. Prodotti online e consulenza a distanza.`,
+  description: `Preventivo acustica HoReCa — ${site.marketArea}. Risposta entro ${site.responseTime}.`,
 };
 
-export default function ContattiPage() {
+type Props = {
+  searchParams: Promise<{ tipo?: string; prodotto?: string }>;
+};
+
+export default async function ContattiPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const validTipi = [
+    "prodotto-online",
+    "consulenza-remota",
+    "sopralluogo-roma",
+    "installazione-partner",
+  ];
+  const tipo = validTipi.includes(params.tipo ?? "")
+    ? params.tipo!
+    : "prodotto-online";
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
       <div className="grid gap-12 lg:grid-cols-2">
@@ -19,9 +34,9 @@ export default function ContattiPage() {
             Richiedi preventivo
           </h1>
           <p className="mt-4 text-lg text-stone-600">
-            Indica il tipo di richiesta: prodotto standard (risposta rapida),
-            consulenza con planimetria, o sopralluogo a Roma. Rispondiamo entro 24–48
-            ore lavorative.
+            Indica il tipo di richiesta: prodotto standard, consulenza con
+            planimetria, o sopralluogo a Roma. Rispondiamo entro{" "}
+            {site.responseTime}.
           </p>
 
           <div className="mt-8 space-y-6 border-l-2 border-nrs-accent pl-5">
@@ -30,18 +45,27 @@ export default function ContattiPage() {
                 Email
               </p>
               <a
-                href={`mailto:${site.emailPreventivi}`}
+                href={`mailto:${site.email}`}
                 className="text-nrs-accent hover:underline"
               >
-                {site.emailPreventivi}
+                {site.email}
               </a>
             </div>
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
-                Telefono
+                Telefono / WhatsApp
               </p>
               <a href={`tel:${site.phoneTel}`} className="text-nrs-accent hover:underline">
                 {site.phone}
+              </a>
+              <span className="text-stone-400"> · </span>
+              <a
+                href={site.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-nrs-accent hover:underline"
+              >
+                WhatsApp
               </a>
             </div>
             <div>
@@ -56,14 +80,14 @@ export default function ContattiPage() {
               </p>
               <p className="text-stone-700">{site.marketArea}</p>
               <p className="mt-1 text-sm text-stone-500">
-                Partner {site.supplier} — {site.partnerMarket}
+                {site.partnerLabel} — {site.partnerMarket}
               </p>
             </div>
           </div>
         </div>
 
         <div className="border border-stone-200 bg-white p-8">
-          <ContactForm />
+          <ContactForm defaultTipo={tipo} defaultProdotto={params.prodotto} />
         </div>
       </div>
     </div>

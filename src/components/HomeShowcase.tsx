@@ -106,14 +106,13 @@ export function HomeShowcase() {
           {site.logoCategory} · {site.marketArea}
         </p>
         <h1 className="mt-4 max-w-3xl font-serif text-4xl font-bold uppercase leading-[1.05] tracking-[0.02em] md:text-5xl lg:text-[3.5rem]">
-          {site.clientMessage}
+          {site.heroHeadline}
         </h1>
         <p className="mt-4 max-w-2xl text-lg font-medium leading-snug text-stone-200 md:text-xl">
           {site.clientSubline}
         </p>
         <p className="mt-5 max-w-xl text-sm leading-relaxed text-stone-300 md:text-base">
-          {site.yearsExperience} anni di interventi reali. Partner ufficiale{" "}
-          {site.supplier}.
+          {site.yearsExperience}+ anni di interventi reali. {site.partnerLabel}.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
