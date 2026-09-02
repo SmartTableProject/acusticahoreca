@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { FaqJsonLd, JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/Footer";
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <WhatsAppFab />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );

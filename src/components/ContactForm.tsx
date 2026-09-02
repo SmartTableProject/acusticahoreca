@@ -44,7 +44,16 @@ export function ContactForm({ defaultTipo = "prodotto-online", defaultProdotto }
         body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error("Invio fallito");
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        setState("error");
+        setMessage(
+          typeof err.error === "string"
+            ? err.error
+            : `Errore di invio. Scrivi a ${site.email} o chiama ${site.phone}.`,
+        );
+        return;
+      }
 
       setState("success");
       setMessage(`Richiesta inviata. Ti rispondiamo entro ${site.responseTime}.`);
@@ -52,9 +61,7 @@ export function ContactForm({ defaultTipo = "prodotto-online", defaultProdotto }
       setTipo(defaultTipo);
     } catch {
       setState("error");
-      setMessage(
-        `Errore di invio. Scrivi a ${site.email} o chiama ${site.phone}.`,
-      );
+      setMessage(`Errore di invio. Scrivi a ${site.email} o chiama ${site.phone}.`);
     }
   }
 

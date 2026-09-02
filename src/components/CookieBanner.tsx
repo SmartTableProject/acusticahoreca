@@ -36,6 +36,7 @@ export function CookieBanner() {
             type="button"
             onClick={() => {
               localStorage.setItem(STORAGE_KEY, "accepted");
+              window.dispatchEvent(new Event("nrs-cookie-consent"));
               setVisible(false);
             }}
             className="rounded-sm bg-nrs-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-nrs-accent-hover"
