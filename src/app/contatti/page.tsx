@@ -15,7 +15,7 @@ export default function ContattiPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
             Contatti
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-nrs-dark">
+          <h1 className="mt-2 text-4xl font-bold text-nrs-hero">
             Richiedi preventivo
           </h1>
           <p className="mt-4 text-lg text-stone-600">
@@ -24,14 +24,14 @@ export default function ContattiPage() {
             ore lavorative.
           </p>
 
-          <div className="mt-8 space-y-6 border-l-2 border-nrs-dark pl-5">
+          <div className="mt-8 space-y-6 border-l-2 border-nrs-accent pl-5">
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
                 Email
               </p>
               <a
                 href={`mailto:${site.emailPreventivi}`}
-                className="text-nrs-dark hover:underline"
+                className="text-nrs-accent hover:underline"
               >
                 {site.emailPreventivi}
               </a>
@@ -40,7 +40,7 @@ export default function ContattiPage() {
               <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
                 Telefono
               </p>
-              <a href={`tel:${site.phoneTel}`} className="text-nrs-dark hover:underline">
+              <a href={`tel:${site.phoneTel}`} className="text-nrs-accent hover:underline">
                 {site.phone}
               </a>
             </div>

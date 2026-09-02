@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 
@@ -5,22 +6,26 @@ const steps = [
   {
     step: "01",
     title: "Scegli online",
-    text: "Configura pannelli standard (forma, colore, mq) e ricevi il prezzo senza sopralluogo. Spedizione in tutta l'area di competenza.",
+    text: "Configura pannelli standard e ricevi il prezzo senza sopralluogo.",
+    image: "/portfolio/20180608_100932.jpg",
   },
   {
     step: "02",
     title: "Consulenza a distanza",
-    text: "Invia foto e planimetria del locale. Ti indichiamo quantità e posizionamento con un report tecnico — senza uscire da Roma.",
+    text: "Invia foto e planimetria. Report tecnico con mq e posizionamento.",
+    image: "/portfolio/render_v1_21_060812.jpg",
   },
   {
     step: "03",
     title: "Sopralluogo Roma",
-    text: `Per progetti complessi in ${site.surveyArea}: sopralluogo, misurazioni e posa in opera con tempi concordati.`,
+    text: `Progetti complessi in ${site.surveyArea}: misurazioni e posa in opera.`,
+    image: "/portfolio/20190128_160113.jpg",
   },
   {
     step: "04",
     title: "Partner installazione",
-    text: "Fuori Roma, su richiesta e disponibilità, coordiniamo partner tecnici per la sola installazione.",
+    text: "Fuori Roma coordiniamo partner tecnici per la sola installazione.",
+    image: "/portfolio/20180215_141107.jpg",
   },
 ];
 
@@ -31,37 +36,38 @@ export function HowItWorks() {
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
           Come lavoriamo
         </p>
-        <h2 className="mt-2 text-3xl font-bold text-nrs-dark">
+        <h2 className="mt-2 font-serif text-3xl font-bold text-nrs-hero">
           Tecnico, trasparente, senza sprechi di tempo
         </h2>
-        <p className="mt-4 max-w-2xl text-stone-600">
-          Operiamo in modo snello: prodotti standard acquistabili online, consulenza
-          remota per la maggior parte dei clienti, sopralluogo riservato a Roma dove
-          possiamo garantire presenza diretta.
-        </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((item) => (
-            <div
-              key={item.step}
-              className="border-l-2 border-nrs-dark pl-5"
-            >
-              <span className="text-xs font-bold text-nrs-grey">{item.step}</span>
-              <h3 className="mt-2 font-bold text-nrs-dark">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-stone-600">
-                {item.text}
-              </p>
-            </div>
+            <article key={item.step} className="group overflow-hidden border border-stone-200">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <span className="absolute left-3 top-3 bg-nrs-hero/80 px-2 py-1 text-xs font-bold text-white">
+                  {item.step}
+                </span>
+              </div>
+              <div className="p-5">
+                <h3 className="font-serif font-bold text-nrs-hero">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-600">{item.text}</p>
+              </div>
+            </article>
           ))}
         </div>
 
-        <p className="mt-8 text-sm text-stone-500">
-          {site.partnerNote}
-        </p>
+        <p className="mt-8 text-sm text-stone-500">{site.partnerNote}</p>
 
         <Link
           href="/servizi"
-          className="mt-6 inline-block text-sm font-semibold text-nrs-dark underline underline-offset-4 hover:no-underline"
+          className="mt-6 inline-block text-sm font-semibold text-nrs-accent underline underline-offset-4 hover:text-nrs-accent-hover hover:no-underline"
         >
           Dettaglio servizi e fasce →
         </Link>

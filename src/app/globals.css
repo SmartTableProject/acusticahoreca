@@ -1,22 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --nrs-dark: #1a1a1a;
-  --nrs-dark-elevated: #2a2a2a;
-  --nrs-grey: #8a8a8a;
-  --nrs-grey-light: #c4c4c4;
+  /* Template B — Warm HoReCa */
+  --nrs-hero: #292524;
+  --nrs-header: #fafaf9;
+  --nrs-accent: #c2410c;
+  --nrs-accent-hover: #9a3412;
+  --nrs-body: #fafaf9;
+
+  /* Alias semantici */
+  --nrs-dark: var(--nrs-hero);
+  --nrs-dark-elevated: #44403c;
+  --nrs-grey: #78716c;
+  --nrs-grey-light: #a8a29e;
   --nrs-white: #ffffff;
-  --nrs-bg: #f5f5f4;
-  --nrs-foreground: #1a1a1a;
+  --nrs-bg: var(--nrs-body);
+  --nrs-foreground: var(--nrs-hero);
 }
 
 @theme inline {
+  --color-nrs-hero: var(--nrs-hero);
+  --color-nrs-header: var(--nrs-header);
+  --color-nrs-accent: var(--nrs-accent);
+  --color-nrs-accent-hover: var(--nrs-accent-hover);
   --color-nrs-dark: var(--nrs-dark);
   --color-nrs-elevated: var(--nrs-dark-elevated);
   --color-nrs-grey: var(--nrs-grey);
   --color-background: var(--nrs-bg);
   --color-foreground: var(--nrs-foreground);
   --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-source-serif);
 }
 
 body {
@@ -24,7 +37,47 @@ body {
   color: var(--nrs-foreground);
 }
 
+h1,
+h2,
+h3,
+.font-logo {
+  font-family: var(--font-source-serif), Georgia, "Times New Roman", serif;
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+
+@keyframes ken-burns-soft {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 5.5s ease-out forwards;
+}
+
+.animate-ken-burns-soft {
+  animation: ken-burns-soft 6s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ken-burns,
+  .animate-ken-burns-soft {
+    animation: none;
+  }
+}
+
 ::selection {
-  background: #d4d4d4;
-  color: #1a1a1a;
+  background: #fed7aa;
+  color: var(--nrs-hero);
 }

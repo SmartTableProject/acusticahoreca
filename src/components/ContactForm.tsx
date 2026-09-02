@@ -47,7 +47,7 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full border border-stone-300 px-4 py-3 text-stone-900 outline-none focus:border-nrs-dark focus:ring-1 focus:ring-nrs-dark";
+    "w-full border border-stone-300 px-4 py-3 text-stone-900 outline-none focus:border-nrs-accent focus:ring-1 focus:ring-nrs-accent";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -136,7 +136,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={state === "loading"}
-        className="w-full bg-nrs-dark px-6 py-4 text-sm font-bold uppercase tracking-wide text-white hover:bg-nrs-elevated disabled:opacity-60 sm:w-auto"
+        className="w-full bg-nrs-accent px-6 py-4 text-sm font-bold uppercase tracking-wide text-white hover:bg-nrs-accent-hover disabled:opacity-60 sm:w-auto"
       >
         {state === "loading" ? "Invio..." : "Invia richiesta"}
       </button>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { installLabels, standardProducts } from "@/data/products";
 
@@ -9,7 +10,7 @@ export function ProductTeaser() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
             Acquista online
           </p>
-          <h2 className="mt-2 text-3xl font-bold text-nrs-dark">
+          <h2 className="mt-2 font-serif text-3xl font-bold text-nrs-hero">
             Pannelli standard — prezzo immediato
           </h2>
           <p className="mt-3 max-w-xl text-stone-600">
@@ -19,7 +20,7 @@ export function ProductTeaser() {
         </div>
         <Link
           href="/contatti"
-          className="shrink-0 rounded-sm bg-nrs-dark px-6 py-3 text-sm font-semibold text-white hover:bg-nrs-elevated"
+          className="shrink-0 rounded-sm bg-nrs-accent px-6 py-3 text-sm font-semibold text-white hover:bg-nrs-accent-hover"
         >
           Configura e richiedi prezzo
         </Link>
@@ -29,23 +30,34 @@ export function ProductTeaser() {
         {standardProducts.map((product) => (
           <article
             key={product.id}
-            className="flex flex-col border border-stone-200 bg-white p-6"
+            className="group flex flex-col overflow-hidden border border-stone-200 bg-white"
           >
-            {product.badge && (
-              <span className="mb-3 self-start bg-nrs-dark px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                {product.badge}
-              </span>
-            )}
-            <h3 className="font-bold text-nrs-dark">{product.name}</h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
-              {product.description}
-            </p>
-            <p className="mt-4 text-xs text-nrs-grey">
-              {installLabels[product.install]}
-            </p>
-            <p className="mt-2 text-sm font-semibold text-nrs-dark">
-              {product.priceFrom}
-            </p>
+            <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                className="object-cover transition duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+              {product.badge && (
+                <span className="absolute left-3 top-3 bg-nrs-accent px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                  {product.badge}
+                </span>
+              )}
+            </div>
+            <div className="flex flex-1 flex-col p-5">
+              <h3 className="font-serif font-bold text-nrs-hero">{product.name}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
+                {product.description}
+              </p>
+              <p className="mt-4 text-xs text-nrs-grey">
+                {installLabels[product.install]}
+              </p>
+              <p className="mt-2 text-sm font-semibold text-nrs-accent">
+                {product.priceFrom}
+              </p>
+            </div>
           </article>
         ))}
       </div>

@@ -1,11 +1,12 @@
 import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { navLinks, servicePillars, site } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="mt-auto bg-nrs-dark text-nrs-grey-light">
+    <footer className="mt-auto bg-nrs-hero text-stone-300">
       <div className="border-b border-white/10 bg-nrs-elevated py-3">
-        <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6 px-4 text-[11px] font-semibold uppercase tracking-widest text-nrs-grey md:px-6">
+        <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6 px-4 text-[11px] font-semibold uppercase tracking-widest text-stone-400 md:px-6">
           {servicePillars.map((p) => (
             <span key={p}>{p}</span>
           ))}
@@ -14,12 +15,12 @@ export function Footer() {
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3 md:px-6">
         <div>
-          <p className="text-xl font-bold text-white">NRS</p>
-          <p className="mt-1 text-xs uppercase tracking-widest text-nrs-grey">
-            Noise Reduction System
+          <Logo variant="dark" />
+          <p className="mt-4 text-sm italic leading-relaxed text-stone-200">
+            {site.clientSubline}
           </p>
-          <p className="mt-4 text-sm leading-relaxed">{site.tagline}</p>
-          <p className="mt-3 text-xs text-nrs-grey">
+          <p className="mt-3 text-xs text-stone-400">{site.legalName}</p>
+          <p className="mt-2 text-xs text-stone-400">
             Partner {site.supplier} — {site.partnerMarket}
           </p>
         </div>
@@ -31,7 +32,7 @@ export function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-white">
+                <Link href={link.href} className="hover:text-nrs-accent">
                   {link.label}
                 </Link>
               </li>
@@ -45,12 +46,12 @@ export function Footer() {
           </p>
           <ul className="mt-3 space-y-2 text-sm">
             <li>
-              <a href={`mailto:${site.email}`} className="hover:text-white">
+              <a href={`mailto:${site.email}`} className="hover:text-nrs-accent">
                 {site.email}
               </a>
             </li>
             <li>
-              <a href={`tel:${site.phoneTel}`} className="hover:text-white">
+              <a href={`tel:${site.phoneTel}`} className="hover:text-nrs-accent">
                 {site.phone}
               </a>
             </li>
@@ -60,7 +61,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-4 text-center text-xs text-nrs-grey">
+      <div className="border-t border-white/10 py-4 text-center text-xs text-stone-500">
         © {new Date().getFullYear()} {site.name} — P.IVA 10847041000
       </div>
     </footer>

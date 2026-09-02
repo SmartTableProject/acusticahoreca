@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Geist, Source_Serif_4 } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { site } from "@/data/site";
@@ -10,13 +10,19 @@ const geist = Geist({
   subsets: ["latin"],
 });
 
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Correzione acustica HoReCa`,
+    default: `${site.name} | ${site.clientMessage}`,
     template: `%s | ${site.name}`,
   },
   description:
-    "NRS Soluzioni Acustiche: pannelli SoundOff per ristoranti e HoReCa. Roma e Centro Italia. Acquisto online, consulenza a distanza, sopralluogo Roma.",
+    "NRS Soluzioni Acustiche: il tuo locale, finalmente comodo. Pannelli SoundOff per ristoranti e HoReCa. Roma e Centro Italia. Preventivo online.",
   keywords: [
     "correzione acustica ristorante Roma",
     "pannelli fonoassorbenti Lazio",
@@ -26,7 +32,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: site.name,
-    description: site.tagline,
+    description: site.clientMessage,
     url: site.domain,
     locale: "it_IT",
     type: "website",
@@ -35,7 +41,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="it" className={`${geist.variable} h-full`}>
+    <html lang="it" className={`${geist.variable} ${sourceSerif.variable} h-full`}>
       <body className="flex min-h-full flex-col font-sans antialiased">
         <Header />
         <main className="flex-1">{children}</main>

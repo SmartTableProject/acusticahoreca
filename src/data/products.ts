@@ -6,6 +6,7 @@ export type Product = {
   priceFrom: string;
   install: "fai-da-te" | "partner" | "roma";
   badge?: string;
+  image: string;
 };
 
 export const standardProducts: Product[] = [
@@ -17,6 +18,7 @@ export const standardProducts: Product[] = [
     priceFrom: "Su preventivo online",
     install: "fai-da-te",
     badge: "Più richiesto",
+    image: "/portfolio/alla-lampara.jpg",
   },
   {
     id: "basfon",
@@ -25,6 +27,7 @@ export const standardProducts: Product[] = [
       "Pannelli a soffitto ignifughi B-s1-d0. Soluzione performante ed economica per HoReCa.",
     priceFrom: "Su preventivo online",
     install: "partner",
+    image: "/portfolio/20180608_100932.jpg",
   },
   {
     id: "wave",
@@ -33,6 +36,7 @@ export const standardProducts: Product[] = [
       "Profilo onda ad alto rendimento acustico. Per sale con forte riverbero e poca superficie.",
     priceFrom: "Su preventivo online",
     install: "fai-da-te",
+    image: "/portfolio/20170802_134723.jpg",
   },
   {
     id: "isole",
@@ -42,6 +46,7 @@ export const standardProducts: Product[] = [
     priceFrom: "Su preventivo online",
     install: "partner",
     badge: "Design",
+    image: "/portfolio/20180215_141018.jpg",
   },
 ];
 

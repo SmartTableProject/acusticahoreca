@@ -66,7 +66,7 @@ export default function ServiziPage() {
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
         Servizi
       </p>
-      <h1 className="mt-2 text-4xl font-bold text-nrs-dark">
+      <h1 className="mt-2 text-4xl font-bold text-nrs-hero">
         Tre livelli. Un solo obiettivo: acustica che funziona.
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-stone-600">
@@ -81,7 +81,7 @@ export default function ServiziPage() {
             key={tier.id}
             className={`border p-8 md:p-10 ${
               tier.highlight
-                ? "border-nrs-dark bg-nrs-dark text-white"
+                ? "border-nrs-hero bg-nrs-hero text-white"
                 : "border-stone-200 bg-white"
             }`}
           >
@@ -105,7 +105,7 @@ export default function ServiziPage() {
               </div>
               <p
                 className={`shrink-0 text-lg font-bold ${
-                  tier.highlight ? "text-white" : "text-nrs-dark"
+                  tier.highlight ? "text-white" : "text-nrs-hero"
                 }`}
               >
                 {tier.price}
@@ -128,8 +128,8 @@ export default function ServiziPage() {
               href="/contatti"
               className={`mt-8 inline-block px-6 py-3 text-sm font-semibold uppercase tracking-wide ${
                 tier.highlight
-                  ? "bg-white text-nrs-dark hover:bg-stone-200"
-                  : "border border-nrs-dark text-nrs-dark hover:bg-nrs-dark hover:text-white"
+                  ? "bg-nrs-accent text-white hover:bg-nrs-accent-hover"
+                  : "border border-nrs-accent text-nrs-accent hover:bg-nrs-accent hover:text-white"
               }`}
             >
               {tier.cta}
@@ -139,7 +139,7 @@ export default function ServiziPage() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-xl font-bold text-nrs-dark">Catalogo prodotti online</h2>
+        <h2 className="text-xl font-bold text-nrs-hero">Catalogo prodotti online</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {standardProducts.map((p) => (
             <div key={p.id} className="border border-stone-200 bg-stone-50 p-5">
