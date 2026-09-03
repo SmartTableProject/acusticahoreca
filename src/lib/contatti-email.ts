@@ -42,8 +42,11 @@ function escapeHtml(text: string) {
 
 export function formatContattiPlain(payload: ContattiPayload) {
   const lines = [
-    `Nuova richiesta da ${site.name}`,
+    "MESSAGGIO DEL CLIENTE",
     "",
+    payload.messaggio,
+    "",
+    "---",
     `Nome: ${payload.nome}`,
     `Email: ${payload.email}`,
     `Telefono: ${payload.telefono || "—"}`,
@@ -56,7 +59,7 @@ export function formatContattiPlain(payload: ContattiPayload) {
     lines.push(`Prodotto: ${payload.prodotto}`);
   }
 
-  lines.push("", "Messaggio:", payload.messaggio, "", `Inviato da ${site.domain}/contatti`);
+  lines.push("", `Inviato da ${site.domain}/contatti`);
 
   return lines.join("\n");
 }
@@ -83,12 +86,13 @@ export function formatContattiHtml(payload: ContattiPayload) {
     .join("");
 
   return `
-    <div style="font-family:system-ui,sans-serif;max-width:560px;color:#292524">
-      <p style="font-size:12px;text-transform:uppercase;letter-spacing:0.1em;color:#c2410c;font-weight:700">Nuova richiesta preventivo</p>
-      <h1 style="font-size:20px;margin:8px 0 16px">${escapeHtml(site.name)}</h1>
+    <div style="font-family:system-ui,sans-serif;max-width:640px;color:#292524">
+      <p style="font-size:12px;text-transform:uppercase;letter-spacing:0.12em;color:#c2410c;font-weight:700;margin:0 0 8px">Nuova richiesta dal sito</p>
+      <h1 style="font-size:22px;margin:0 0 16px">Messaggio del cliente</h1>
+      <div style="background:#fafaf9;border:1px solid #e7e5e4;padding:16px 18px;font-size:16px;line-height:1.6;white-space:pre-wrap">${escapeHtml(payload.messaggio)}</div>
+      <p style="margin:24px 0 8px;font-size:12px;font-weight:700;text-transform:uppercase;color:#78716c">Dati di contatto</p>
       <table style="border-collapse:collapse;width:100%;font-size:14px">${table}</table>
-      <p style="margin-top:20px;font-size:12px;font-weight:700;text-transform:uppercase;color:#78716c">Messaggio</p>
-      <p style="white-space:pre-wrap;line-height:1.5;color:#44403c">${escapeHtml(payload.messaggio)}</p>
+      <p style="margin-top:16px;font-size:12px;color:#78716c">Rispondi a questa email per scrivere direttamente a ${escapeHtml(payload.email)}.</p>
     </div>
   `;
 }
@@ -111,15 +115,8 @@ function resendErrorMessage(error: unknown): string {
   return e.message ?? e.name ?? JSON.stringify(error);
 }
 
-/**
- * Destinatari notifica team: CONTACT_INBOX (virgola-separati) + CONTACT_NOTIFY opzionale.
- * Es. CONTACT_INBOX=preventivi@acusticahoreca.it,pasqualepaglialunga@gmail.com
- */
 function teamInboxes(): string[] {
-  const raw = [
-    process.env.CONTACT_INBOX,
-    process.env.CONTACT_NOTIFY,
-  ]
+  const raw = [process.env.CONTACT_INBOX, process.env.CONTACT_NOTIFY]
     .filter(Boolean)
     .join(",");
 
@@ -132,9 +129,6 @@ function teamInboxes(): string[] {
   return [...new Set(list)];
 }
 
-/**
- * Invia notifica al team (obbligatoria) + auto-risposta al cliente (best-effort).
- */
 export async function sendContattiEmails(payload: ContattiPayload) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -142,47 +136,55 @@ export async function sendContattiEmails(payload: ContattiPayload) {
   }
 
   const from =
-    process.env.RESEND_FROM?.trim() ||
-    `${site.name} <onboarding@resend.dev>`;
+    process.env.RESEND_FROM?.trim() || `${site.name} <onboarding@resend.dev>`;
 
   const inboxes = teamInboxes();
+  const clientEmail = payload.email.toLowerCase();
+  const teamSet = new Set(inboxes.map((e) => e.toLowerCase()));
 
   const resend = new Resend(apiKey);
-  const subject = `[Preventivo] ${payload.nome} — ${label(TIPO_LABELS, payload.tipoRichiesta)}`;
+  const snippet = payload.messaggio.replace(/\s+/g, " ").trim().slice(0, 60);
+  const subject = `[Sito] ${payload.nome}: ${snippet}${payload.messaggio.length > 60 ? "…" : ""}`;
 
-  const toTeam = await resend.emails.send({
-    from,
-    to: inboxes,
-    replyTo: payload.email,
-    subject,
-    text: formatContattiPlain(payload),
-    html: formatContattiHtml(payload),
-  });
+  const results = await Promise.all(
+    inboxes.map((to) =>
+      resend.emails.send({
+        from,
+        to: [to],
+        replyTo: payload.email,
+        subject,
+        text: formatContattiPlain(payload),
+        html: formatContattiHtml(payload),
+      }),
+    ),
+  );
 
-  if (toTeam.error) {
-    console.error("[NRS Email] team", toTeam.error);
+  const failed = results.find((r) => r.error);
+  if (failed?.error) {
+    console.error("[NRS Email] team", failed.error);
     return {
       sent: false as const,
       reason: "resend_error" as const,
-      error: resendErrorMessage(toTeam.error),
+      error: resendErrorMessage(failed.error),
     };
   }
 
-  // Auto-risposta: non blocca il form se fallisce
-  try {
-    const toClient = await resend.emails.send({
-      from,
-      to: [payload.email],
-      subject: `Richiesta ricevuta — ${site.name}`,
-      text: `Ciao ${payload.nome.split(" ")[0]},\n\nabbiamo ricevuto la tua richiesta. Ti rispondiamo entro ${site.responseTime}.\n\n${site.name}\n${site.phone}`,
-      html: autoReplyHtml(payload.nome),
-    });
-    if (toClient.error) {
-      console.warn("[NRS Email] auto-reply skip", toClient.error);
+  if (!teamSet.has(clientEmail)) {
+    try {
+      const toClient = await resend.emails.send({
+        from,
+        to: [payload.email],
+        subject: `Richiesta ricevuta — ${site.name}`,
+        text: `Ciao ${payload.nome.split(" ")[0]},\n\nabbiamo ricevuto la tua richiesta. Ti rispondiamo entro ${site.responseTime}.\n\n${site.name}\n${site.phone}`,
+        html: autoReplyHtml(payload.nome),
+      });
+      if (toClient.error) {
+        console.warn("[NRS Email] auto-reply skip", toClient.error);
+      }
+    } catch (err) {
+      console.warn("[NRS Email] auto-reply skip", err);
     }
-  } catch (err) {
-    console.warn("[NRS Email] auto-reply skip", err);
   }
 
-  return { sent: true as const, ids: [toTeam.data?.id] };
+  return { sent: true as const, ids: results.map((r) => r.data?.id) };
 }
