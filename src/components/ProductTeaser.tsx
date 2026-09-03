@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { installLabels, standardProducts } from "@/data/products";
-import { contactTierLinks, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export function ProductTeaser() {
   return (
@@ -21,10 +21,10 @@ export function ProductTeaser() {
           </p>
         </div>
         <Link
-          href={contactTierLinks.online}
+          href="/prodotti"
           className="shrink-0 rounded-sm bg-nrs-accent px-6 py-3 text-sm font-semibold text-white hover:bg-nrs-accent-hover"
         >
-          Richiedi preventivo
+          Vedi catalogo
         </Link>
       </div>
 
@@ -32,7 +32,7 @@ export function ProductTeaser() {
         {standardProducts.map((product) => (
           <Link
             key={product.id}
-            href={`${contactTierLinks.online}&prodotto=${product.id}`}
+            href={`/prodotti/${product.id}`}
             className="group flex flex-col overflow-hidden border border-stone-200 bg-white transition hover:border-nrs-accent/50"
           >
             <div className="relative aspect-[4/3] overflow-hidden bg-stone-100">

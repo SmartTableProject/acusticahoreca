@@ -141,12 +141,16 @@ export default function ServiziPage() {
       </div>
 
       <div className="mt-16">
-        <h2 className="text-xl font-bold text-nrs-hero">Catalogo prodotti online</h2>
+        <h2 className="text-xl font-bold text-nrs-hero">
+          <Link href="/prodotti" className="hover:text-nrs-accent">
+            Catalogo prodotti online
+          </Link>
+        </h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {standardProducts.map((p) => (
             <Link
               key={p.id}
-              href={`${contactTierLinks.online}&prodotto=${p.id}`}
+              href={`/prodotti/${p.id}`}
               className="border border-stone-200 bg-stone-50 p-5 transition hover:border-nrs-accent/40"
             >
               <h3 className="font-bold">{p.name}</h3>

@@ -39,6 +39,11 @@ export function Footer() {
               </li>
             ))}
             <li>
+              <Link href="/acustica-ristorante-roma" className="hover:text-nrs-accent">
+                Acustica Roma
+              </Link>
+            </li>
+            <li>
               <Link href="/privacy" className="hover:text-nrs-accent">
                 Privacy policy
               </Link>

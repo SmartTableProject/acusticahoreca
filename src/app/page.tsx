@@ -6,6 +6,7 @@ import { HowItWorks } from "@/components/HowItWorks";
 import { PortfolioFeatured } from "@/components/PortfolioFeatured";
 import { ProductTeaser } from "@/components/ProductTeaser";
 import { ServicePillars } from "@/components/ServicePillars";
+import { SocialProof } from "@/components/SocialProof";
 import { TrustBar } from "@/components/TrustBar";
 import { contactTierLinks, site } from "@/data/site";
 
@@ -25,7 +26,8 @@ export default function HomePage() {
       <HomeShowcase />
       <TrustBar />
       <ServicePillars />
-      <CaseStudies />
+      <CaseStudies limit={3} />
+      <SocialProof />
       <PortfolioFeatured />
       <ProductTeaser />
       <HowItWorks />
