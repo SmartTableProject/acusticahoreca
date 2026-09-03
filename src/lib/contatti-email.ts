@@ -112,8 +112,28 @@ function resendErrorMessage(error: unknown): string {
 }
 
 /**
+ * Destinatari notifica team: CONTACT_INBOX (virgola-separati) + CONTACT_NOTIFY opzionale.
+ * Es. CONTACT_INBOX=preventivi@acusticahoreca.it,pasqualepaglialunga@gmail.com
+ */
+function teamInboxes(): string[] {
+  const raw = [
+    process.env.CONTACT_INBOX,
+    process.env.CONTACT_NOTIFY,
+  ]
+    .filter(Boolean)
+    .join(",");
+
+  const list = raw
+    .split(/[,;]+/)
+    .map((e) => e.trim())
+    .filter((e) => e.includes("@"));
+
+  if (list.length === 0) return [site.emailPreventivi];
+  return [...new Set(list)];
+}
+
+/**
  * Invia notifica al team (obbligatoria) + auto-risposta al cliente (best-effort).
- * Senza dominio verificato: FROM = onboarding@resend.dev e TO = solo email account Resend.
  */
 export async function sendContattiEmails(payload: ContattiPayload) {
   const apiKey = process.env.RESEND_API_KEY;
@@ -125,16 +145,14 @@ export async function sendContattiEmails(payload: ContattiPayload) {
     process.env.RESEND_FROM?.trim() ||
     `${site.name} <onboarding@resend.dev>`;
 
-  /** Casella dove arrivano i preventivi (in test: la Gmail del account Resend) */
-  const inbox =
-    process.env.CONTACT_INBOX?.trim() || site.emailPreventivi;
+  const inboxes = teamInboxes();
 
   const resend = new Resend(apiKey);
   const subject = `[Preventivo] ${payload.nome} — ${label(TIPO_LABELS, payload.tipoRichiesta)}`;
 
   const toTeam = await resend.emails.send({
     from,
-    to: [inbox],
+    to: inboxes,
     replyTo: payload.email,
     subject,
     text: formatContattiPlain(payload),
@@ -150,7 +168,7 @@ export async function sendContattiEmails(payload: ContattiPayload) {
     };
   }
 
-  // Auto-risposta: non blocca il form se fallisce (es. dominio non verificato)
+  // Auto-risposta: non blocca il form se fallisce
   try {
     const toClient = await resend.emails.send({
       from,
