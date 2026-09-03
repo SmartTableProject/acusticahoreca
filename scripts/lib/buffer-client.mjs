@@ -50,27 +50,28 @@ export async function listOrganizations() {
 }
 
 export async function listChannels(organizationId) {
-  const data = await bufferGraphql(
-    `
-    query GetChannels($organizationId: String!) {
-      channels(input: { organizationId: $organizationId }) {
+  // OrganizationId è uno scalar Buffer, non String — inlinamo l'id validato
+  if (!/^[a-zA-Z0-9_-]+$/.test(organizationId)) {
+    throw new Error("organizationId non valido");
+  }
+  const data = await bufferGraphql(`
+    query GetChannels {
+      channels(input: { organizationId: "${organizationId}" }) {
         id
         name
         service
       }
     }
-  `,
-    { organizationId },
-  );
+  `);
   return data.channels;
 }
 
-/**
- * Crea un post programmato su un canale.
- * @param {{ text: string, channelId: string, imageUrl?: string, dueAtIso?: string, dryRun?: boolean }} opts
- */
 export async function createScheduledPost(opts) {
   const { text, channelId, imageUrl, dueAtIso, dryRun } = opts;
+
+  if (!/^[a-zA-Z0-9_-]+$/.test(channelId) && !dryRun) {
+    throw new Error("channelId non valido");
+  }
 
   const assets = imageUrl
     ? [{ image: { url: imageUrl } }]
@@ -89,24 +90,24 @@ export async function createScheduledPost(opts) {
     };
   }
 
-  // GraphQL variables evitano escape hell su caption lunghe
-  const data = await bufferGraphql(
-    `
-    mutation CreateScheduledPost(
-      $text: String!
-      $channelId: String!
-      $mode: CreatePostMode!
-      $dueAt: DateTime
-      $assets: [PostAssetInput!]
-    ) {
+  // Tipi Buffer (scalar ChannelId / CreatePostMode) — campi inlinati in modo sicuro
+  const assetsGql = imageUrl
+    ? `assets: [{ image: { url: ${JSON.stringify(imageUrl)} } }]`
+    : "";
+  const dueGql = dueAtIso
+    ? `dueAt: ${JSON.stringify(dueAtIso)}`
+    : "";
+
+  const data = await bufferGraphql(`
+    mutation CreateScheduledPost {
       createPost(
         input: {
-          text: $text
-          channelId: $channelId
+          text: ${JSON.stringify(text)}
+          channelId: "${channelId}"
           schedulingType: automatic
-          mode: $mode
-          dueAt: $dueAt
-          assets: $assets
+          mode: ${mode}
+          ${dueGql}
+          ${assetsGql}
         }
       ) {
         ... on PostActionSuccess {
@@ -122,15 +123,7 @@ export async function createScheduledPost(opts) {
         }
       }
     }
-  `,
-    {
-      text,
-      channelId,
-      mode,
-      dueAt: dueAtIso ?? null,
-      assets: assets.length ? assets : null,
-    },
-  );
+  `);
 
   const result = data.createPost;
   if (result?.message) {
