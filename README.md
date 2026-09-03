@@ -30,13 +30,16 @@ Senza `RESEND_API_KEY` in locale il form funziona ma le richieste vengono solo l
    ```
 
 ### 3. Variabili su Vercel
-**Settings → Environment Variables** (Production + Preview):
+**Settings → Environment Variables** (Production):
 
-| Variabile | Valore |
-|-----------|--------|
-| `RESEND_API_KEY` | `re_...` dalla dashboard Resend |
-| `RESEND_FROM` | `NRS Soluzioni Acustiche <preventivi@acusticahoreca.it>` |
-| `NEXT_PUBLIC_GA_ID` | *(opzionale)* ID Google Analytics `G-...` |
+| Variabile | Valore (test senza dominio) | Valore (dominio Verified) |
+|-----------|----------------------------|---------------------------|
+| `RESEND_API_KEY` | `re_...` | `re_...` |
+| `RESEND_FROM` | `NRS Soluzioni Acustiche <onboarding@resend.dev>` | `NRS Soluzioni Acustiche <preventivi@acusticahoreca.it>` |
+| `CONTACT_INBOX` | la **tua Gmail** dell’account Resend | `preventivi@acusticahoreca.it` |
+| `NEXT_PUBLIC_GA_ID` | *(opzionale)* | *(opzionale)* |
+
+**Importante:** finché il dominio non è Verified, Resend accetta solo mittente `onboarding@resend.dev` e destinatario = email del tuo account Resend.
 
 Dopo il salvataggio: **Redeploy** il progetto.
 

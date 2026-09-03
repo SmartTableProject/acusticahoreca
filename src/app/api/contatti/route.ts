@@ -45,9 +45,17 @@ export async function POST(request: Request) {
       }
 
       console.error("[NRS Contatti]", result);
+
+      const hint =
+        result.reason === "missing_api_key"
+          ? "Configura RESEND_API_KEY su Vercel."
+          : result.reason === "resend_error" && "error" in result
+            ? `Dettaglio: ${result.error}`
+            : "";
+
       return NextResponse.json(
         {
-          error: `Invio email non riuscito. Scrivi a ${site.email} o chiama ${site.phone}.`,
+          error: `Invio email non riuscito. Scrivi a ${site.email} o chiama ${site.phone}.${hint ? ` ${hint}` : ""}`,
         },
         { status: 503 },
       );

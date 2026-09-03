@@ -105,6 +105,16 @@ function autoReplyHtml(nome: string) {
   `;
 }
 
+function resendErrorMessage(error: unknown): string {
+  if (!error || typeof error !== "object") return "Errore Resend sconosciuto";
+  const e = error as { message?: string; name?: string };
+  return e.message ?? e.name ?? JSON.stringify(error);
+}
+
+/**
+ * Invia notifica al team (obbligatoria) + auto-risposta al cliente (best-effort).
+ * Senza dominio verificato: FROM = onboarding@resend.dev e TO = solo email account Resend.
+ */
 export async function sendContattiEmails(payload: ContattiPayload) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
@@ -112,36 +122,49 @@ export async function sendContattiEmails(payload: ContattiPayload) {
   }
 
   const from =
-    process.env.RESEND_FROM ?? `${site.name} <onboarding@resend.dev>`;
+    process.env.RESEND_FROM?.trim() ||
+    `${site.name} <onboarding@resend.dev>`;
+
+  /** Casella dove arrivano i preventivi (in test: la Gmail del account Resend) */
+  const inbox =
+    process.env.CONTACT_INBOX?.trim() || site.emailPreventivi;
+
   const resend = new Resend(apiKey);
   const subject = `[Preventivo] ${payload.nome} — ${label(TIPO_LABELS, payload.tipoRichiesta)}`;
 
-  const [toTeam, toClient] = await Promise.all([
-    resend.emails.send({
-      from,
-      to: [site.emailPreventivi],
-      replyTo: payload.email,
-      subject,
-      text: formatContattiPlain(payload),
-      html: formatContattiHtml(payload),
-    }),
-    resend.emails.send({
+  const toTeam = await resend.emails.send({
+    from,
+    to: [inbox],
+    replyTo: payload.email,
+    subject,
+    text: formatContattiPlain(payload),
+    html: formatContattiHtml(payload),
+  });
+
+  if (toTeam.error) {
+    console.error("[NRS Email] team", toTeam.error);
+    return {
+      sent: false as const,
+      reason: "resend_error" as const,
+      error: resendErrorMessage(toTeam.error),
+    };
+  }
+
+  // Auto-risposta: non blocca il form se fallisce (es. dominio non verificato)
+  try {
+    const toClient = await resend.emails.send({
       from,
       to: [payload.email],
       subject: `Richiesta ricevuta — ${site.name}`,
       text: `Ciao ${payload.nome.split(" ")[0]},\n\nabbiamo ricevuto la tua richiesta. Ti rispondiamo entro ${site.responseTime}.\n\n${site.name}\n${site.phone}`,
       html: autoReplyHtml(payload.nome),
-    }),
-  ]);
-
-  if (toTeam.error || toClient.error) {
-    console.error("[NRS Email]", { toTeam: toTeam.error, toClient: toClient.error });
-    return {
-      sent: false as const,
-      reason: "resend_error" as const,
-      error: toTeam.error ?? toClient.error,
-    };
+    });
+    if (toClient.error) {
+      console.warn("[NRS Email] auto-reply skip", toClient.error);
+    }
+  } catch (err) {
+    console.warn("[NRS Email] auto-reply skip", err);
   }
 
-  return { sent: true as const, ids: [toTeam.data?.id, toClient.data?.id] };
+  return { sent: true as const, ids: [toTeam.data?.id] };
 }
