@@ -1,0 +1,29 @@
+{
+  "id": "basfon",
+  "publishStatus": "draft",
+  "partnerSku": "BASFON (Art. 550+)",
+  "name": "Basfon — Resina melamminica",
+  "brand": "2B Resine",
+  "material": "Resina melamminica espansa a celle aperte",
+  "fireClass": "B-s1,d0 · DIN 4102 B1 · autoestinguente",
+  "shortDescription": "Pannelli melammina per soffitti e grandi superfici. Rapporto prestazioni/prezzo, ignifugo per locali pubblici.",
+  "catalogHints": {
+    "densityKgM3": "11,5",
+    "color": "Bianco",
+    "sheetSizeMm": "2500 x 1250",
+    "thicknessRangeMm": "5–500",
+    "variants": ["Basfon", "Basfon-All (accoppiamento alluminio)", "Basfon Bugnata", "Basfon Piramidale"]
+  },
+  "specs": {
+    "thermalConductivity": "0,037 Kcal/Mh a 40°C",
+    "applications": ["Soffitti HoReCa", "Sale riunioni", "Palchi", "Industria"]
+  },
+  "idealFor": ["Soffitti piani", "Grandi mq", "Budget controllato", "Locali aperti al pubblico"],
+  "installNrs": "partner",
+  "sourceUrls": [
+    "https://www.slideshare.net/slideshow/catalogo-2-b-resine-srl/23250494",
+    "https://2bresine.it/reazione-al-fuoco-dei-pannelli-fonoassorbenti/"
+  ],
+  "mapsToNrsSlug": "basfon",
+  "notes": "Richiedere a 2B scheda tecnica aggiornata Basfon + α assorbimento. Catalogo SlideShare datato — verificare."
+}

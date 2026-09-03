@@ -1,0 +1,55 @@
+{
+  "collectedAt": "2026-09-03",
+  "partner": "2B Resine S.r.l.",
+  "brandHoreca": "SoundOff",
+  "sites": {
+    "manufacturer": "https://2bresine.it/",
+    "designLine": "https://soundoff.it/",
+    "designPageIt": "https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/",
+    "designPageEn": "https://2bresine.it/en/noise-control-design/",
+    "fireSafety": "https://2bresine.it/reazione-al-fuoco-dei-pannelli-fonoassorbenti/",
+    "company": "https://2bresine.it/azienda/",
+    "catalogPdf": "https://www.slideshare.net/slideshow/catalogo-2-b-resine-srl/23250494"
+  },
+  "contacts": {
+    "marketing": "marketing@2bresine.it",
+    "info": "info@2bresine.it",
+    "production": "produzionemanerbio@2bresine.it",
+    "milano": {
+      "address": "Via Stelvio 51/F, 20095 Cusano Milanino",
+      "phone": "+39 02 3510559"
+    },
+    "manerbio": {
+      "address": "Strada per Porzano 5/B, 25025 Manerbio",
+      "phone": "+39 030 9383342"
+    }
+  },
+  "pagesUsefulForNrs": [
+    {
+      "url": "https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/",
+      "use": "Schede prodotto Hexagon, Hexagon Kit, Wave, Acoustic Panel, Desk Divider + case study HoReCa"
+    },
+    {
+      "url": "https://2bresine.it/reazione-al-fuoco-dei-pannelli-fonoassorbenti/",
+      "use": "Blog normativa / fiducia ristoratore (CE, UNI EN 13501-1, Euroclassi, melammina vs poliestere)"
+    },
+    {
+      "url": "https://2bresine.it/azienda/",
+      "use": "Chi siamo partner, credibilità (fondata 2001, Lucchini/Genghini)"
+    }
+  ],
+  "caseStudiesPartnerOnly": [
+    "Trattoria Lazzati",
+    "The Pacific Food Experience",
+    "Pesce d'Oro Bistrot",
+    "Prostahl (ufficio)"
+  ],
+  "gapsToRequestFromPartner": [
+    "Foto prodotto HD senza watermark per sito NRS",
+    "Schede tecniche PDF Basfon / isole (assorbimento α, peso, montaggio)",
+    "Listino rivenditori o fasce ufficiali SoundOff",
+    "Autorizzazione uso marchio SoundOff + 2B Resine",
+    "Case study testuali per adattamento Roma (se disponibili)",
+    "Link SoundOff.it — quali URL prodotto sono canonici"
+  ]
+}

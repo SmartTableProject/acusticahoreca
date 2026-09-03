@@ -1,0 +1,19 @@
+{
+  "id": "hexagon",
+  "publishStatus": "draft",
+  "partnerSku": "HEXAGON",
+  "name": "Hexagon (modulo singolo)",
+  "brand": "SoundOff / 2B Resine",
+  "material": "Fibra di poliestere grigia ad alta densità",
+  "shortDescription": "Modulo esagonale singolo — 9 pezzi per confezione. Ideale per interventi mirati o integrazioni.",
+  "specs": {
+    "packageContents": "9 esagoni",
+    "moduleSizeMm": "~350 lato",
+    "thicknessOptionsMm": [20, 30, 50],
+    "mounting": "Retro adesivo — parete o soffitto"
+  },
+  "installNrs": "fai-da-te",
+  "sourceUrls": ["https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/"],
+  "mapsToNrsSlug": null,
+  "notes": "Nuova scheda da aggiungere al catalogo NRS (complemento a Hexagon Kit)."
+}

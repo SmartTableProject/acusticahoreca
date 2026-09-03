@@ -1,0 +1,23 @@
+{
+  "id": "acoustic-panel",
+  "publishStatus": "draft",
+  "partnerSku": "ACOUSTIC-PANEL",
+  "name": "Acoustic Panel (cornice legno)",
+  "brand": "SoundOff / 2B Resine",
+  "material": "Cornice legno + interno melammina espansa + TNT forato",
+  "fireClass": "Melammina B-s1,d0 · tessuti B-s1,d0",
+  "shortDescription": "Pannello «quadro» con cornice in legno. Tessuto stampato o colorato, opzione LED retro.",
+  "specs": {
+    "frame": "Legno",
+    "core": "Resina melamminica espansa",
+    "front": "TNT forato stampato",
+    "back": "TNT nero",
+    "options": ["LED retroilluminazione ambient"],
+    "dimensionsMm": ["600 x 600", "600 x 1200", "1800 x 1200"]
+  },
+  "idealFor": ["Hotel", "Ristoranti design", "Pareti feature", "Hall"],
+  "installNrs": "partner",
+  "sourceUrls": ["https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/"],
+  "mapsToNrsSlug": null,
+  "notes": "Prodotto premium da valutare per catalogo NRS — non in prodotti attuali."
+}

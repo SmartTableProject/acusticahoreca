@@ -1,0 +1,26 @@
+{
+  "publishStatus": "draft",
+  "legalName": "2B Resine S.r.l.",
+  "founded": 2001,
+  "founders": ["Sergio Lucchini", "Luca Genghini"],
+  "headlineIt": "Specialisti in acustica — soluzioni certificate per ridurre il rumore",
+  "segments": ["industria", "design ambienti", "navale", "ferroviario"],
+  "horecaBrand": "SoundOff",
+  "processSteps": [
+    "Consulenza tecnica di progetto",
+    "Predisposizione materie prime",
+    "Esecuzione prodotto",
+    "Controllo in process"
+  ],
+  "materials": {
+    "fonoassorbenti": ["resina melamminica espansa", "fibra poliestere alta densità"],
+    "fonoimpedenti": ["accoppiamenti piombo, gomma, alluminio"]
+  },
+  "fireClasses": {
+    "melamine": "B-s1,d0",
+    "polyester": "B-s2,d0",
+    "fabrics": "B-s1,d0"
+  },
+  "nrsPositioning": "NRS è partner installazione/consulenza HoReCa su territorio Roma e Centro Italia. 2B Resine è produttore a monte; SoundOff è la linea design per locali pubblici.",
+  "sourceUrl": "https://2bresine.it/azienda/"
+}

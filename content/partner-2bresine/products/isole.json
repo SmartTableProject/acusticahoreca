@@ -1,0 +1,20 @@
+{
+  "id": "isole",
+  "publishStatus": "draft",
+  "partnerSku": "ISOLE-SOSPese",
+  "name": "Isole acustiche sospese",
+  "brand": "SoundOff / 2B Resine",
+  "material": "Melammina / poliestere (configurazione da confermare con partner)",
+  "shortDescription": "Pannelli flottanti a soffitto — assorbimento bilaterale, impatto estetico.",
+  "idealFor": ["Soffitti alti", "Locali design", "Hotel e ristoranti di pregio"],
+  "installNrs": "partner",
+  "mapsToNrsSlug": "isole",
+  "sourceUrls": ["https://2bresine.it/ (linea SoundOff)"],
+  "gapsToRequestFromPartner": [
+    "Modelli isole SoundOff",
+    "Dimensioni standard",
+    "Sistemi sospensione",
+    "Foto e schede α"
+  ],
+  "notes": "Scheda NRS esiste ma specs 2B non trovate su pagina design — chiedere al titolare."
+}

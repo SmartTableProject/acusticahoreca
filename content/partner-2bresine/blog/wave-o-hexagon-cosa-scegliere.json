@@ -1,0 +1,18 @@
+{
+  "slug": "wave-o-hexagon-cosa-scegliere",
+  "publishStatus": "draft",
+  "category": "prodotti",
+  "partnerSource": "https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/",
+  "title": "Wave o Hexagon: quale pannello per la tua sala",
+  "excerpt": "Melammina a onda vs moduli esagonali in poliestere — due strade, stesso obiettivo: meno eco.",
+  "readingMinutes": 5,
+  "cover": "/portfolio/20170802_134723.jpg",
+  "bodyNrs": [
+    "Hexagon (poliestere): moduli esagonali, tessuto personalizzabile, ottimi per pareti visibili. Ideale se vuoi un impatto estetico forte e posa modulare. Kit disponibili in formati 2000×1200 o 2500×1400 mm.",
+    "Wave (melammina): profilo onda sottile, alto rendimento su poca superficie. Ideale quando il soffitto o la parete disponibile è limitata ma il riverbero è alto. Finitura colore a base acqua.",
+    "Basfon / isole: altra strada — soffitti ampi o design sospeso. Non esiste un prodotto «migliore»: esiste quello giusto per mq, altezze e budget.",
+    "Il wizard preventivo sul sito ti dà un ordine di grandezza; in consulenza ti diciamo la combinazione che usiamo davvero nei locali simili al tuo."
+  ],
+  "cta": "/preventivo",
+  "relatedProducts": ["hexagon-kit", "wave", "basfon", "isole"]
+}

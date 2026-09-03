@@ -1,0 +1,22 @@
+{
+  "id": "wave",
+  "publishStatus": "draft",
+  "partnerSku": "WAVE",
+  "name": "Wave",
+  "brand": "SoundOff / 2B Resine",
+  "material": "Resina melamminica espansa sagomata, profilo onda",
+  "fireClass": "B-s1,d0 (melammina)",
+  "shortDescription": "Profilo onda sottile ad alto rendimento. Per sale con forte riverbero e poca superficie disponibile.",
+  "longDescriptionNrs": "Wave concentra l'assorbimento dove serve: profilo a onda, alto rendimento, poco spazio occupato. Colore a base acqua personalizzabile. Utile quando non puoi rivestire tutta la sala.",
+  "specs": {
+    "profile": "Onda sottile ad alto rendimento acustico",
+    "finish": "Colore a base d'acqua personalizzabile (vernici certificate)",
+    "dimensionsMm": ["600 x 600", "1200 x 600"],
+    "mounting": "Parete o soffitto"
+  },
+  "idealFor": ["Sale riverberanti", "Poca superficie libera", "Soffitti o pareti design"],
+  "installNrs": "fai-da-te",
+  "sourceUrls": ["https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/"],
+  "mapsToNrsSlug": "wave",
+  "notes": "Allineare copy NRS con specs 2B; verificare se Wave HP = stesso prodotto."
+}

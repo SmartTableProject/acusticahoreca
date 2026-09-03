@@ -1,0 +1,37 @@
+{
+  "id": "hexagon-kit",
+  "publishStatus": "draft",
+  "partnerSku": "HEXAGON-KIT",
+  "name": "Hexagon Kit",
+  "brand": "SoundOff / 2B Resine",
+  "material": "Fibra di poliestere ad alta densità",
+  "fireClass": "B-s2,d0 (fibra poliestere — verificare scheda lotto)",
+  "shortDescription": "Pannello modulare esagonale per parete o soffitto. Design contemporaneo, tessuto personalizzabile.",
+  "longDescriptionNrs": "Il kit esagonale è la scelta più richiesta nei ristoranti: moduli modulari, tessuto a scelta, montaggio guidato. Riduce il riverbero sulle pareti senza «chiudere» esteticamente la sala. Partner SoundOff — 2B Resine.",
+  "idealFor": ["Sale ristorante", "Bar", "Pizzerie con pareti libere"],
+  "benefits": [
+    "9 esagoni per confezione (modulo singolo Hexagon)",
+    "Retro adesivo per posa a parete o soffitto",
+    "Tessuto colorato personalizzabile",
+    "Alta densità — buone prestazioni acustiche"
+  ],
+  "specs": {
+    "moduleShape": "Esagono ~350 mm",
+    "thicknessOptionsMm": [20, 30, 50],
+    "kitDimensionsMm": ["2000 x 1200", "2500 x 1400"],
+    "modulesPerKit": "Composizione Hexagon multipli",
+    "finish": "Tessuto acustico certificato B-s1,d0"
+  },
+  "installNrs": "fai-da-te",
+  "sourceUrls": [
+    "https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/",
+    "https://2bresine.it/en/noise-control-design/"
+  ],
+  "imagesNeededFromPartner": [
+    "Render kit 2000x1200 e 2500x1400",
+    "Dettaglio tessuto e spessori",
+    "Foto installazione HoReCa (con permesso)"
+  ],
+  "mapsToNrsSlug": "hexagon-kit",
+  "notes": "Già presente su acusticahoreca — arricchire con specs da partner al OK."
+}
