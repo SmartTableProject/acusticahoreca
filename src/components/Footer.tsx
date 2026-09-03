@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { navLinks, servicePillars, site } from "@/data/site";
+import { socialLinks } from "@/data/social";
 
 export function Footer() {
   return (
@@ -24,6 +25,19 @@ export function Footer() {
           <p className="mt-2 text-xs text-stone-400">
             {site.partnerLabel} — {site.partnerMarket}
           </p>
+          <div className="mt-4 flex flex-wrap gap-4 text-sm">
+            {socialLinks.map((s) => (
+              <a
+                key={s.url}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-stone-200 underline-offset-2 hover:text-nrs-accent hover:underline"
+              >
+                {s.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <div>

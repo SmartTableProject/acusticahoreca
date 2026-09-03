@@ -10,6 +10,7 @@ export function JsonLd() {
     url: site.domain,
     email: site.email,
     telephone: site.phone,
+    sameAs: [site.facebookUrl, site.instagramUrl],
     areaServed: site.marketArea,
     founder: { "@type": "Person", name: site.titolare },
     image: `${site.domain}/portfolio/alla-lampara.jpg`,

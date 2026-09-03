@@ -1,0 +1,55 @@
+{
+  "week": "2026-W36",
+  "label": "Settimana 1 — ripartenza",
+  "mode": "sicura",
+  "status": "scheduled_in_buffer",
+  "approvedAt": "2026-09-03",
+  "scheduledAt": "2026-09-03",
+  "schedule": [
+    { "id": "w36-1", "date": "2026-09-04", "note": "in Buffer (orario Buffer)" },
+    { "id": "w36-2", "date": "2026-09-05", "note": "in Buffer" },
+    { "id": "w36-3", "date": "2026-09-07", "note": "in Buffer" },
+    { "id": "w36-4", "date": "2026-09-09", "note": "in Buffer" }
+  ],
+  "channels": ["instagram", "facebook"],
+  "notes": "4 post programmati su Buffer da Pasquale. Max 5 hashtag IG. Hashtag standard: #acustica #ristorantiRoma #HoReCa #Roma #SoundOff",
+  "hashtagsMax5": "#acustica #ristorantiRoma #HoReCa #Roma #SoundOff",
+  "posts": [
+    {
+      "id": "w36-1",
+      "day": "lunedì",
+      "suggestedTime": "10:30",
+      "pillar": "ripartenza",
+      "image": "public/portfolio/alla-lampara.jpg",
+      "imageUrl": "https://www.acusticahoreca.it/portfolio/alla-lampara.jpg",
+      "caption": "Torniamo attivi — con lo stesso metodo di sempre.\n\nAcustica per ristoranti e locali HoReCa.\nRoma e provincia: sopralluogo.\nAltrove: preventivo e consulenza online.\n\nOnesti sui tempi. Facciamo sul serio.\n\n→ acusticahoreca.it\n→ WhatsApp 393 97 45 428\n\n#acustica #ristorantiRoma #HoReCa #fonoassorbenti #Roma #SoundOff #locali #comfortacustico"
+    },
+    {
+      "id": "w36-2",
+      "day": "mercoledì",
+      "suggestedTime": "12:00",
+      "pillar": "portfolio",
+      "image": "public/portfolio/da-dante.jpg",
+      "imageUrl": "https://www.acusticahoreca.it/portfolio/da-dante.jpg",
+      "caption": "Da Dante, Roma.\n\nSoffitto alto, superfici dure: il riverbero allungava ogni voce.\nAbbiamo corretto a soffitto — senza snaturare l’estetica del locale.\n\nRisultato: meno eco, più ospitalità.\n\nHai un locale simile? Mandaci una foto.\nWhatsApp 393 97 45 428\n\n#acustica #ristorantiRoma #HoReCa #fonoassorbenti #Roma #SoundOff #locali #comfortacustico"
+    },
+    {
+      "id": "w36-3",
+      "day": "venerdì",
+      "suggestedTime": "18:30",
+      "pillar": "problema",
+      "image": "public/portfolio/7su7-5.jpg",
+      "imageUrl": "https://www.acusticahoreca.it/portfolio/7su7-5.jpg",
+      "caption": "Se al tavolo alzano la voce, non è «atmosfera».\nÈ riverbero.\n\nNei locali pieni il parlato diventa rumore di fondo.\nSi può correggere — con prodotti giusti e posa dove serve.\n\nPreventivo online in 24–48 ore lavorative.\nacusticahoreca.it/contatti\n\n#acustica #ristorantiRoma #HoReCa #fonoassorbenti #Roma #SoundOff #locali #comfortacustico"
+    },
+    {
+      "id": "w36-4",
+      "day": "sabato",
+      "suggestedTime": "11:00",
+      "pillar": "cta",
+      "image": "public/portfolio/osteria-del-sole.jpg",
+      "imageUrl": "https://www.acusticahoreca.it/portfolio/osteria-del-sole.jpg",
+      "caption": "Osteria del Sole — intervento mirato dove il riverbero colpiva di più.\n\nMetodo NRS:\n• Roma e provincia → sopralluogo\n• Altrove → consulenza e preventivo online\n\nMandaci una foto del tuo locale.\nRispondiamo in 24–48h.\n\nWhatsApp 393 97 45 428\n\n#acustica #ristorantiRoma #HoReCa #fonoassorbenti #Roma #SoundOff #locali #comfortacustico"
+    }
+  ]
+}

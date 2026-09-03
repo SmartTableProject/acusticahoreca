@@ -1,0 +1,35 @@
+{
+  "mode": "sicura",
+  "scheduler": "buffer",
+  "api": {
+    "endpoint": "https://api.buffer.com",
+    "type": "graphql",
+    "setupScript": "npm run social:buffer-setup",
+    "scheduleScript": "npm run social:buffer -- social/queue/WEEK.json --confirm",
+    "env": [
+      "BUFFER_API_KEY",
+      "BUFFER_CHANNEL_IG",
+      "BUFFER_CHANNEL_FB"
+    ],
+    "notes": "Immagini via URL pubblico acusticahoreca.it/portfolio/*.jpg. Max 5 hashtag su IG."
+  },
+  "channels": {
+    "facebook": "https://www.facebook.com/NRS.Soluzioni.acustiche",
+    "instagram": "https://www.instagram.com/nrs.acustica/"
+  },
+  "approval": {
+    "contact": "pasqualepaglialunga@gmail.com",
+    "rule": "Nessuna pubblicazione API senza OK esplicito (chat) + flag --confirm."
+  },
+  "buffer": {
+    "setupDone": true,
+    "apiKeyEnv": "BUFFER_API_KEY",
+    "channelIgEnv": "BUFFER_CHANNEL_IG",
+    "channelFbEnv": "BUFFER_CHANNEL_FB"
+  },
+  "cadence": {
+    "postsPerWeek": 4,
+    "days": ["lunedì", "mercoledì", "venerdì", "sabato"],
+    "hashtagsMax5": "#acustica #ristorantiRoma #HoReCa #Roma #SoundOff"
+  }
+}

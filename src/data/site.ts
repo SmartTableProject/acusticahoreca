@@ -28,6 +28,8 @@ export const site = {
     "Per installazioni fuori Roma collaboriamo con partner tecnici selezionati, su disponibilità.",
   piva: "10847041000",
   titolare: "Pasquale Paglialunga",
+  facebookUrl: "https://www.facebook.com/NRS.Soluzioni.acustiche",
+  instagramUrl: "https://www.instagram.com/nrs.acustica/",
 } as const;
 
 export const navLinks = [

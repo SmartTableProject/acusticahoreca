@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "sync-portfolio": "node scripts/sync-portfolio.mjs"
+    "sync-portfolio": "node scripts/sync-portfolio.mjs",
+    "social:week": "node scripts/generate-social-week.mjs",
+    "social:buffer-setup": "node scripts/buffer-setup.mjs",
+    "social:buffer": "node scripts/buffer-schedule-week.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
