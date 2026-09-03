@@ -57,7 +57,10 @@ export function ProductTeaser() {
               <p className="mt-4 text-xs text-nrs-grey">
                 {installLabels[product.install]}
               </p>
-              <p className="mt-2 text-sm font-semibold text-nrs-accent">
+              <p className="mt-2 text-sm font-semibold text-nrs-hero">
+                {product.priceBand}
+              </p>
+              <p className="mt-1 text-xs font-semibold text-nrs-accent">
                 {product.priceFrom}
               </p>
             </div>

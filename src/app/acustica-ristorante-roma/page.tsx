@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "Quanto costa?",
-    a: "Dipende da mq, prodotto e tessuto. Ti diamo una quotazione chiara dopo i dati del locale — senza giri di parole.",
+    a: "Dipende da mq, prodotto e tessuto. Sul sito trovi fasce indicative e un wizard preventivo; la quotazione reale arriva entro 24–48 ore lavorative dopo i dati del locale.",
   },
   {
     q: "Che prodotti usate?",
@@ -73,10 +73,16 @@ export default function AcusticaRistoranteRomaPage() {
               Prenota sopralluogo Roma
             </Link>
             <Link
-              href={contactTierLinks.online}
+              href="/preventivo"
               className="border border-white/50 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
-              Preventivo online
+              Preventivo guidato
+            </Link>
+            <Link
+              href="/blog"
+              className="border border-white/30 px-8 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
+            >
+              Guide
             </Link>
           </div>
         </div>

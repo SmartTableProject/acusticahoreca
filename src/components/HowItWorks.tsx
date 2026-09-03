@@ -8,7 +8,7 @@ const steps = [
     title: "Scegli online",
     text: `Indica prodotto e metratura. Preventivo entro ${site.responseTime}, senza sopralluogo.`,
     image: "/portfolio/20180608_100932.jpg",
-    href: contactTierLinks.online,
+    href: contactTierLinks.preventivo,
   },
   {
     step: "02",

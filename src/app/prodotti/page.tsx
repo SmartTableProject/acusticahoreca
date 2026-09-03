@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { installLabels, standardProducts } from "@/data/products";
-import { contactTierLinks, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Prodotti acustici SoundOff",
@@ -48,7 +48,8 @@ export default function ProdottiPage() {
               <h2 className="font-serif text-2xl font-bold text-nrs-hero">{p.name}</h2>
               <p className="mt-2 text-sm leading-relaxed text-stone-600">{p.description}</p>
               <p className="mt-3 text-xs text-nrs-grey">{installLabels[p.install]}</p>
-              <p className="mt-2 text-sm font-semibold text-nrs-accent">{p.priceFrom}</p>
+              <p className="mt-2 text-sm font-semibold text-nrs-hero">{p.priceBand}</p>
+              <p className="mt-1 text-xs text-nrs-accent">{p.priceFrom}</p>
               <p className="mt-4 text-sm font-semibold text-nrs-hero group-hover:text-nrs-accent">
                 Scheda prodotto →
               </p>
@@ -65,10 +66,10 @@ export default function ProdottiPage() {
           Invia foto o planimetria: ti indichiamo mq e prodotto adatto.
         </p>
         <Link
-          href={contactTierLinks.remote}
+          href="/preventivo"
           className="mt-6 inline-block rounded-sm bg-nrs-accent px-8 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-nrs-accent-hover"
         >
-          Consulenza a distanza
+          Preventivo guidato
         </Link>
       </div>
     </div>

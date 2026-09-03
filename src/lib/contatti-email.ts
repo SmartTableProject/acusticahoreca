@@ -1,6 +1,12 @@
 import { Resend } from "resend";
 import { site } from "@/data/site";
 
+export type ContattiAttachment = {
+  filename: string;
+  content: Buffer;
+  contentType?: string;
+};
+
 export type ContattiPayload = {
   nome: string;
   email: string;
@@ -10,6 +16,7 @@ export type ContattiPayload = {
   locale?: string;
   prodotto?: string;
   messaggio: string;
+  attachments?: ContattiAttachment[];
 };
 
 const TIPO_LABELS: Record<string, string> = {
@@ -59,6 +66,10 @@ export function formatContattiPlain(payload: ContattiPayload) {
     lines.push(`Prodotto: ${payload.prodotto}`);
   }
 
+  if (payload.attachments?.length) {
+    lines.push(`Allegati: ${payload.attachments.map((a) => a.filename).join(", ")}`);
+  }
+
   lines.push("", `Inviato da ${site.domain}/contatti`);
 
   return lines.join("\n");
@@ -76,6 +87,13 @@ export function formatContattiHtml(payload: ContattiPayload) {
 
   if (payload.prodotto) {
     rows.push(["Prodotto", payload.prodotto]);
+  }
+
+  if (payload.attachments?.length) {
+    rows.push([
+      "Allegati",
+      payload.attachments.map((a) => a.filename).join(", "),
+    ]);
   }
 
   const table = rows
@@ -155,6 +173,11 @@ export async function sendContattiEmails(payload: ContattiPayload) {
         subject,
         text: formatContattiPlain(payload),
         html: formatContattiHtml(payload),
+        attachments: payload.attachments?.map((a) => ({
+          filename: a.filename,
+          content: a.content,
+          contentType: a.contentType,
+        })),
       }),
     ),
   );

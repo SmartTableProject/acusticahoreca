@@ -54,7 +54,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href={contactTierLinks.online}
+            href={contactTierLinks.preventivo}
             className="rounded-sm bg-nrs-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-nrs-accent-hover"
           >
             Preventivo
@@ -99,7 +99,7 @@ export function Header() {
               Scrivici su WhatsApp
             </a>
             <Link
-              href={contactTierLinks.online}
+              href={contactTierLinks.preventivo}
               onClick={() => setOpen(false)}
               className="mt-2 inline-block rounded-sm bg-nrs-accent px-5 py-2 text-center text-sm font-semibold text-white"
             >

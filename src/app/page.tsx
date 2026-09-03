@@ -48,10 +48,10 @@ export default function HomePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              href={contactTierLinks.online}
+              href={contactTierLinks.preventivo}
               className="inline-block bg-nrs-accent px-8 py-3 text-sm font-semibold uppercase tracking-wide text-white hover:bg-nrs-accent-hover"
             >
-              Preventivo online
+              Preventivo guidato
             </Link>
             <a
               href={site.whatsappUrl}

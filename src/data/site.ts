@@ -37,6 +37,7 @@ export const navLinks = [
   { href: "/servizi", label: "Servizi" },
   { href: "/prodotti", label: "Prodotti" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/blog", label: "Blog" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/contatti", label: "Contatti" },
 ] as const;
@@ -53,4 +54,5 @@ export const contactTierLinks = {
   remote: "/contatti?tipo=consulenza-remota",
   roma: "/contatti?tipo=sopralluogo-roma",
   partner: "/contatti?tipo=installazione-partner",
+  preventivo: "/preventivo",
 } as const;

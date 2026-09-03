@@ -22,8 +22,8 @@ const tiers = [
       "Guida montaggio PDF/video",
       "Spedizione in area di competenza",
     ],
-    cta: "Richiedi preventivo",
-    href: contactTierLinks.online,
+    cta: "Preventivo guidato",
+    href: contactTierLinks.preventivo,
     highlight: true,
   },
   {

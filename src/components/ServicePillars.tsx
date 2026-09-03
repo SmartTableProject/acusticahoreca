@@ -8,7 +8,7 @@ const pillars = [
     text: `Kit standard SoundOff. ${site.priceLabel}. Spedizione senza sopralluogo.`,
     image: "/portfolio/20180608_100932.jpg",
     alt: "Isole acustiche a soffitto in locale HoReCa",
-    href: contactTierLinks.online,
+    href: contactTierLinks.preventivo,
   },
   {
     title: "Progetto a distanza",

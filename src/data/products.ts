@@ -1,4 +1,4 @@
-/** Prodotti standard — preventivo online (fase 1, senza checkout) */
+/** Prodotti standard — preventivo online (senza checkout) */
 export type Product = {
   id: string;
   name: string;
@@ -8,11 +8,17 @@ export type Product = {
   benefits: string[];
   priceFrom: string;
   priceHint: string;
+  /** Fascia orientativa lorda materiale+posa base — NON è un quotazione */
+  priceBand: string;
+  priceBandNote: string;
   install: "fai-da-te" | "partner" | "roma";
   badge?: string;
   image: string;
   gallery: string[];
 };
+
+export const priceDisclaimer =
+  "Fasce indicative per orientarti sull’ordine di grandezza. Non sono un listino né un preventivo: la quotazione reale dipende da mq, tessuto, accessibilità e tipo di posa.";
 
 export const standardProducts: Product[] = [
   {
@@ -31,6 +37,8 @@ export const standardProducts: Product[] = [
     ],
     priceFrom: "Preventivo online · 24–48h",
     priceHint: "Fascia indicativa in base a mq e tessuto — ti quotiamo dopo i dati del locale.",
+    priceBand: "da ~90–160 €/mq",
+    priceBandNote: "Orientativo su materiale+kit; tessuto e quantità moduli fanno variare.",
     install: "fai-da-te",
     badge: "Più richiesto",
     image: "/portfolio/alla-lampara.jpg",
@@ -52,6 +60,8 @@ export const standardProducts: Product[] = [
     ],
     priceFrom: "Preventivo online · 24–48h",
     priceHint: "Spesso la soluzione più economica per mq su soffitto.",
+    priceBand: "da ~45–85 €/mq",
+    priceBandNote: "Di solito la fascia più contenuta per grandi soffitti.",
     install: "partner",
     image: "/portfolio/20180608_100932.jpg",
     gallery: ["/portfolio/20180608_100932.jpg", "/portfolio/20180215_141018.jpg"],
@@ -72,6 +82,8 @@ export const standardProducts: Product[] = [
     ],
     priceFrom: "Preventivo online · 24–48h",
     priceHint: "Quotazione su pezzi/mq in base al layout della sala.",
+    priceBand: "da ~110–190 €/mq",
+    priceBandNote: "Più alto rendimento per mq; utile se non puoi rivestire tutto.",
     install: "fai-da-te",
     image: "/portfolio/20170802_134723.jpg",
     gallery: ["/portfolio/20170802_134723.jpg", "/portfolio/galbi.jpg"],
@@ -92,6 +104,8 @@ export const standardProducts: Product[] = [
     ],
     priceFrom: "Preventivo online · 24–48h",
     priceHint: "Il prezzo dipende da forma, tessuto e numero di isole.",
+    priceBand: "da ~180–350 €/isola",
+    priceBandNote: "Per pezzo: forma, tessuto e sospensione cambiano il totale.",
     install: "partner",
     badge: "Design",
     image: "/portfolio/20180215_141018.jpg",
@@ -107,4 +121,56 @@ export const installLabels: Record<Product["install"], string> = {
 
 export function getProduct(id: string) {
   return standardProducts.find((p) => p.id === id);
+}
+
+/** Stima grezza per il wizard — solo ordine di grandezza */
+export function estimateWizardBand(opts: {
+  mq: number;
+  superfici: string[];
+}): { label: string; note: string } {
+  const { mq, superfici } = opts;
+  if (!mq || mq < 1) {
+    return {
+      label: "Indica i mq per un ordine di grandezza",
+      note: priceDisclaimer,
+    };
+  }
+
+  const hasIsole = superfici.includes("isole");
+  const hasParete = superfici.includes("parete");
+  const hasSoffitto = superfici.includes("soffitto");
+
+  // Stima molto grezza: soffitto basfon-like, parete hexagon-like, isole pezzi
+  let low = 0;
+  let high = 0;
+  if (hasSoffitto) {
+    low += mq * 45;
+    high += mq * 85;
+  }
+  if (hasParete) {
+    const wallMq = Math.max(8, Math.round(mq * 0.35));
+    low += wallMq * 90;
+    high += wallMq * 160;
+  }
+  if (hasIsole) {
+    const n = Math.max(4, Math.round(mq / 12));
+    low += n * 180;
+    high += n * 350;
+  }
+  if (!hasSoffitto && !hasParete && !hasIsole) {
+    low = mq * 60;
+    high = mq * 140;
+  }
+
+  const fmt = (n: number) =>
+    new Intl.NumberFormat("it-IT", {
+      style: "currency",
+      currency: "EUR",
+      maximumFractionDigits: 0,
+    }).format(n);
+
+  return {
+    label: `Ordine di grandezza orientativo: ${fmt(low)} – ${fmt(high)}`,
+    note: priceDisclaimer,
+  };
 }

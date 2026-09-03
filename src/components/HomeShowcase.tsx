@@ -116,10 +116,10 @@ export function HomeShowcase() {
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
-            href="/contatti"
+            href="/preventivo"
             className="rounded-sm bg-nrs-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-nrs-accent-hover"
           >
-            Preventivo online
+            Preventivo guidato
           </Link>
           <Link
             href="/portfolio"

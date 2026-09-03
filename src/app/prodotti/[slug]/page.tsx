@@ -78,7 +78,12 @@ export default async function ProductPage({ params }: Props) {
           </p>
           <p className="mt-2 text-sm text-nrs-grey">{installLabels[product.install]}</p>
           <p className="mt-4 text-lg font-semibold text-nrs-accent">{product.priceFrom}</p>
-          <p className="mt-1 text-xs text-stone-500">{product.priceHint}</p>
+          <p className="mt-1 text-base font-semibold text-nrs-hero">{product.priceBand}</p>
+          <p className="mt-1 text-xs text-stone-500">{product.priceBandNote}</p>
+          <p className="mt-2 text-xs text-stone-500">{product.priceHint}</p>
+          <p className="mt-3 text-[11px] leading-relaxed text-stone-400">
+            Fasce indicative per orientarti — non sono un listino né un preventivo.
+          </p>
 
           <ul className="mt-8 space-y-2">
             {product.benefits.map((b) => (
@@ -91,8 +96,14 @@ export default async function ProductPage({ params }: Props) {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              href={`${contactTierLinks.online}&prodotto=${product.id}`}
+              href="/preventivo"
               className="rounded-sm bg-nrs-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white hover:bg-nrs-accent-hover"
+            >
+              Preventivo guidato
+            </Link>
+            <Link
+              href={`${contactTierLinks.online}&prodotto=${product.id}`}
+              className="rounded-sm border border-nrs-hero px-8 py-3.5 text-sm font-semibold text-nrs-hero hover:bg-stone-50"
             >
               Richiedi preventivo
             </Link>
@@ -100,7 +111,7 @@ export default async function ProductPage({ params }: Props) {
               href={site.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-sm border border-nrs-hero px-8 py-3.5 text-sm font-semibold text-nrs-hero hover:bg-stone-50"
+              className="rounded-sm border border-stone-300 px-8 py-3.5 text-sm font-semibold text-nrs-hero hover:bg-stone-50"
             >
               WhatsApp
             </a>
