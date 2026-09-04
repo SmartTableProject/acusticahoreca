@@ -17,6 +17,13 @@ export type ContattiPayload = {
   prodotto?: string;
   messaggio: string;
   attachments?: ContattiAttachment[];
+  /** Attribuzione Ads / campagne */
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_content?: string;
+  utm_term?: string;
+  gclid?: string;
 };
 
 const TIPO_LABELS: Record<string, string> = {
@@ -70,6 +77,19 @@ export function formatContattiPlain(payload: ContattiPayload) {
     lines.push(`Allegati: ${payload.attachments.map((a) => a.filename).join(", ")}`);
   }
 
+  const attribution = [
+    payload.utm_source && `utm_source: ${payload.utm_source}`,
+    payload.utm_medium && `utm_medium: ${payload.utm_medium}`,
+    payload.utm_campaign && `utm_campaign: ${payload.utm_campaign}`,
+    payload.utm_content && `utm_content: ${payload.utm_content}`,
+    payload.utm_term && `utm_term: ${payload.utm_term}`,
+    payload.gclid && `gclid: ${payload.gclid}`,
+  ].filter((line): line is string => Boolean(line));
+
+  if (attribution.length) {
+    lines.push("", "ATTRIBUZIONE CAMPAGNA", ...attribution);
+  }
+
   lines.push("", `Inviato da ${site.domain}/contatti`);
 
   return lines.join("\n");
@@ -95,6 +115,13 @@ export function formatContattiHtml(payload: ContattiPayload) {
       payload.attachments.map((a) => a.filename).join(", "),
     ]);
   }
+
+  if (payload.utm_source) rows.push(["utm_source", payload.utm_source]);
+  if (payload.utm_medium) rows.push(["utm_medium", payload.utm_medium]);
+  if (payload.utm_campaign) rows.push(["utm_campaign", payload.utm_campaign]);
+  if (payload.utm_content) rows.push(["utm_content", payload.utm_content]);
+  if (payload.utm_term) rows.push(["utm_term", payload.utm_term]);
+  if (payload.gclid) rows.push(["gclid", payload.gclid]);
 
   const table = rows
     .map(

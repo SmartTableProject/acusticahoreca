@@ -37,7 +37,9 @@ Senza `RESEND_API_KEY` in locale il form funziona ma le richieste vengono solo l
 | `RESEND_API_KEY` | `re_...` | `re_...` |
 | `RESEND_FROM` | `NRS Soluzioni Acustiche <onboarding@resend.dev>` | `NRS Soluzioni Acustiche <preventivi@acusticahoreca.it>` |
 | `CONTACT_INBOX` | la **tua Gmail** dell’account Resend | `preventivi@acusticahoreca.it` |
-| `NEXT_PUBLIC_GA_ID` | *(opzionale)* | *(opzionale)* |
+| `NEXT_PUBLIC_GA_ID` | *(opzionale)* `G-…` | stesso |
+| `NEXT_PUBLIC_GOOGLE_ADS_ID` | *(opzionale)* `AW-…` | stesso |
+| `NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL` | *(opzionale)* label conversione | stesso |
 
 **Importante:** finché il dominio non è Verified, Resend accetta solo mittente `onboarding@resend.dev` e destinatario = email del tuo account Resend.
 
@@ -46,6 +48,16 @@ Dopo il salvataggio: **Redeploy** il progetto.
 ### Cosa invia il form
 - Email a **preventivi@acusticahoreca.it** con tutti i dati (reply-to = cliente)
 - Email di conferma automatica al cliente
+- Se presenti: UTM / `gclid` (da dove arriva il lead Ads)
+
+## Google Analytics + Google Ads
+
+1. Banner cookie: **Accetta tutto** (analitica + Ads) oppure **Solo tecnici**
+2. Consent Mode v2: default `denied` finché l’utente non sceglie
+3. Dopo submit form → redirect `/contatti/grazie` + eventi `generate_lead` / `conversion`
+4. Guida campagna Search Roma: [`content/ads/google-ads-roma.md`](content/ads/google-ads-roma.md)
+
+Su Vercel, dopo aver creato la conversion action in Google Ads, inserisci ID e label (vedi tabella sopra) e fai Redeploy. **Non attivare la campagna** finché un form di prova non risulta come conversione.
 
 ## Deploy su Vercel
 
@@ -56,17 +68,21 @@ Dopo il salvataggio: **Redeploy** il progetto.
 
 | Tipo | Nome | Valore |
 |------|------|--------|
-| A | @ | `76.76.21.21` |
-| CNAME | www | `cname.vercel-dns.com` |
+| A | @ | `216.198.79.1` (verifica in dashboard Vercel) |
+| CNAME | www | valore `*.vercel-dns-*.com` mostrato da Vercel |
 
 ## Struttura
 
 - `/` — Homepage
 - `/servizi` — Tre livelli servizio
-- `/portfolio` — Galleria (44 locali, 193 foto)
+- `/prodotti` — Catalogo + schede
+- `/portfolio` — Galleria
+- `/preventivo` — Wizard preventivo
+- `/acustica-ristorante-roma` — Landing SEO / Ads Roma
+- `/contatti` — Form · `/contatti/grazie` dopo invio
+- `/blog` — Guide
 - `/chi-siamo` — NRS
-- `/contatti` — Form preventivo
-- `/privacy` — Privacy policy
+- `/privacy` — Privacy + cookie
 
 ## Portfolio
 

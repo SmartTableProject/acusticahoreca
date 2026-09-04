@@ -1,7 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site } from "@/data/site";
+import { trackLeadConversion } from "@/lib/analytics";
+import { appendUtmToFormData } from "@/lib/utm";
 
 type FormState = "idle" | "loading" | "success" | "error";
 
@@ -24,6 +27,7 @@ export function ContactForm({
   defaultMessaggio = "",
   showUpload = true,
 }: Props) {
+  const router = useRouter();
   const [state, setState] = useState<FormState>("idle");
   const [message, setMessage] = useState("");
   const [tipo, setTipo] = useState(defaultTipo);
@@ -66,6 +70,7 @@ export function ContactForm({
     for (const f of files) {
       data.append("foto", f);
     }
+    appendUtmToFormData(data);
 
     try {
       const res = await fetch("/api/contatti", {
@@ -84,11 +89,10 @@ export function ContactForm({
         return;
       }
 
-      setState("success");
-      setMessage(`Richiesta inviata. Ti rispondiamo entro ${site.responseTime}.`);
-      form.reset();
-      setFiles([]);
-      setTipo(defaultTipo);
+      trackLeadConversion(
+        defaultProdotto ? "product_form" : defaultMessaggio ? "preventivo_wizard" : "contact_form",
+      );
+      router.push("/contatti/grazie");
     } catch {
       setState("error");
       setMessage(`Errore di invio. Scrivi a ${site.email} o chiama ${site.phone}.`);

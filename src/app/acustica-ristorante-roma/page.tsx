@@ -8,7 +8,7 @@ import { portfolioStats } from "@/data/portfolio";
 export const metadata: Metadata = {
   title: "Acustica ristorante Roma",
   description:
-    "Correzione acustica per ristoranti e bar a Roma e provincia. Sopralluogo locale, pannelli SoundOff, preventivo online. NRS Soluzioni Acustiche.",
+    "Correzione acustica per ristoranti e bar a Roma e provincia. Sopralluogo locale, pannelli SoundOff, preventivo online in 24–48h. NRS Soluzioni Acustiche.",
   keywords: [
     "acustica ristorante Roma",
     "pannelli fonoassorbenti Roma",
@@ -44,7 +44,7 @@ const faqs = [
 export default function AcusticaRistoranteRomaPage() {
   return (
     <>
-      <section className="relative min-h-[48vh] overflow-hidden">
+      <section className="relative min-h-[52vh] overflow-hidden">
         <Image
           src="/portfolio/felice-a-testaccio.jpg"
           alt="Correzione acustica ristorante Roma"
@@ -53,36 +53,38 @@ export default function AcusticaRistoranteRomaPage() {
           priority
         />
         <div className="absolute inset-0 bg-nrs-hero/70" />
-        <div className="relative mx-auto flex min-h-[48vh] max-w-6xl flex-col justify-end px-4 pb-12 pt-28 md:px-6">
+        <div className="relative mx-auto flex min-h-[52vh] max-w-6xl flex-col justify-end px-4 pb-12 pt-28 md:px-6">
           <p className="text-xs font-bold uppercase tracking-[0.25em] text-nrs-accent">
-            Roma e provincia
+            Roma e provincia · Onesti sui tempi
           </p>
           <h1 className="mt-3 max-w-3xl font-serif text-4xl font-bold uppercase leading-tight text-white md:text-5xl">
             Acustica per ristoranti a Roma
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-stone-200">
-            Meno riverbero, più ospiti che tornano. Sopralluogo in zona, preventivo
-            online, prodotti SoundOff. {portfolioStats.projects} locali già in
-            galleria.
+            Meno riverbero al tavolo, più ospiti che tornano. Sopralluogo in zona
+            o preventivo online in {site.responseTime}. {portfolioStats.projects}{" "}
+            locali già documentati.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              href={contactTierLinks.roma}
+              href="/preventivo"
               className="bg-nrs-accent px-8 py-3 text-sm font-bold uppercase tracking-wide text-white hover:bg-nrs-accent-hover"
             >
-              Prenota sopralluogo Roma
+              Preventivo in 24–48h
             </Link>
-            <Link
-              href="/preventivo"
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="border border-white/50 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
-              Preventivo guidato
-            </Link>
+              WhatsApp
+            </a>
             <Link
-              href="/blog"
+              href={contactTierLinks.roma}
               className="border border-white/30 px-8 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
             >
-              Guide
+              Sopralluogo Roma
             </Link>
           </div>
         </div>
@@ -128,12 +130,6 @@ export default function AcusticaRistoranteRomaPage() {
               </div>
             ))}
           </dl>
-          <Link
-            href="/prodotti"
-            className="mt-10 inline-block text-sm font-semibold text-nrs-accent underline"
-          >
-            Vedi catalogo prodotti →
-          </Link>
         </div>
         <script
           type="application/ld+json"
@@ -157,15 +153,15 @@ export default function AcusticaRistoranteRomaPage() {
             Il tuo locale a Roma merita di essere comodo
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-stone-300">
-            Scrivici: ti diciamo subito se serve sopralluogo o se basta un
-            preventivo online.
+            Inizia dal preventivo guidato: ti diciamo subito se serve sopralluogo
+            o se basta un intervento online.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
-              href={contactTierLinks.roma}
+              href="/preventivo"
               className="bg-nrs-accent px-8 py-3 text-sm font-bold uppercase tracking-wide hover:bg-nrs-accent-hover"
             >
-              Contattaci
+              Richiedi preventivo
             </Link>
             <a
               href={site.whatsappUrl}

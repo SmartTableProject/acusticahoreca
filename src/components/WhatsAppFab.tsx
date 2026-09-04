@@ -1,4 +1,7 @@
+"use client";
+
 import { site } from "@/data/site";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export function WhatsAppFab() {
   return (
@@ -7,6 +10,7 @@ export function WhatsAppFab() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contattaci su WhatsApp"
+      onClick={() => trackWhatsAppClick()}
       className="fixed bottom-20 right-4 z-[90] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:scale-105 md:bottom-6"
     >
       <svg className="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden>

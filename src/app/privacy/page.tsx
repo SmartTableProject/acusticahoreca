@@ -66,9 +66,26 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-nrs-hero">Cookie</h2>
           <p>
-            Il sito utilizza cookie tecnici necessari al funzionamento e, previo
-            consenso, strumenti di analisi del traffico. Puoi gestire le preferenze
-            dal banner cookie.
+            Il sito utilizza cookie tecnici necessari al funzionamento. Con il tuo
+            consenso esplicito (banner «Accetta tutto») attiviamo anche:
+          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-5">
+            <li>
+              <strong>Analitica</strong> — Google Analytics 4, per capire come viene
+              usato il sito (pagine visitate, dispositivi). IP anonimizzato dove
+              supportato.
+            </li>
+            <li>
+              <strong>Marketing / Ads</strong> — tag Google Ads per misurare le
+              conversioni delle campagne pubblicitarie (es. invio preventivo) e,
+              ove applicabile, remarketing.
+            </li>
+          </ul>
+          <p className="mt-3">
+            Puoi scegliere «Solo tecnici» e navigare senza analitica né Ads. Puoi
+            cambiare preferenza cancellando i dati del sito dal browser e
+            ricaricando la pagina (riappare il banner). Base giuridica: consenso
+            (art. 6.1.a GDPR).
           </p>
         </section>
 

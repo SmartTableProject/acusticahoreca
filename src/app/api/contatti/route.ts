@@ -68,8 +68,22 @@ class ResponseError extends Error {
 export async function POST(request: Request) {
   try {
     const { fields, attachments } = await parseBody(request);
-    const { nome, email, telefono, citta, tipoRichiesta, locale, messaggio, prodotto } =
-      fields;
+    const {
+      nome,
+      email,
+      telefono,
+      citta,
+      tipoRichiesta,
+      locale,
+      messaggio,
+      prodotto,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      utm_content,
+      utm_term,
+      gclid,
+    } = fields;
 
     if (!nome || nome.trim().length < 2) {
       return NextResponse.json({ error: "Nome non valido" }, { status: 400 });
@@ -83,6 +97,11 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Messaggio troppo breve" }, { status: 400 });
     }
 
+    const trimOpt = (v?: string) => {
+      const t = v?.trim();
+      return t ? t.slice(0, 200) : undefined;
+    };
+
     const payload: ContattiPayload = {
       nome: nome.trim(),
       email: email.trim(),
@@ -93,6 +112,12 @@ export async function POST(request: Request) {
       prodotto: prodotto || undefined,
       messaggio: messaggio.trim(),
       attachments,
+      utm_source: trimOpt(utm_source),
+      utm_medium: trimOpt(utm_medium),
+      utm_campaign: trimOpt(utm_campaign),
+      utm_content: trimOpt(utm_content),
+      utm_term: trimOpt(utm_term),
+      gclid: trimOpt(gclid),
     };
 
     const result = await sendContattiEmails(payload);

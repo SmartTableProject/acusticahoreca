@@ -5,6 +5,7 @@ import { CookieBanner } from "@/components/CookieBanner";
 import { FaqJsonLd, JsonLd } from "@/components/JsonLd";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { UtmCapture } from "@/components/UtmCapture";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { site } from "@/data/site";
 import "./globals.css";
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <WhatsAppFab />
+        <UtmCapture />
         <CookieBanner />
         <Analytics />
       </body>
