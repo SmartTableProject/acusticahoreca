@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { Analytics } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { FaqJsonLd, JsonLd } from "@/components/JsonLd";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <UtmCapture />
         <CookieBanner />
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );

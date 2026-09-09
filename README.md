@@ -59,6 +59,11 @@ Dopo il salvataggio: **Redeploy** il progetto.
 
 Su Vercel, dopo aver creato la conversion action in Google Ads, inserisci ID e label (vedi tabella sopra) e fai Redeploy. **Non attivare la campagna** finché un form di prova non risulta come conversione.
 
+## Vercel Web Analytics
+
+Visite e pagine viste nel pannello Vercel (senza aprire Google Analytics):  
+**Progetto → Analytics**. Il pacchetto `@vercel/analytics` è nel layout; attiva **Web Analytics** nelle impostazioni del progetto se non è già on.
+
 ## Deploy su Vercel
 
 1. Push su GitHub → deploy automatico
