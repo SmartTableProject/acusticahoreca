@@ -1,4 +1,6 @@
 /** Prodotti standard — preventivo online (senza checkout) */
+import { retailBands } from "@/data/listino-pubblico";
+
 export type Product = {
   id: string;
   name: string;
@@ -8,7 +10,7 @@ export type Product = {
   benefits: string[];
   priceFrom: string;
   priceHint: string;
-  /** Fascia orientativa lorda materiale+posa base — NON è un quotazione */
+  /** Fascia orientativa materiale — NON è un quotazione */
   priceBand: string;
   priceBandNote: string;
   install: "fai-da-te" | "partner" | "roma";
@@ -18,7 +20,7 @@ export type Product = {
 };
 
 export const priceDisclaimer =
-  "Fasce indicative per orientarti sull’ordine di grandezza. Non sono un listino né un preventivo: la quotazione reale dipende da mq, tessuto, accessibilità e tipo di posa.";
+  "Fasce indicative sul solo materiale (ordine di grandezza). Non sono un listino né un preventivo: la quotazione reale dipende da pezzi, finitura, spedizione e tipo di posa.";
 
 export const standardProducts: Product[] = [
   {
@@ -27,18 +29,18 @@ export const standardProducts: Product[] = [
     description:
       "Moduli esagonali in poliestere, tessuto personalizzabile. Ideale per pareti in sala ristorante.",
     longDescription:
-      "Il kit esagonale è la scelta più richiesta nei ristoranti: moduli modulari, tessuto a scelta, montaggio guidato. Riduce il riverbero sulle pareti senza «chiudere» esteticamente la sala.",
+      "Il kit esagonale è la scelta più richiesta nei ristoranti: moduli modulari, tessuto a scelta, montaggio guidato. Riduce il riverbero sulle pareti senza «chiudere» esteticamente la sala. Formato kit standard 2000×1200 mm; disponibili anche moduli singoli.",
     idealFor: "Sale ristorante, bar, pizzerie con pareti libere",
     benefits: [
-      "Tessuto personalizzabile sul colore del locale",
+      "Tessuto Pugi personalizzabile sul colore del locale",
       "Montaggio fai-da-te con guida inclusa",
       "Estetica arredo, non «pannello tecnico»",
-      "Preventivo rapido su mq e quantità moduli",
+      "Preventivo rapido su kit o pezzi",
     ],
     priceFrom: "Preventivo online · 24–48h",
-    priceHint: "Fascia indicativa in base a mq e tessuto — ti quotiamo dopo i dati del locale.",
-    priceBand: "da ~90–160 €/mq",
-    priceBandNote: "Orientativo su materiale+kit; tessuto e quantità moduli fanno variare.",
+    priceHint: "Fascia sul kit 2000×1200 o sui singoli moduli — ti quotiamo dopo i dati del locale.",
+    priceBand: retailBands.hexagonKit.label,
+    priceBandNote: retailBands.hexagonKit.note,
     install: "fai-da-te",
     badge: "Più richiesto",
     image: "/portfolio/alla-lampara.jpg",
@@ -50,18 +52,18 @@ export const standardProducts: Product[] = [
     description:
       "Pannelli a soffitto ignifughi, certificati per locali pubblici. Soluzione performante ed economica per HoReCa.",
     longDescription:
-      "Basfon in melammina è pensato per soffitti di locali pubblici: performance acustica, reazione al fuoco adeguata agli ambienti HoReCa, costo contenuto rispetto a soluzioni decorative complesse.",
+      "Basfon in melammina è pensato per soffitti di locali pubblici: performance acustica, reazione al fuoco adeguata agli ambienti HoReCa, costo contenuto. Disponibile nuda o verniciata RAL acqua (spessori 40/50 mm; formati 600×600, 1200×600).",
     idealFor: "Soffitti piani, locali con budget controllato, interventi ampi",
     benefits: [
       "Ignifugo, adatto a locali aperti al pubblico",
-      "Ottimo rapporto prestazioni/prezzo",
-      "Ideale su grandi superfici a soffitto",
+      "Ottimo rapporto prestazioni/prezzo in versione nuda",
+      "RAL acqua per allinearsi al colore della sala",
       "Installazione con partner su richiesta",
     ],
     priceFrom: "Preventivo online · 24–48h",
-    priceHint: "Spesso la soluzione più economica per mq su soffitto.",
-    priceBand: "da ~45–85 €/mq",
-    priceBandNote: "Di solito la fascia più contenuta per grandi soffitti.",
+    priceHint: "Nuda = fascia più bassa; RAL = fascia alta. Spesso la soluzione più economica per mq su soffitto.",
+    priceBand: retailBands.basfon.label,
+    priceBandNote: retailBands.basfon.note,
     install: "partner",
     image: "/portfolio/20180608_100932.jpg",
     gallery: ["/portfolio/20180608_100932.jpg", "/portfolio/20180215_141018.jpg"],
@@ -72,7 +74,7 @@ export const standardProducts: Product[] = [
     description:
       "Profilo onda ad alto rendimento acustico. Per sale con forte riverbero e poca superficie.",
     longDescription:
-      "Wave High Performance concentra l'assorbimento dove serve: profilo a onda, alto rendimento, poco spazio occupato. Utile quando non puoi rivestire tutta la sala.",
+      "Wave High Performance concentra l'assorbimento dove serve: profilo a onda in melammina sp. 50 mm, alto rendimento, poco spazio occupato. Formati 600×600 e 1200×600.",
     idealFor: "Sale riverberanti con poca superficie disponibile",
     benefits: [
       "Alto rendimento su poca superficie",
@@ -81,9 +83,9 @@ export const standardProducts: Product[] = [
       "Partner SoundOff — 2B Resine",
     ],
     priceFrom: "Preventivo online · 24–48h",
-    priceHint: "Quotazione su pezzi/mq in base al layout della sala.",
-    priceBand: "da ~110–190 €/mq",
-    priceBandNote: "Più alto rendimento per mq; utile se non puoi rivestire tutto.",
+    priceHint: "Quotazione a pezzo in base al layout della sala.",
+    priceBand: retailBands.wave.label,
+    priceBandNote: retailBands.wave.note,
     install: "fai-da-te",
     image: "/portfolio/20170802_134723.jpg",
     gallery: ["/portfolio/20170802_134723.jpg", "/portfolio/galbi.jpg"],
@@ -94,18 +96,18 @@ export const standardProducts: Product[] = [
     description:
       "Pannelli flottanti a soffitto. Intervento estetico con impatto acustico immediato.",
     longDescription:
-      "Le isole sospese lavorano su entrambe le facce e diventano elemento di design. Perfette quando il soffitto è alto o vuoi un intervento visibile ma elegante.",
+      "Le isole sospese (sp. 80 mm, diametri Ø800 / 1000 / 1200) lavorano su entrambe le facce. Melammina base, RAL o poliestere+tessuto Pugi. Kit sospensione a parte.",
     idealFor: "Soffitti alti, locali design, hotel e ristoranti di pregio",
     benefits: [
       "Assorbimento bilaterale",
-      "Forte impatto estetico",
-      "Intervento reversibile / non invasivo",
+      "Tre diametri standard",
+      "Finitura nuda, RAL o tessuto",
       "Posa con partner o chiavi in mano a Roma",
     ],
     priceFrom: "Preventivo online · 24–48h",
-    priceHint: "Il prezzo dipende da forma, tessuto e numero di isole.",
-    priceBand: "da ~180–350 €/isola",
-    priceBandNote: "Per pezzo: forma, tessuto e sospensione cambiano il totale.",
+    priceHint: "Il prezzo dipende da diametro, finitura e punti di sospensione.",
+    priceBand: retailBands.isole.label,
+    priceBandNote: retailBands.isole.note,
     install: "partner",
     badge: "Design",
     image: "/portfolio/20180215_141018.jpg",
@@ -123,7 +125,7 @@ export function getProduct(id: string) {
   return standardProducts.find((p) => p.id === id);
 }
 
-/** Stima grezza per il wizard — solo ordine di grandezza */
+/** Stima grezza per il wizard — solo ordine di grandezza (fasce vendita, non netti) */
 export function estimateWizardBand(opts: {
   mq: number;
   superfici: string[];
@@ -140,26 +142,25 @@ export function estimateWizardBand(opts: {
   const hasParete = superfici.includes("parete");
   const hasSoffitto = superfici.includes("soffitto");
 
-  // Stima molto grezza: soffitto basfon-like, parete hexagon-like, isole pezzi
   let low = 0;
   let high = 0;
   if (hasSoffitto) {
-    low += mq * 45;
-    high += mq * 85;
+    low += mq * retailBands.basfon.eurPerMqLow;
+    high += mq * retailBands.basfon.eurPerMqHigh;
   }
   if (hasParete) {
     const wallMq = Math.max(8, Math.round(mq * 0.35));
-    low += wallMq * 90;
-    high += wallMq * 160;
+    low += wallMq * retailBands.hexagonKit.eurPerMqLow;
+    high += wallMq * retailBands.hexagonKit.eurPerMqHigh;
   }
   if (hasIsole) {
     const n = Math.max(4, Math.round(mq / 12));
-    low += n * 180;
-    high += n * 350;
+    low += n * retailBands.isole.eurPerIslandLow;
+    high += n * retailBands.isole.eurPerIslandHigh;
   }
   if (!hasSoffitto && !hasParete && !hasIsole) {
-    low = mq * 60;
-    high = mq * 140;
+    low = mq * 70;
+    high = mq * 150;
   }
 
   const fmt = (n: number) =>

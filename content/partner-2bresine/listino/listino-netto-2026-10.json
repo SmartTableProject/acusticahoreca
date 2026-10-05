@@ -1,0 +1,44 @@
+{
+  "receivedAt": "2026-10-05",
+  "from": "Luca Genghini / 2B Resine",
+  "currency": "EUR",
+  "priceType": "net_to_nrs",
+  "vat": "unspecified",
+  "doNotPublishNetsOnWebsite": true,
+  "provisionalRetailMarginFactor": 2,
+  "melammina": {
+    "nuda": {
+      "600x600": { "40mm": 9.3, "50mm": 11.7 },
+      "1200x600": { "40mm": 18.6, "50mm": 23.4 },
+      "2500x1250": { "40mm": 74, "50mm": 92 }
+    },
+    "ralAcqua": {
+      "600x600": { "40mm": 22.3, "50mm": 24.7 },
+      "1200x600": { "40mm": 44, "50mm": 49 },
+      "2500x1250": { "note": "non_verniciabile_intera", "40mm": 74, "50mm": 92 }
+    },
+    "wave50mm": {
+      "600x600": 30,
+      "1200x600": 60
+    },
+    "accessoriPuntoAggancio": 3
+  },
+  "fiberfon": {
+    "bianca50mmEurMq": 20,
+    "nera50mmEurMq": 22,
+    "hexagonSingolo350mmConf9pz": 33,
+    "hexagonKit": { "2000x1200": 150, "2500x1400": null }
+  },
+  "isoleSp80mm": {
+    "base": { "800": 60, "1000": 80, "1200": 100 },
+    "ralOTessutoPugi": { "800": 90, "1000": 120, "1200": 150 },
+    "sospensionePunto": 3
+  },
+  "gaps": [
+    "airlite",
+    "formula_margine_ufficiale",
+    "cartella_colori_pugi",
+    "hexagon_kit_2500x1400",
+    "tempi_dropship_iva"
+  ]
+}
