@@ -104,7 +104,7 @@ Copia allineata al sito: onesti sui tempi, sopralluogo Roma, preventivo 24–48h
 2. Meno eco, più ospiti  
 3. Preventivo in 24–48h  
 4. Sopralluogo Roma e provincia  
-5. Il locale finalmente comodo  
+5. Silenzioso e confortevole 
 6. Partner tecnico SoundOff  
 7. Onesti sui tempi  
 8. 44 locali documentati  
@@ -146,7 +146,7 @@ Copia allineata al sito: onesti sui tempi, sopralluogo Roma, preventivo 24–48h
 4. Rispondiamo in 24–48h  
 5. Niente prezzo inventato  
 6. Quotazione su dati reali  
-7. Locale comodo = cover  
+7. Locale silenzioso = cover 
 8. Acustica HoReCa  
 9. Richiedi preventivo ora  
 10. acusticahoreca.it  

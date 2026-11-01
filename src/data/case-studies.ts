@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/portfolio/7su7-5.jpg",
     problema: "Cover alta: il parlato diventava rumore di fondo continuo.",
     soluzione: "Intervento completo su superfici critiche con moduli e isole.",
-    risultato: "Serate più comode per ospiti e staff; locale più «rilassato» acusticamente.",
+    risultato: "Serate più silenziose e confortevoli per ospiti e staff; locale più «rilassato» acusticamente.",
     prodotti: ["hexagon-kit", "wave"],
     mqHint: "Sala affollata · multi-superficie",
   },

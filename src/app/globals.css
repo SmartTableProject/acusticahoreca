@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* Template B — Warm HoReCa */
-  --nrs-hero: #292524;
-  --nrs-header: #fafaf9;
-  --nrs-accent: #c2410c;
-  --nrs-accent-hover: #9a3412;
-  --nrs-body: #fafaf9;
-
-  /* Alias semantici */
+  /* Officina tecnica — allineato ai mockup STAMPA */
+  --nrs-hero: #1c1917;
+  --nrs-header: #ffffff;
+  --nrs-accent: #0f766e;
+  --nrs-accent-hover: #0d9488;
+  --nrs-body: #f4f4f5;
   --nrs-dark: var(--nrs-hero);
-  --nrs-dark-elevated: #44403c;
-  --nrs-grey: #78716c;
+  --nrs-dark-elevated: #292524;
+  --nrs-grey: #57534e;
   --nrs-grey-light: #a8a29e;
   --nrs-white: #ffffff;
   --nrs-bg: var(--nrs-body);
   --nrs-foreground: var(--nrs-hero);
+  --nrs-concrete: #e7e5e4;
+  --nrs-paper: #f0eeea;
 }
 
 @theme inline {
@@ -26,6 +26,8 @@
   --color-nrs-dark: var(--nrs-dark);
   --color-nrs-elevated: var(--nrs-dark-elevated);
   --color-nrs-grey: var(--nrs-grey);
+  --color-nrs-concrete: var(--nrs-concrete);
+  --color-nrs-paper: var(--nrs-paper);
   --color-background: var(--nrs-bg);
   --color-foreground: var(--nrs-foreground);
   --font-sans: var(--font-barlow);
@@ -49,17 +51,193 @@ h3,
 
 .font-logo {
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 1;
 }
 
-@keyframes ken-burns {
-  from {
-    transform: scale(1);
+/* Foto: look catalogo/mockup (desaturate) */
+.nrs-photo-catalog {
+  filter: saturate(0.35) contrast(1.08) brightness(0.98);
+}
+
+.nrs-photo-bw {
+  filter: grayscale(1) contrast(1.08);
+  transition:
+    filter 0.45s ease,
+    transform 0.7s ease;
+}
+
+/* Hover: la foto torna a colori */
+.group:hover .nrs-photo-bw,
+a:hover .nrs-photo-bw {
+  filter: grayscale(0) contrast(1.02) saturate(1.05);
+}
+
+/* Carta tecnica / cemento — come mockup 2 e 4 */
+.nrs-paper {
+  background-color: var(--nrs-paper);
+  background-image:
+    radial-gradient(rgba(28, 25, 23, 0.035) 0.6px, transparent 0.6px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 40%);
+  background-size: 3px 3px, auto;
+}
+
+.nrs-concrete-bg {
+  background-color: var(--nrs-concrete);
+  background-image:
+    radial-gradient(rgba(28, 25, 23, 0.04) 0.7px, transparent 0.7px);
+  background-size: 4px 4px;
+}
+
+/* Mirino tecnico (mockup tre porte) */
+.nrs-crosshair {
+  position: relative;
+}
+.nrs-crosshair::before,
+.nrs-crosshair::after {
+  content: "";
+  position: absolute;
+  background: var(--nrs-accent);
+  opacity: 0.85;
+}
+.nrs-crosshair::before {
+  width: 10px;
+  height: 1px;
+  top: 0;
+  left: -4px;
+}
+.nrs-crosshair::after {
+  width: 1px;
+  height: 10px;
+  top: -4px;
+  left: 0;
+}
+
+/* Angolo a L (blueprint) */
+.nrs-bracket {
+  position: relative;
+}
+.nrs-bracket::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid var(--nrs-accent);
+  border-left: 2px solid var(--nrs-accent);
+  pointer-events: none;
+}
+
+/* Porte Percorsi — lift al passaggio mouse */
+.nrs-door {
+  opacity: 1;
+}
+.nrs-door:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(28, 25, 23, 0.14);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nrs-door:hover {
+    transform: none;
+    box-shadow: none;
   }
-  to {
-    transform: scale(1.07);
+}
+
+/* Titolo sezione tra due linee — mockup catalogo */
+.nrs-section-rule {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.nrs-section-rule::before,
+.nrs-section-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #a8a29e;
+  opacity: 0.55;
+}
+
+.nrs-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--nrs-accent);
+}
+
+.nrs-page-title {
+  font-family: var(--font-barlow-condensed), Impact, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Collage home — template fisso come mockup 3 (zero buchi) */
+.nrs-collage {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(6, minmax(120px, 28vw));
+  grid-template-areas:
+    "a a"
+    "a a"
+    "b c"
+    "d e"
+    "f g"
+    "h i";
+}
+
+@media (min-width: 768px) {
+  .nrs-collage {
+    gap: 0.65rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(160px, 20vw));
+    grid-template-areas:
+      "a a b c"
+      "a a d e"
+      "f g h i";
   }
+}
+
+/* Collage nel Dossier: riempie l'altezza disponibile */
+.nrs-collage.nrs-collage-fill {
+  height: 100%;
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .nrs-collage.nrs-collage-fill {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.nrs-collage-a { grid-area: a; }
+.nrs-collage-b { grid-area: b; }
+.nrs-collage-c { grid-area: c; }
+.nrs-collage-d { grid-area: d; }
+.nrs-collage-e { grid-area: e; }
+.nrs-collage-f { grid-area: f; }
+.nrs-collage-g { grid-area: g; }
+.nrs-collage-h { grid-area: h; }
+.nrs-collage-i { grid-area: i; }
+
+/* Celle collage cliccabili: manina + area piena */
+.nrs-collage > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  cursor: pointer;
+}
+
+/* Manina su tutti i controlli del dossier */
+.nrs-dossier a,
+.nrs-dossier button {
+  cursor: pointer;
 }
 
 @keyframes ken-burns-soft {
@@ -71,22 +249,17 @@ h3,
   }
 }
 
-.animate-ken-burns {
-  animation: ken-burns 5.5s ease-out forwards;
-}
-
 .animate-ken-burns-soft {
   animation: ken-burns-soft 6s ease-out forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-ken-burns,
   .animate-ken-burns-soft {
     animation: none;
   }
 }
 
 ::selection {
-  background: #fed7aa;
+  background: #ccfbf1;
   color: var(--nrs-hero);
 }

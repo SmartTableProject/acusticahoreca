@@ -87,7 +87,7 @@ export function HomeShowcase() {
               src={slide.src}
               alt={slide.title}
               fill
-              className={`object-cover ${isActive ? "animate-ken-burns-soft" : ""}`}
+              className={`nrs-photo-catalog object-cover ${isActive ? "animate-ken-burns-soft" : ""}`}
               style={{ objectPosition: slide.objectPosition ?? "center center" }}
               sizes="100vw"
               priority={i < 2}
@@ -96,45 +96,60 @@ export function HomeShowcase() {
         );
       })}
 
+      {/* Overlay catalogo: più scuro a sinistra, foto leggibile a destra */}
       <div
-        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-nrs-hero via-nrs-hero/45 to-nrs-hero/15"
+        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-r from-nrs-hero via-nrs-hero/75 to-nrs-hero/25"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-nrs-hero/90 via-transparent to-nrs-hero/20"
         aria-hidden
       />
 
       <div className="relative z-[3] mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-8 pt-28 md:min-h-[92vh] md:px-6 md:pb-12 md:pt-32">
-        <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-nrs-accent">
-          {site.logoCategory} · {site.marketArea}
+        <p className="text-[11px] font-bold uppercase tracking-[0.32em] text-nrs-accent">
+          Art. catalogo · {site.supplier}
         </p>
-        <h1 className="mt-4 max-w-3xl font-serif text-4xl font-bold uppercase leading-[1.05] tracking-[0.02em] md:text-5xl lg:text-[3.5rem]">
+        <p className="mt-3 font-logo text-2xl uppercase tracking-[0.08em] text-white md:text-3xl">
+          NRS
+        </p>
+        <h1 className="mt-3 max-w-3xl font-serif text-4xl font-bold uppercase leading-[1.05] tracking-[0.02em] md:text-5xl lg:text-[3.5rem]">
           {site.heroHeadline}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg font-medium leading-snug text-stone-200 md:text-xl">
-          {site.clientSubline}
+        <div className="mt-5 h-px w-16 bg-nrs-accent" aria-hidden />
+        <p className="mt-4 max-w-xl text-[11px] font-bold uppercase tracking-[0.22em] text-stone-300">
+          Pannelli acustici · Progettazione · Misura · Risultati
         </p>
-        <p className="mt-5 max-w-xl text-sm leading-relaxed text-stone-300 md:text-base">
-          {site.yearsExperience}+ anni di interventi reali. {site.partnerLabel}.
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-stone-300 md:text-lg">
+          {site.clientSubline} {site.yearsExperience}+ anni sul campo.{" "}
+          {site.partnerLabel}.
         </p>
         <div className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/preventivo"
-            className="rounded-sm bg-nrs-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-nrs-accent-hover"
+            className="rounded-none bg-nrs-accent px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-nrs-accent-hover"
           >
             Preventivo guidato
           </Link>
           <Link
             href="/portfolio"
-            className="rounded-sm border border-white/60 bg-white/10 px-8 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+            className="rounded-none border border-white/50 px-8 py-3.5 text-sm font-semibold uppercase tracking-wide text-white transition hover:border-nrs-accent hover:text-nrs-accent"
           >
             {portfolioStats.projects} locali in galleria
           </Link>
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-white/15 pt-6 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-stone-400">
-              In evidenza
-            </p>
-            <p className="mt-1 font-serif text-xl font-semibold md:text-2xl">{active.title}</p>
+          <div className="flex flex-wrap items-end gap-6">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-stone-500">
+                In evidenza
+              </p>
+              <p className="mt-1 font-serif text-xl font-semibold md:text-2xl">{active.title}</p>
+            </div>
+            <div className="hidden border border-white/20 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-stone-400 sm:block">
+              Partner tecnico · SoundOff
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-xs tabular-nums text-stone-400">
@@ -146,7 +161,7 @@ export function HomeShowcase() {
                   key={slide.id}
                   type="button"
                   onClick={() => goTo(i)}
-                  className={`h-1.5 rounded-full transition-all ${
+                  className={`h-1 rounded-none transition-all ${
                     i === index ? "w-8 bg-nrs-accent" : "w-1.5 bg-white/40 hover:bg-white/70"
                   }`}
                   aria-label={`Vai a ${slide.title}`}
@@ -167,7 +182,7 @@ export function HomeShowcase() {
       <button
         type="button"
         onClick={prev}
-        className="absolute left-4 top-1/2 z-[4] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-nrs-hero/30 text-white opacity-0 backdrop-blur-md transition hover:bg-nrs-hero/60 group-hover:opacity-100 md:left-8"
+        className="absolute left-4 top-1/2 z-[4] flex h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/25 bg-nrs-hero/40 text-white opacity-0 backdrop-blur-sm transition hover:border-nrs-accent hover:bg-nrs-hero/70 group-hover:opacity-100 md:left-8"
         aria-label="Foto precedente"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -177,7 +192,7 @@ export function HomeShowcase() {
       <button
         type="button"
         onClick={next}
-        className="absolute right-4 top-1/2 z-[4] flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-nrs-hero/30 text-white opacity-0 backdrop-blur-md transition hover:bg-nrs-hero/60 group-hover:opacity-100 md:right-8"
+        className="absolute right-4 top-1/2 z-[4] flex h-12 w-12 -translate-y-1/2 items-center justify-center border border-white/25 bg-nrs-hero/40 text-white opacity-0 backdrop-blur-sm transition hover:border-nrs-accent hover:bg-nrs-hero/70 group-hover:opacity-100 md:right-8"
         aria-label="Foto successiva"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

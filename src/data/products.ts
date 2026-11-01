@@ -43,8 +43,13 @@ export const standardProducts: Product[] = [
     priceBandNote: retailBands.hexagonKit.note,
     install: "fai-da-te",
     badge: "Più richiesto",
-    image: "/portfolio/alla-lampara.jpg",
-    gallery: ["/portfolio/alla-lampara.jpg", "/portfolio/la-lampara.jpg", "/portfolio/7su7-5.jpg"],
+    // Foto ufficiali 2B Resine / SoundOff (non portfolio locali)
+    image: "/prodotti/hexagon-kit.jpg",
+    gallery: [
+      "/prodotti/hexagon-kit.jpg",
+      "/prodotti/hexagon.jpg",
+      "/prodotti/hexagon-2.jpg",
+    ],
   },
   {
     id: "basfon",
@@ -65,8 +70,12 @@ export const standardProducts: Product[] = [
     priceBand: retailBands.basfon.label,
     priceBandNote: retailBands.basfon.note,
     install: "partner",
-    image: "/portfolio/20180608_100932.jpg",
-    gallery: ["/portfolio/20180608_100932.jpg", "/portfolio/20180215_141018.jpg"],
+    image: "/prodotti/basfon-3.jpg",
+    gallery: [
+      "/prodotti/basfon-3.jpg",
+      "/prodotti/basfon-white.jpg",
+      "/prodotti/basfon-inst.jpg",
+    ],
   },
   {
     id: "wave",
@@ -87,8 +96,12 @@ export const standardProducts: Product[] = [
     priceBand: retailBands.wave.label,
     priceBandNote: retailBands.wave.note,
     install: "fai-da-te",
-    image: "/portfolio/20170802_134723.jpg",
-    gallery: ["/portfolio/20170802_134723.jpg", "/portfolio/galbi.jpg"],
+    image: "/prodotti/wave.jpg",
+    gallery: [
+      "/prodotti/wave.jpg",
+      "/prodotti/wave-2.jpg",
+      "/prodotti/wave-rosa.jpg",
+    ],
   },
   {
     id: "isole",
@@ -110,8 +123,13 @@ export const standardProducts: Product[] = [
     priceBandNote: retailBands.isole.note,
     install: "partner",
     badge: "Design",
-    image: "/portfolio/20180215_141018.jpg",
-    gallery: ["/portfolio/20180215_141018.jpg", "/portfolio/felice-a-testaccio.jpg"],
+    image: "/prodotti/isole.jpg",
+    gallery: [
+      "/prodotti/isole.jpg",
+      "/prodotti/isole-2.jpg",
+      "/prodotti/isole-5.jpg",
+      "/prodotti/isole-4.jpg",
+    ],
   },
 ];
 

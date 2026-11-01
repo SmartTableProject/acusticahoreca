@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { DossierPageFrame } from "@/components/dossier/DossierPageFrame";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -11,6 +12,14 @@ type Props = {
   searchParams: Promise<{ tipo?: string; prodotto?: string }>;
 };
 
+const tipoLabel: Record<string, string> = {
+  "prodotto-online": "Acquisto / prodotto online",
+  "consulenza-remota": "Progetto a distanza",
+  "sopralluogo-roma": "Chiavi in mano Roma",
+  "installazione-partner": "Installazione con partner",
+};
+
+/** Contatti = scheda dossier */
 export default async function ContattiPage({ searchParams }: Props) {
   const params = await searchParams;
   const validTipi = [
@@ -24,72 +33,81 @@ export default async function ContattiPage({ searchParams }: Props) {
     : "prodotto-online";
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
-      <div className="grid gap-12 lg:grid-cols-2">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
-            Contatti
+    <DossierPageFrame
+      tone="paper"
+      eyebrow={`Contatti · ${tipoLabel[tipo] ?? "Richiesta"}`}
+      title="Parliamone sul tuo locale"
+      backHref="/percorsi"
+      backLabel="Percorsi"
+      rightSlot={
+        <span className="text-[10px] uppercase tracking-[0.14em] text-stone-500">
+          Risposta {site.responseTime}
+        </span>
+      }
+    >
+      <div className="grid gap-3 md:grid-cols-2 md:gap-4">
+        <div className="border border-stone-400/50 bg-white/90 p-5 md:p-6">
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-nrs-accent">
+            Riferimenti
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-nrs-hero">
-            Richiedi preventivo
-          </h1>
-          <p className="mt-4 text-lg text-stone-600">
-            Indica il tipo di richiesta: prodotto standard, consulenza con
-            planimetria, o sopralluogo a Roma. Rispondiamo entro{" "}
-            {site.responseTime}.
-          </p>
-
-          <div className="mt-8 space-y-6 border-l-2 border-nrs-accent pl-5">
+          <div className="mt-5 space-y-4 border-l-2 border-nrs-accent pl-4">
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
+              <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
                 Email
               </p>
               <a
                 href={`mailto:${site.email}`}
-                className="text-nrs-accent hover:underline"
+                className="cursor-pointer text-nrs-accent hover:underline"
               >
                 {site.email}
               </a>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
+              <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
                 Telefono / WhatsApp
               </p>
-              <a href={`tel:${site.phoneTel}`} className="text-nrs-accent hover:underline">
-                {site.phone}
-              </a>
-              <span className="text-stone-400"> · </span>
               <a
-                href={site.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-nrs-accent hover:underline"
+                href={`tel:${site.phoneTel}`}
+                className="cursor-pointer text-nrs-accent hover:underline"
               >
-                WhatsApp
+                {site.phone}
               </a>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
+              <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
                 Sopralluoghi
               </p>
               <p className="text-stone-700">{site.surveyArea}</p>
             </div>
             <div>
-              <p className="text-xs font-bold uppercase tracking-wide text-nrs-grey">
-                Area commerciale
+              <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
+                Area
               </p>
               <p className="text-stone-700">{site.marketArea}</p>
-              <p className="mt-1 text-sm text-stone-500">
-                {site.partnerLabel} — {site.partnerMarket}
-              </p>
             </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <a
+              href={site.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer bg-nrs-accent px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white hover:bg-nrs-accent-hover"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="/preventivo"
+              className="cursor-pointer border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-nrs-hero hover:border-nrs-accent hover:text-nrs-accent"
+            >
+              Wizard preventivo
+            </a>
           </div>
         </div>
 
-        <div className="border border-stone-200 bg-white p-8">
+        <div className="border border-stone-400/50 bg-white p-5 md:p-6">
           <ContactForm defaultTipo={tipo} defaultProdotto={params.prodotto} />
         </div>
       </div>
-    </div>
+    </DossierPageFrame>
   );
 }

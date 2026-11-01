@@ -3,8 +3,9 @@
 **Fonte:** Luca Genghini — risposta WhatsApp/email  
 **Data ricezione:** 2026-10-05  
 **Tipo prezzi:** **NETTO a NRS** (non pubblicare sul sito vetrina)  
-**IVA:** non indicata — verificare se prezzi + IVA  
+**IVA:** esclusa (confermato 2026-10-05)  
 **Airlite:** non presente in questa risposta — ancora da chiedere  
+**Cartella Pugi:** ricevuta (Convert D 7000) — vedi `listino/tessuti-pugi/`  
 
 ---
 
@@ -93,9 +94,10 @@ Quando Luca dà la formula ufficiale, aggiorniamo questo coefficiente in `src/da
 
 ## Gap ancora aperti con Luca
 
+- [x] IVA sul listino → **esclusa**
+- [x] Cartella colori **Pugi** → ricevuta (Convert D 7000)
 - [ ] Formula ufficiale **come marginare**
-- [ ] Prezzi / disponibilità **Airlite**
-- [ ] Hexagon Kit **2500×1400** (sì/no)
-- [ ] Cartella colori **Pugi**
+- [ ] Prezzi / disponibilità **Airlite** (delta vs RAL + su quali articoli)
+- [ ] Hexagon Kit **2500×1400** e Hexagon sp. **20/30** (sì/no)
+- [ ] PDF Fiberfon Art.580 + cartella RAL/Airlite
 - [ ] Tempi produzione, minimi ordine, dropship Manerbio
-- [ ] IVA inclusa o esclusa sul listino

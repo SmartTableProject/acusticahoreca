@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-03",
+  "collectedAt": "2026-09-07",
   "partner": "2B Resine S.r.l.",
   "brandHoreca": "SoundOff",
   "sites": {
@@ -9,12 +9,23 @@
     "designPageEn": "https://2bresine.it/en/noise-control-design/",
     "fireSafety": "https://2bresine.it/reazione-al-fuoco-dei-pannelli-fonoassorbenti/",
     "company": "https://2bresine.it/azienda/",
-    "catalogPdf": "https://www.slideshare.net/slideshow/catalogo-2-b-resine-srl/23250494"
+    "wave": "https://soundoff.it/wave-high-performance/",
+    "esagoniLuce": "https://soundoff.it/esagoni-di-luce/",
+    "esagoniLuceSpecifiche": "https://soundoff.it/esagoni-di-luce-specifiche/",
+    "oniricon": "https://soundoff.it/oniricon/",
+    "ecosoundAirlite": "https://soundoff.it/pannelli-fonoassorbenti-ecosound/",
+    "melammina": "https://soundoff.it/pannelli-in-resina-di-melammina/",
+    "fiberfon": "https://soundoff.it/pannelli-in-fibra-di-poliestere-fiberfon/",
+    "vendita": "https://soundoff.it/vendita-pannelli-fonoassorbenti/",
+    "prodotti": "https://soundoff.it/prodotti/",
+    "catalogPdfHistorical": "https://www.slideshare.net/slideshow/catalogo-2-b-resine-srl/23250494",
+    "localResearch": "content/partner-2bresine/ricerca-soundoff/SINTESI-GAP-PRODOTTI.md"
   },
   "contacts": {
     "marketing": "marketing@2bresine.it",
     "info": "info@2bresine.it",
     "production": "produzionemanerbio@2bresine.it",
+    "luca": "vocale WhatsApp 2026-09-07 (listino in preparazione)",
     "milano": {
       "address": "Via Stelvio 51/F, 20095 Cusano Milanino",
       "phone": "+39 02 3510559"
@@ -24,32 +35,43 @@
       "phone": "+39 030 9383342"
     }
   },
-  "pagesUsefulForNrs": [
-    {
-      "url": "https://2bresine.it/soluzioni-acustiche-con-pannelli-insonorizzanti/",
-      "use": "Schede prodotto Hexagon, Hexagon Kit, Wave, Acoustic Panel, Desk Divider + case study HoReCa"
-    },
-    {
-      "url": "https://2bresine.it/reazione-al-fuoco-dei-pannelli-fonoassorbenti/",
-      "use": "Blog normativa / fiducia ristoratore (CE, UNI EN 13501-1, Euroclassi, melammina vs poliestere)"
-    },
-    {
-      "url": "https://2bresine.it/azienda/",
-      "use": "Chi siamo partner, credibilità (fondata 2001, Lucchini/Genghini)"
-    }
+  "sellableOnlinePriorityA": [
+    "hexagon",
+    "hexagon-kit",
+    "wave",
+    "basfon",
+    "isole"
   ],
-  "caseStudiesPartnerOnly": [
-    "Trattoria Lazzati",
-    "The Pacific Food Experience",
-    "Pesce d'Oro Bistrot",
-    "Prostahl (ufficio)"
+  "sellableOnlinePriorityB": [
+    "acoustic-panel",
+    "esagoni-di-luce",
+    "oniricon"
+  ],
+  "lucaFourFamilies": [
+    "poliestere-tessuto",
+    "melammina-nuda",
+    "melammina-verniciata-ral",
+    "melammina-airlite"
   ],
   "gapsToRequestFromPartner": [
-    "Foto prodotto HD senza watermark per sito NRS",
-    "Schede tecniche PDF Basfon / isole (assorbimento α, peso, montaggio)",
-    "Listino rivenditori o fasce ufficiali SoundOff",
-    "Autorizzazione uso marchio SoundOff + 2B Resine",
-    "Case study testuali per adattamento Roma (se disponibili)",
-    "Link SoundOff.it — quali URL prodotto sono canonici"
-  ]
+    "Formula ufficiale come marginare",
+    "Delta prezzo Airlite vs RAL + su quali articoli applicabile",
+    "Cartella colori Pugi + RAL/Airlite ufficiali",
+    "Hexagon Kit 2500x1400 e Hexagon sp.20/30 ancora disponibili?",
+    "PDF Fiberfon Art.580 + Basfon/Wave in formato digitale leggibile",
+    "IVA sul listino netto inclusa o esclusa",
+    "Tempi produzione / minimi ordine / dropship Manerbio",
+    "Autorizzazione claim Airlite/EcoSound sul sito NRS",
+    "Foto HD + autorizzazione marchi SoundOff / 2B"
+  ],
+  "filledFromSoundoff2026-10": [
+    "Airlite Purelight Interior scheda + fuoco A2-s1,d0",
+    "EcoSound = melammina + Airlite",
+    "Wave Art.550 claim basse/medie frequenze",
+    "Basfon Art.550 PDF scheda",
+    "Fiberfon Art.580 descrizione (senza PDF)",
+    "Oniricon moduli 1200x600 / 1200x2400 + Airlite",
+    "Esagoni di luce: 3 LED, magneti, RAL/Airlite"
+  ],
+  "localFolder": "content/partner-2bresine/"
 }

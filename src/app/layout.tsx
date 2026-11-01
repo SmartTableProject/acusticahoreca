@@ -4,8 +4,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { Analytics } from "@/components/Analytics";
 import { CookieBanner } from "@/components/CookieBanner";
 import { FaqJsonLd, JsonLd } from "@/components/JsonLd";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { SiteChrome } from "@/components/SiteChrome";
 import { UtmCapture } from "@/components/UtmCapture";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
 import { site } from "@/data/site";
@@ -57,9 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <FaqJsonLd />
       </head>
       <body className="flex min-h-full flex-col font-sans antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
         <WhatsAppFab />
         <UtmCapture />
         <CookieBanner />

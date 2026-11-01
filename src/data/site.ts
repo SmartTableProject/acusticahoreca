@@ -1,10 +1,12 @@
 export const site = {
   name: "NRS Soluzioni Acustiche",
   legalName: "NRS — Noise Reduction System",
-  logoSubline: "Roma e Centro Italia · Facciamo sul serio",
-  logoCategory: "Soluzioni acustiche",
+  logoSubline: "Acustica HoReCa",
+  logoCategory: "Officina tecnica",
+  /** Logo ufficiale bloccato — non modificare file/componente Logo */
+  logoLocked: true,
   /** H1 hero — parla al ristoratore */
-  heroHeadline: "Il tuo locale, finalmente comodo.",
+  heroHeadline: "Il tuo locale, finalmente silenzioso e confortevole.",
   /** Identità brand (logo, footer, SEO secondario) */
   clientMessage: "Roma e Centro Italia. Facciamo sul serio.",
   clientSubline: "Sopralluogo in zona, online altrove. Onesti sui tempi.",
@@ -32,11 +34,8 @@ export const site = {
   instagramUrl: "https://www.instagram.com/nrs.acustica/",
 } as const;
 
+/** Nav secondaria (fuori dalle 4 schede) */
 export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/servizi", label: "Servizi" },
-  { href: "/prodotti", label: "Prodotti" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/blog", label: "Blog" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/contatti", label: "Contatti" },
@@ -49,10 +48,16 @@ export const servicePillars = [
   "Chiavi in mano Roma",
 ] as const;
 
+/** Link percorsi / contatti — path veri che aprono sempre */
 export const contactTierLinks = {
-  online: "/contatti?tipo=prodotto-online",
-  remote: "/contatti?tipo=consulenza-remota",
-  roma: "/contatti?tipo=sopralluogo-roma",
+  online: "/preventivo",
+  remote: "/progetto-remoto",
+  roma: "/chiavi-in-mano",
   partner: "/contatti?tipo=installazione-partner",
   preventivo: "/preventivo",
+  percorsi: "/percorsi",
+  prodotti: "/prodotti",
+  realizzazioni: "/",
+  contattiRemoto: "/contatti?tipo=consulenza-remota",
+  contattiRoma: "/contatti?tipo=sopralluogo-roma",
 } as const;

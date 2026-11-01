@@ -39,7 +39,7 @@ const CASE_STUDIES = [
     locale: "Ristorante 7su7",
     image: "7su7-5.jpg",
     problema: "Cover alta: il parlato diventava rumore continuo.",
-    risultato: "Serate più comode per ospiti e staff.",
+    risultato: "Serate più silenziose e confortevoli per ospiti e staff.",
   },
   {
     id: "felice",
