@@ -45,6 +45,25 @@ export const caseStudies: CaseStudy[] = [
     highlights: ["1.200 mattoni fonoassorbenti", "volta a botte", "20 ore"],
   },
   {
+    id: "galbi",
+    locale: "Galbi",
+    city: "Roma",
+    image: "/portfolio/galbi-2.jpg",
+    problema:
+      "Locale dal design forte, con superfici e volume che facevano lavorare il riverbero contro il comfort: bella sala, conversazioni faticose.",
+    soluzione:
+      "Pannelli fonoassorbenti a soffitto a motivo geometrico bianco/nero, integrati con la struttura lignea e l’illuminazione a sospensione. A parete: elemento custom in legno con listelli geometrici, realizzato su misura e allineato all’estetica del locale.",
+    risultato:
+      "Comfort acustico senza snaturare l’identità del brand: i pannelli diventano parte dell’arredo, non un “aggiunto tecnico”.",
+    prodotti: ["basfon"],
+    mqHint: "Soffitto geometrico + pezzo custom a parete",
+    highlights: [
+      "soffitto geometrico",
+      "pannelli design",
+      "custom a parete",
+    ],
+  },
+  {
     id: "alla-lampara",
     locale: "Alla Lampara",
     city: "Roma",
