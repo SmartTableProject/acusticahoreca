@@ -15,6 +15,7 @@ export type PortfolioCase = {
   prodotti: string[];
   mqHint?: string;
   highlights?: string[];
+  featuredShots?: { src: string; caption: string; alt: string }[];
   project: PortfolioProject;
   indexable: boolean;
 };
@@ -71,6 +72,7 @@ export function getPortfolioCase(slug: string): PortfolioCase | null {
     prodotti: story?.prodotti ?? ["isole", "basfon"],
     mqHint: story?.mqHint,
     highlights: story?.highlights,
+    featuredShots: story?.featuredShots,
     project,
     indexable: true,
   };

@@ -11,6 +11,8 @@ export type CaseStudy = {
   mqHint?: string;
   /** Fatti chiave da mostrare come badge (solo dati reali) */
   highlights?: string[];
+  /** Foto in evidenza (es. pezzi custom) con didascalia */
+  featuredShots?: { src: string; caption: string; alt: string }[];
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -48,19 +50,31 @@ export const caseStudies: CaseStudy[] = [
     id: "galbi",
     locale: "Galbi",
     city: "Roma",
-    image: "/portfolio/galbi-2.jpg",
+    image: "/portfolio/galbi-4.jpg",
     problema:
       "Locale dal design forte, con superfici e volume che facevano lavorare il riverbero contro il comfort: bella sala, conversazioni faticose.",
     soluzione:
-      "Pannelli fonoassorbenti a soffitto a motivo geometrico bianco/nero, integrati con la struttura lignea e l’illuminazione a sospensione. A parete: elemento custom in legno con listelli geometrici, realizzato su misura e allineato all’estetica del locale.",
+      "Al centro dell’intervento: quadri fonoassorbenti creati su misura sul tema del locale — pezzi unici, non pannelli “da catalogo”. Accanto, correzione a soffitto con motivo geometrico bianco/nero, integrata con struttura lignea e luci a sospensione.",
     risultato:
-      "Comfort acustico senza snaturare l’identità del brand: i pannelli diventano parte dell’arredo, non un “aggiunto tecnico”.",
+      "Comfort acustico e identità visiva nello stesso gesto: i quadri lavorano sul riverbero e restano parte dell’arredo Galbi.",
     prodotti: ["basfon"],
-    mqHint: "Soffitto geometrico + pezzo custom a parete",
+    mqHint: "Quadri fonoassorbenti custom + soffitto geometrico",
     highlights: [
+      "quadri fonoassorbenti",
+      "su misura · tema locale",
       "soffitto geometrico",
-      "pannelli design",
-      "custom a parete",
+    ],
+    featuredShots: [
+      {
+        src: "/portfolio/galbi-3.jpg",
+        caption: "In laboratorio — quadro fonoassorbente su misura",
+        alt: "Quadro fonoassorbente su misura per Galbi in fase di realizzazione - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/galbi-4.jpg",
+        caption: "In sala — quadro fonoassorbente sul tema del locale",
+        alt: "Quadro fonoassorbente a tema installato presso Galbi a Roma - NRS Acustica HoReCa",
+      },
     ],
   },
   {

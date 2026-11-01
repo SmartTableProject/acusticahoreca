@@ -27,7 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `Acustica ${c.locale} ${c.city}`,
     description: `Caso studio correzione acustica ${c.locale} (${c.city}). ${c.risultato.slice(0, 80)} Preventivo in 24-48h.`,
     path: `/portfolio/${c.slug}`,
-    ogImage: c.project.cover || c.project.images[0]?.src,
+    ogImage:
+      c.featuredShots?.[0]?.src ||
+      c.project.cover ||
+      c.project.images[0]?.src,
   });
 }
 
@@ -98,11 +101,53 @@ export default async function PortfolioCasePage({ params }: Props) {
         ))}
       </div>
 
+      {c.featuredShots?.length ? (
+        <section className="mb-6">
+          <h2 className="mb-1 font-serif text-lg font-bold uppercase tracking-[0.06em] text-nrs-hero">
+            Quadri fonoassorbenti su misura
+          </h2>
+          <p className="mb-3 text-sm text-stone-600">
+            Creati sul tema del locale: assorbono il riverbero e restano pezzi
+            d’arredo.
+          </p>
+          <div className="grid gap-3 md:grid-cols-2">
+            {c.featuredShots.map((shot) => (
+              <figure
+                key={shot.src}
+                className="overflow-hidden border border-stone-300 bg-white"
+              >
+                <div className="relative aspect-[4/3] bg-stone-100">
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width:768px) 100vw, 50vw"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                  />
+                </div>
+                <figcaption className="border-t border-stone-200 px-3 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-nrs-hero">
+                  {shot.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       <h2 className="mb-3 font-serif text-lg font-bold uppercase tracking-[0.06em] text-nrs-hero">
         Foto intervento
       </h2>
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3 lg:grid-cols-4">
-        {c.project.images.slice(0, 12).map((img, i) => (
+        {c.project.images
+          .filter(
+            (img) =>
+              !c.featuredShots?.some((shot) => shot.src === img.src),
+          )
+          .slice(0, 12)
+          .map((img, i) => (
           <div
             key={img.id}
             className="relative aspect-[4/3] overflow-hidden border border-stone-300 bg-stone-200"
