@@ -7,17 +7,17 @@ import { portfolioStats } from "@/data/portfolio";
 import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
 
-/** Tile collage → scheda caso se esiste, altrimenti galleria */
+/** Tile collage → scheda caso studio */
 const CASE_HREF: Record<string, string> = {
-  "la-lampara": "/portfolio/alla-lampara",
+  "alla-lampara": "/portfolio/alla-lampara",
   felice: "/portfolio/felice-a-testaccio",
-  "hotel-nazionale": "/portfolio/hotel-nazionale",
+  remo: "/portfolio/remo",
   "7su7": "/portfolio/7su7",
   galbi: "/portfolio/galbi",
   cuccurucu: "/portfolio/cuccurucu",
-  "pizzeria-ostiense": "/portfolio/pizzeria-ostiense",
+  "taverna-latina": "/portfolio/taverna-latina",
   "la-botte": "/portfolio/la-botte",
-  strozzaquintino: "/portfolio/strozzaquintino",
+  "osteria-sole": "/portfolio/osteria-del-sole",
 };
 
 const areaClass: Record<CollageTile["area"], string> = {

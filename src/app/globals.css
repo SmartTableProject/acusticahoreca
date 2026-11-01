@@ -55,22 +55,20 @@ h3,
   line-height: 1;
 }
 
-/* Foto: look catalogo/mockup (desaturate) */
-.nrs-photo-catalog {
-  filter: saturate(0.35) contrast(1.08) brightness(0.98);
-}
-
+/* Foto: colore nitido (niente B/N né desaturazione catalogo) */
+.nrs-photo-catalog,
 .nrs-photo-bw {
-  filter: grayscale(1) contrast(1.08);
+  filter: contrast(1.05) saturate(1.04) brightness(1.01);
   transition:
-    filter 0.45s ease,
+    filter 0.35s ease,
     transform 0.7s ease;
 }
 
-/* Hover: la foto torna a colori */
+.group:hover .nrs-photo-catalog,
 .group:hover .nrs-photo-bw,
+a:hover .nrs-photo-catalog,
 a:hover .nrs-photo-bw {
-  filter: grayscale(0) contrast(1.02) saturate(1.05);
+  filter: contrast(1.06) saturate(1.08) brightness(1.02);
 }
 
 /* Carta tecnica / cemento — come mockup 2 e 4 */

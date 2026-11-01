@@ -38,8 +38,8 @@ const doors: Door[] = [
     href: "/progetto-remoto",
     dominant: false,
     tag: "Tutta Italia",
-    image: "/portfolio/hotel-nazionale.jpg",
-    imagePos: "center 32%",
+    image: "/portfolio/cuccurucu-5-plus.jpg",
+    imagePos: "center 28%",
     highlight: "Studio tecnico su foto e misure",
   },
   {
@@ -50,8 +50,8 @@ const doors: Door[] = [
     href: "/chiavi-in-mano",
     dominant: true,
     tag: "Roma e provincia",
-    image: "/portfolio/alla-lampara.jpg",
-    imagePos: "center 42%",
+    image: "/portfolio/la-lampara.jpg",
+    imagePos: "center 38%",
     highlight: "Dal sopralluogo al collaudo",
   },
 ];

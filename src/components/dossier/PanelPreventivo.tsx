@@ -55,15 +55,15 @@ export function PanelPreventivo({ query = {} }: Props) {
             </div>
             <div className="relative aspect-[16/10] overflow-hidden border border-stone-400/40">
               <Image
-                src="/portfolio/da-dante.jpg"
-                alt="Correzione acustica a soffitto in locale HoReCa — NRS"
+                src="/portfolio/la-lampara.jpg"
+                alt="Sala con isole fonoassorbenti — caso Alla Lampara, NRS"
                 fill
                 className="nrs-photo-bw object-cover"
                 sizes="260px"
               />
-              <div className="absolute inset-0 bg-nrs-hero/50" />
+              <div className="absolute inset-0 bg-nrs-hero/25" />
               <p className="absolute bottom-2 left-2 right-2 text-[9px] font-bold uppercase tracking-wide text-white">
-                Bar · Ristoranti · Hotel
+                Casi studio · foto reali
               </p>
             </div>
           </div>

@@ -1,6 +1,5 @@
 /**
- * Collage home — 9 pezzi come mockup Portfolio first.
- * Solo le migliori: sale leggibili, soffitti forti, varietà tipologica.
+ * Collage home — 9 pezzi, solo casi studio con le foto più forti (colore nitido).
  */
 export type CollageTile = {
   id: string;
@@ -13,66 +12,66 @@ export type CollageTile = {
 
 export const homeCollage: CollageTile[] = [
   {
-    id: "la-lampara",
+    id: "alla-lampara",
     src: "/portfolio/la-lampara.jpg",
     title: "Alla Lampara",
     area: "a",
-    objectPosition: "center 42%",
+    objectPosition: "center 38%",
   },
   {
     id: "felice",
     src: "/portfolio/felice-a-testaccio.jpg",
     title: "Felice a Testaccio",
     area: "b",
-    objectPosition: "center 28%",
+    objectPosition: "center 22%",
   },
   {
-    id: "hotel-nazionale",
-    src: "/portfolio/hotel-nazionale.jpg",
-    title: "Hotel Nazionale",
+    id: "remo",
+    src: "/portfolio/remo.jpg",
+    title: "Pizzeria Remo",
     area: "c",
-    objectPosition: "center 35%",
+    objectPosition: "center 30%",
   },
   {
     id: "7su7",
-    src: "/portfolio/7su7.jpg",
+    src: "/portfolio/7su7-5.jpg",
     title: "Ristorante 7su7",
     area: "d",
-    objectPosition: "center 22%",
+    objectPosition: "center 20%",
   },
   {
     id: "galbi",
     src: "/portfolio/galbi-4.jpg",
     title: "Galbi",
     area: "e",
-    objectPosition: "center 25%",
+    objectPosition: "center 28%",
   },
   {
     id: "cuccurucu",
     src: "/portfolio/cuccurucu-5-plus.jpg",
     title: "Cuccurucù",
     area: "f",
-    objectPosition: "center 32%",
+    objectPosition: "center 28%",
   },
   {
-    id: "pizzeria-ostiense",
-    src: "/portfolio/pizzeria-ostiense-4.jpg",
-    title: "Pizzeria Ostiense",
+    id: "taverna-latina",
+    src: "/portfolio/taverna-latina.jpg",
+    title: "Taverna Latina",
     area: "g",
-    objectPosition: "center 40%",
+    objectPosition: "center 35%",
   },
   {
     id: "la-botte",
-    src: "/portfolio/la-botte-10.jpg",
+    src: "/portfolio/la-botte-11.jpg",
     title: "La Botte",
     area: "h",
-    objectPosition: "center 25%",
+    objectPosition: "center 32%",
   },
   {
-    id: "strozzaquintino",
-    src: "/portfolio/strozzaquintino-3.jpg",
-    title: "Strozzaquintino",
+    id: "osteria-sole",
+    src: "/portfolio/osteria-del-sole.jpg",
+    title: "Osteria del Sole",
     area: "i",
-    objectPosition: "center 30%",
+    objectPosition: "center 25%",
   },
 ];
