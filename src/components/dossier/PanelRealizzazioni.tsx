@@ -1,5 +1,6 @@
 "use client";
 
+import { FeaturedCaseStrip } from "@/components/FeaturedCaseStrip";
 import { SeoH1 } from "@/components/SeoH1";
 import { homeCollage, type CollageTile } from "@/data/home-collage";
 import { portfolioStats } from "@/data/portfolio";
@@ -98,6 +99,8 @@ export function PanelRealizzazioni() {
         })}
       </div>
 
+      <FeaturedCaseStrip limit={6} variant="compact" title="Casi studio" />
+
       <div className="relative z-10 flex shrink-0 flex-col gap-3 border border-stone-200 bg-white px-4 py-3 md:flex-row md:items-center md:justify-between md:px-5">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.12em] text-nrs-hero">
@@ -110,17 +113,10 @@ export function PanelRealizzazioni() {
         </div>
         <div className="flex flex-wrap gap-2">
           <a
-            href="/preventivo#calcolatore"
+            href="/portfolio"
             className="inline-flex cursor-pointer items-center gap-2 border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-nrs-hero transition hover:border-nrs-accent hover:text-nrs-accent"
           >
-            Calcola mq SoundOff
-            <span aria-hidden>↗</span>
-          </a>
-          <a
-            href="/prodotti"
-            className="inline-flex cursor-pointer items-center gap-2 border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-nrs-hero transition hover:border-nrs-accent hover:text-nrs-accent"
-          >
-            Vai ai prodotti
+            Tutti i casi
             <span aria-hidden>↗</span>
           </a>
           <a

@@ -835,27 +835,27 @@
     },
     "public/portfolio/la-botte-10.jpg": {
       "preset": "photo",
-      "outputHash": "1fe45beac1f3cd1575b6fe8ae462711c97bb612aeeccd9f49dac0d900b98f88e",
+      "outputHash": "576ea0b9afbcdc4843d0f1d6e2c18c75be6555846fab6f67814783109285ead4",
       "width": 1500,
-      "height": 1125,
-      "bytes": 179600,
-      "at": "2026-11-01T22:37:35.850Z"
+      "height": 1058,
+      "bytes": 155964,
+      "at": "2026-11-01T22:49:56.111Z"
     },
     "public/portfolio/la-botte-11.jpg": {
       "preset": "photo",
-      "outputHash": "c0a19b046da18d98492d64acc2e82053853cf5e2e19574540c5f85078826960d",
+      "outputHash": "47998f09c162ddcaa6bee2391c0e56d2097bafffbf1c8040b18f02763947d503",
       "width": 1500,
-      "height": 1125,
-      "bytes": 166648,
-      "at": "2026-11-01T22:37:35.880Z"
+      "height": 1058,
+      "bytes": 144250,
+      "at": "2026-11-01T22:49:57.889Z"
     },
     "public/portfolio/la-botte-2.jpg": {
       "preset": "photo",
-      "outputHash": "07d9229367c8509b70fdaa6a273c613e395bc5e4cd8a0d42cd2ae1a6f2a1f575",
+      "outputHash": "bfa2f18a3c36ecd4474d90a6cbec062d39e5953d15462d590ad15031d5ab35a9",
       "width": 1500,
-      "height": 1125,
-      "bytes": 150021,
-      "at": "2026-11-01T22:37:35.910Z"
+      "height": 1058,
+      "bytes": 130940,
+      "at": "2026-11-01T22:49:50.809Z"
     },
     "public/portfolio/la-forbice-2.jpg": {
       "preset": "photo",
@@ -867,27 +867,27 @@
     },
     "public/portfolio/la-botte-6.jpg": {
       "preset": "photo",
-      "outputHash": "da7a430d55379d1ae7f9a09eb51b2489613236f1a360d7dd97c9dc3804fbc4da",
+      "outputHash": "c43985d6c2e2821cfac395b03636c5f892f5775c2ee8af95a1f404272c78891b",
       "width": 1500,
-      "height": 1125,
-      "bytes": 194549,
-      "at": "2026-11-01T22:37:36.719Z"
+      "height": 1058,
+      "bytes": 166850,
+      "at": "2026-11-01T22:49:52.645Z"
     },
     "public/portfolio/la-botte-7.jpg": {
       "preset": "photo",
-      "outputHash": "44451d55ef7b8c27322c299baa3156b425077e39536a7be037e773e6b5bfd7e3",
+      "outputHash": "ab0571b59761be411389715f25b456c4572cead6b2ded84a2f4ca4dc14eb8942",
       "width": 1500,
-      "height": 1125,
-      "bytes": 210826,
-      "at": "2026-11-01T22:37:36.774Z"
+      "height": 1058,
+      "bytes": 175672,
+      "at": "2026-11-01T22:49:54.288Z"
     },
     "public/portfolio/la-botte.jpg": {
       "preset": "photo",
-      "outputHash": "493464e12fdb90d877595d1789e55d2b5444e22f91ca05620eb340e6f1708fbb",
+      "outputHash": "385f75dd2eb45b1c664ddd84927069da6d7814835310e302afcf65d2b8b9ba39",
       "width": 1500,
-      "height": 1125,
-      "bytes": 146583,
-      "at": "2026-11-01T22:37:36.803Z"
+      "height": 1058,
+      "bytes": 125967,
+      "at": "2026-11-01T22:49:49.251Z"
     },
     "public/portfolio/la-forbice-3.jpg": {
       "preset": "photo",

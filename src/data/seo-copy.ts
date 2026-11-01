@@ -7,7 +7,7 @@ export const seoH1 = {
   prodotti:
     "Catalogo Pannelli Fonoassorbenti Ignifughi SoundOff per Ristoranti, Pizzerie e Locali Pubblici",
   portfolio:
-    "Portfolio Interventi Acustici HoReCa: 44 Ristoranti e Locali Documentati a Roma e in Italia",
+    "Casi Studio Acustica HoReCa: 44 Ristoranti e Locali Documentati a Roma e in Italia",
   acusticaRoma:
     "Correzione Acustica Ristoranti a Roma e Provincia: Sopralluogo, Progettazione e Posa Chiavi in Mano",
   preventivo: "Preventivo Rapido Correzione Acustica Locale HoReCa in 24–48 Ore",
@@ -34,9 +34,9 @@ export const seoMeta = {
       "Catalogo Hexagon, Basfon, Wave e isole sospese per locali pubblici. SoundOff certificati, preventivo in 24-48h.",
   },
   portfolio: {
-    title: "Portfolio Acustica HoReCa Roma",
+    title: "Casi Studio Acustica HoReCa Roma",
     description:
-      "44 ristoranti e locali documentati, 193 foto reali. Casi studio NRS a Roma e in Italia. Preventivo in 24-48h.",
+      "Casi studio con problema, soluzione e risultato. 44 locali documentati, foto reali. Preventivo in 24-48h.",
   },
   acusticaRoma: {
     title: "Acustica Ristoranti Roma e Provincia",

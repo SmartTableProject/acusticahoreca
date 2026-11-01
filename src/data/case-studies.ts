@@ -267,4 +267,38 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
   },
+  {
+    id: "la-botte",
+    locale: "La Botte",
+    city: "Roma",
+    image: "/portfolio/la-botte-11.jpg",
+    problema:
+      "Soffitto liscio, mattoni a vista e zone servizio: superfici dure che facevano lavorare il riverbero contro il comfort — bella sala, conversazioni faticose nelle ore piene.",
+    soluzione:
+      "Pannelli fonoassorbenti su misura in palette terra: moduli a soffitto e pezzi a L che scendono in parete, coordinati con LED lineari e arredo esistente. Non pannelli «da cantiere»: elementi di design che assorbono dove serve.",
+    risultato:
+      "Comfort acustico e carattere del locale nello stesso gesto: si parla al tavolo senza alzare la voce, con un soffitto che resta parte dell’arredo.",
+    prodotti: ["basfon"],
+    mqHint: "Pannelli su misura · soffitto + passaggio a parete",
+    highlights: [
+      "pannelli a L su misura",
+      "palette terra",
+      "LED integrati",
+    ],
+    featuredTitle: "Pannelli su misura — soffitto e parete",
+    featuredLead:
+      "Moduli in toni terra che assorbono il riverbero e disegnano lo spazio: dalla copertura a soffitto ai pezzi a L verso la cantinetta.",
+    featuredShots: [
+      {
+        src: "/portfolio/la-botte-11.jpg",
+        caption: "In evidenza — pannelli a L soffitto–parete in palette terra",
+        alt: "Pannelli fonoassorbenti a L su misura presso La Botte a Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/la-botte.jpg",
+        caption: "Dettaglio — moduli a soffitto con LED e mattoni a vista",
+        alt: "Soffitto fonoassorbente con illuminazione integrata La Botte Roma - NRS Acustica HoReCa",
+      },
+    ],
+  },
 ];

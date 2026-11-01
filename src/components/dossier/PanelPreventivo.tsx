@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { AcousticCalculator } from "@/components/AcousticCalculator";
+import { FeaturedCaseStrip } from "@/components/FeaturedCaseStrip";
 import {
   PreventivoWizard,
   type PreventivoQuery,
@@ -77,6 +78,13 @@ export function PanelPreventivo({ query = {} }: Props) {
             Richiedi il tuo preventivo
           </h2>
           <p className="mt-2 text-xs text-stone-500">{priceDisclaimer}</p>
+          <div className="mt-4">
+            <FeaturedCaseStrip
+              limit={4}
+              variant="compact"
+              title="Prima di scrivere — vedi lavori simili"
+            />
+          </div>
           <div className="mt-5">
             <AcousticCalculator />
           </div>

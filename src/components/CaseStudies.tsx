@@ -1,24 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { caseStudies } from "@/data/case-studies";
+import { caseStudyHref, getFeaturedCases } from "@/components/FeaturedCaseStrip";
 import { portfolioStats } from "@/data/portfolio";
 import { contactTierLinks } from "@/data/site";
-
-/** id case-study → slug portfolio */
-const SLUG: Record<string, string> = {
-  "alla-lampara": "alla-lampara",
-  "da-dante": "da-dante",
-  "7su7": "7su7",
-  felice: "felice-a-testaccio",
-  "osteria-sole": "osteria-del-sole",
-};
 
 type Props = {
   limit?: number;
 };
 
 export function CaseStudies({ limit }: Props) {
-  const items = limit ? caseStudies.slice(0, limit) : caseStudies;
+  const items = limit ? getFeaturedCases(limit) : getFeaturedCases(12);
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
@@ -44,7 +35,7 @@ export function CaseStudies({ limit }: Props) {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((cs) => {
-          const href = `/portfolio/${SLUG[cs.id] ?? cs.id}`;
+          const href = caseStudyHref(cs);
           return (
           <article
             key={cs.id}

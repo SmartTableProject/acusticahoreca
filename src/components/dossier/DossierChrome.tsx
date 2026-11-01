@@ -6,7 +6,7 @@ import { dossierTabs, dossierTabUrl, type DossierTabId } from "@/lib/dossier";
 import { site } from "@/data/site";
 
 const moreLinks = [
-  { href: "/portfolio", label: "Galleria completa" },
+  { href: "/portfolio", label: "Casi studio" },
   { href: "/blog", label: "Blog" },
   { href: "/chi-siamo", label: "Chi siamo" },
   { href: "/contatti", label: "Contatti" },

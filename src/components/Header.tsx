@@ -62,7 +62,7 @@ export function Header() {
                 }}
                 className="block cursor-pointer px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-stone-600 hover:bg-stone-50 hover:text-nrs-accent"
               >
-                Galleria completa
+                Casi studio
               </a>
               <a
                 href={site.whatsappUrl}
