@@ -11,7 +11,8 @@ export const site = {
   clientMessage: "Roma e Centro Italia. Facciamo sul serio.",
   clientSubline: "Sopralluogo in zona, online altrove. Onesti sui tempi.",
   tagline: "Acustica per ristoranti e locali HoReCa. Roma e Centro Italia.",
-  domain: "https://acusticahoreca.it",
+  /** Canonico = www (Vercel fa 308 da apex → www) */
+  domain: "https://www.acusticahoreca.it",
   email: "preventivi@acusticahoreca.it",
   emailPreventivi: "preventivi@acusticahoreca.it",
   emailInfo: "info@acusticahoreca.it",

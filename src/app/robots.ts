@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/", "/_next/"],
     },
     sitemap: `${site.domain}/sitemap.xml`,
-    host: site.domain.replace(/^https?:\/\//, ""),
+    host: "www.acusticahoreca.it",
   };
 }
