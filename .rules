@@ -1,0 +1,19 @@
+# .rules — acusticahoreca / NRS
+
+## Obiettivo nord
+Pubblicare un sito che trasmette **professionalità** a ristoratori e partner HoReCa.
+Ogni scelta (UI, copy, SEO, foto, codice) deve alzare fiducia e chiarezza.
+
+## Come lavorare
+- Domanda guida: *un gestore serio ci vede un’azienda affidabile?*
+- Se no → migliora subito (non lasciare bozze “così così”).
+- Onestà: niente dati, review o prezzi inventati.
+- Proattività: sistema link morti, foto grezze, CTA deboli, schede thin; proponi il miglioramento utile in 1–2 righe.
+- Foto: `npm run photos:improve` su ogni asset nuovo/sostituito.
+- Case study: fatti veri + evidenza ai pezzi forti.
+- Stile: schede coerenti, brand NRS, niente estetismi AI generici.
+
+## Riferimenti Cursor
+- `.cursor/rules/professionalita-sito.mdc` (alwaysApply)
+- `.cursor/rules/photo-quality.mdc`
+- `.cursor/rules/nrs-marketing-roles.mdc`

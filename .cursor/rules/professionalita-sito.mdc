@@ -1,0 +1,35 @@
+---
+description: Obiettivo nord — sito professionale, migliorare idee, agire proattivi
+alwaysApply: true
+---
+
+# Professionalità del sito (obiettivo nord)
+
+Stiamo pubblicando **acusticahoreca.it** per trasmettere **professionalità** a ristoratori e partner HoReCa.  
+Ogni ragionamento, scelta UI, copy, SEO, foto o codice deve servire questo obiettivo.
+
+## Come decidere
+
+1. Chiediti: *un gestore serio, aprendo questa pagina, ci vede un’azienda affidabile?*
+2. Se la risposta è debole → **migliora** (layout, testo, foto, prova sociale, chiarezza percorsi).
+3. Non inventare dati, recensioni o prezzi: l’onestà è parte della professionalità.
+4. Preferisci soluzioni **pronte e curate** a bozze “tecnici-only”.
+
+## Essere proattivi
+
+- Non limitarti al minimo richiesto: se vedi un link morto, foto grezza, H1 confuso, CTA debole o caso studio thin → **sistemalo** o segnalalo con fix già pronto.
+- Anticipa cosa serve al prossimo passo (Search Console, Ads, schede locali) senza dilungarti.
+- Quando migliori un’idea, spiega in **1–2 righe** il vantaggio pratico.
+
+## Standard visibili
+
+- Chrome a schede coerente, tipografia brand, teal NRS, niente estetismi AI generici.
+- Foto passano da `npm run photos:improve` (regola photo-quality).
+- Case study: fatti veri, evidenza ai pezzi forti (quadri, soffitti, custom).
+- Deploy solo quando la pagina “si difende” da sola allo sguardo.
+
+## Fuori scope
+
+- Feature decorative senza utilità B2B.
+- Copy da brochure vuota o gonfiata.
+- Ottimizzazioni teoriche che non alzano fiducia o conversione.
