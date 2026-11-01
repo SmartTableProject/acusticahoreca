@@ -261,27 +261,32 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     "id": "cuccurucu",
-    "name": "Cuccurucu",
+    "name": "Cuccurucù",
     "category": "ristorante",
     "images": [
       {
+        "id": "cuccurucu-hero",
+        "src": "/portfolio/cuccurucu.jpg",
+        "alt": "Pannelli fonoassorbenti a soffitto nel casale storico Cuccurucù a Roma - NRS Acustica HoReCa"
+      },
+      {
         "id": "cuccurucu-1",
-        "src": "/portfolio/cuccurucu-4.jpg",
-        "alt": "Cuccurucu — NRS Soluzioni Acustiche"
+        "src": "/portfolio/cuccurucu-5-plus.jpg",
+        "alt": "Soffitto a travi con pannelli fonoassorbenti Cuccurucù Roma - NRS Acustica HoReCa"
       },
       {
         "id": "cuccurucu-2",
-        "src": "/portfolio/cuccurucu-5.jpg",
-        "alt": "Cuccurucu — NRS Soluzioni Acustiche"
+        "src": "/portfolio/cuccurucu-4-plus.jpg",
+        "alt": "Sala ristorante Cuccurucù con correzione acustica integrata - NRS Acustica HoReCa"
       },
       {
         "id": "cuccurucu-3",
-        "src": "/portfolio/cuccurucu-6.jpg",
-        "alt": "Cuccurucu — NRS Soluzioni Acustiche"
+        "src": "/portfolio/cuccurucu-6-plus.jpg",
+        "alt": "Dettaglio soffitto fonoassorbente e struttura lignea Cuccurucù - NRS Acustica HoReCa"
       }
     ],
-    "cover": "/portfolio/cuccurucu-4.jpg",
-    "imageCount": 3
+    "cover": "/portfolio/cuccurucu.jpg",
+    "imageCount": 4
   },
   {
     "id": "da-ciccillo",
@@ -1709,31 +1714,40 @@ export const portfolioItemsGenerated = [
     "projectName": "Caino E Abele"
   },
   {
-    "id": "cuccurucu-1",
-    "src": "/portfolio/cuccurucu-4.jpg",
-    "title": "Cuccurucu (1)",
+    "id": "cuccurucu-hero",
+    "src": "/portfolio/cuccurucu.jpg",
+    "title": "Cuccurucù — casale storico",
     "category": "ristorante",
-    "description": "Correzione acustica — Cuccurucu",
+    "description": "Pannelli fonoassorbenti a soffitto nel casale Cuccurucù (Capoprati / Ponte Milvio)",
     "projectId": "cuccurucu",
-    "projectName": "Cuccurucu"
+    "projectName": "Cuccurucù"
+  },
+  {
+    "id": "cuccurucu-1",
+    "src": "/portfolio/cuccurucu-5-plus.jpg",
+    "title": "Cuccurucù (soffitto)",
+    "category": "ristorante",
+    "description": "Correzione acustica — Cuccurucù",
+    "projectId": "cuccurucu",
+    "projectName": "Cuccurucù"
   },
   {
     "id": "cuccurucu-2",
-    "src": "/portfolio/cuccurucu-5.jpg",
-    "title": "Cuccurucu (2)",
+    "src": "/portfolio/cuccurucu-4-plus.jpg",
+    "title": "Cuccurucù (sala)",
     "category": "ristorante",
-    "description": "Correzione acustica — Cuccurucu",
+    "description": "Correzione acustica — Cuccurucù",
     "projectId": "cuccurucu",
-    "projectName": "Cuccurucu"
+    "projectName": "Cuccurucù"
   },
   {
     "id": "cuccurucu-3",
-    "src": "/portfolio/cuccurucu-6.jpg",
-    "title": "Cuccurucu (3)",
+    "src": "/portfolio/cuccurucu-6-plus.jpg",
+    "title": "Cuccurucù (dettaglio)",
     "category": "ristorante",
-    "description": "Correzione acustica — Cuccurucu",
+    "description": "Correzione acustica — Cuccurucù",
     "projectId": "cuccurucu",
-    "projectName": "Cuccurucu"
+    "projectName": "Cuccurucù"
   },
   {
     "id": "da-ciccillo-1",

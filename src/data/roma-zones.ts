@@ -51,7 +51,7 @@ export const romaZones: RomaZone[] = [
   {
     id: "ponte-milvio",
     name: "Ponte Milvio",
-    projectIds: ["mad-cow", "burro-e-menta"],
+    projectIds: ["cuccurucu", "mad-cow", "burro-e-menta"],
   },
   {
     id: "castelli",

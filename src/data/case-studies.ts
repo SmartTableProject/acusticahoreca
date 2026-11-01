@@ -11,6 +11,9 @@ export type CaseStudy = {
   mqHint?: string;
   /** Fatti chiave da mostrare come badge (solo dati reali) */
   highlights?: string[];
+  /** Titolo sezione foto in evidenza */
+  featuredTitle?: string;
+  featuredLead?: string;
   /** Foto in evidenza (es. pezzi custom) con didascalia */
   featuredShots?: { src: string; caption: string; alt: string }[];
 };
@@ -47,6 +50,40 @@ export const caseStudies: CaseStudy[] = [
     highlights: ["1.200 mattoni fonoassorbenti", "volta a botte", "20 ore"],
   },
   {
+    id: "cuccurucu",
+    locale: "Cuccurucù",
+    city: "Roma",
+    image: "/portfolio/cuccurucu.jpg",
+    problema:
+      "Antico casale sul Tevere (Parco Capoprati, tra Ponte Milvio e Prati): travi a vista, volume alto e ampie vetrate. Bella sala storica, ma il riverbero rendeva faticose le serate piene.",
+    soluzione:
+      "Pannelli fonoassorbenti inseriti tra le travi del soffitto, lasciando intatta la struttura lignea del casale. Al centro: elemento a doghe in legno con illuminazione integrata, per assorbire e ordinare il volume senza «chiudere» la sala.",
+    risultato:
+      "Comfort acustico in un locale storico: si parla ai tavoli senza alzare la voce, restando fedeli all’atmosfera del casale e alla cantina in evidenza.",
+    prodotti: ["basfon", "isole"],
+    mqHint: "Casale storico · Capoprati / Ponte Milvio · soffitto a travi",
+    highlights: [
+      "locale storico",
+      "casale sul Tevere",
+      "pannelli tra le travi",
+    ],
+    featuredTitle: "Locale storico — soffitto fonoassorbente",
+    featuredLead:
+      "Pannelli integrati nelle travi del casale Capoprati: correzione acustica senza snaturare il luogo.",
+    featuredShots: [
+      {
+        src: "/portfolio/cuccurucu.jpg",
+        caption: "In evidenza — soffitto fonoassorbente e cantina del casale",
+        alt: "Correzione acustica a soffitto nel ristorante storico Cuccurucù a Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/cuccurucu-5-plus.jpg",
+        caption: "Sala storica — pannelli integrati nelle travi a vista",
+        alt: "Pannelli fonoassorbenti tra le travi a Cuccurucù Roma - NRS Acustica HoReCa",
+      },
+    ],
+  },
+  {
     id: "galbi",
     locale: "Galbi",
     city: "Roma",
@@ -64,6 +101,9 @@ export const caseStudies: CaseStudy[] = [
       "su misura · tema locale",
       "soffitto geometrico",
     ],
+    featuredTitle: "Quadri fonoassorbenti su misura",
+    featuredLead:
+      "Creati sul tema del locale: assorbono il riverbero e restano pezzi d’arredo.",
     featuredShots: [
       {
         src: "/portfolio/galbi-3.jpg",

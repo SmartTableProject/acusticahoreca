@@ -15,6 +15,8 @@ export type PortfolioCase = {
   prodotti: string[];
   mqHint?: string;
   highlights?: string[];
+  featuredTitle?: string;
+  featuredLead?: string;
   featuredShots?: { src: string; caption: string; alt: string }[];
   project: PortfolioProject;
   indexable: boolean;
@@ -50,10 +52,17 @@ export function getPortfolioCase(slug: string): PortfolioCase | null {
   const story = narrativeFor(project.id);
   const isLocale = !NON_LOCALE.has(project.id);
 
+  const cityFromStory = story?.city ?? "Roma";
+  const districtHint =
+    project.id === "cuccurucu"
+      ? "Ponte Milvio / Capoprati"
+      : undefined;
+
   return {
     slug: project.id,
     locale: story?.locale ?? project.name,
-    city: story?.city ?? "Roma",
+    city: cityFromStory,
+    district: districtHint,
     problema:
       story?.problema ??
       (isLocale
@@ -72,6 +81,8 @@ export function getPortfolioCase(slug: string): PortfolioCase | null {
     prodotti: story?.prodotti ?? ["isole", "basfon"],
     mqHint: story?.mqHint,
     highlights: story?.highlights,
+    featuredTitle: story?.featuredTitle,
+    featuredLead: story?.featuredLead,
     featuredShots: story?.featuredShots,
     project,
     indexable: true,

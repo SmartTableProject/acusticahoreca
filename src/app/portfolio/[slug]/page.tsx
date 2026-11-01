@@ -48,7 +48,7 @@ export default async function PortfolioCasePage({ params }: Props) {
   return (
     <DossierPageFrame
       tone="paper"
-      eyebrow={`Caso studio · ${c.city}`}
+      eyebrow={`Caso studio · ${c.district ? `${c.city} · ${c.district}` : c.city}`}
       title={`Correzione Acustica ${c.locale} (${c.city}) — Caso Studio HoReCa`}
       backHref="/portfolio"
       backLabel="Portfolio"
@@ -104,12 +104,11 @@ export default async function PortfolioCasePage({ params }: Props) {
       {c.featuredShots?.length ? (
         <section className="mb-6">
           <h2 className="mb-1 font-serif text-lg font-bold uppercase tracking-[0.06em] text-nrs-hero">
-            Quadri fonoassorbenti su misura
+            {c.featuredTitle ?? "In evidenza"}
           </h2>
-          <p className="mb-3 text-sm text-stone-600">
-            Creati sul tema del locale: assorbono il riverbero e restano pezzi
-            d’arredo.
-          </p>
+          {c.featuredLead ? (
+            <p className="mb-3 text-sm text-stone-600">{c.featuredLead}</p>
+          ) : null}
           <div className="grid gap-3 md:grid-cols-2">
             {c.featuredShots.map((shot) => (
               <figure
