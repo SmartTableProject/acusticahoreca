@@ -4,6 +4,15 @@ import { caseStudies } from "@/data/case-studies";
 import { portfolioStats } from "@/data/portfolio";
 import { contactTierLinks } from "@/data/site";
 
+/** id case-study → slug portfolio */
+const SLUG: Record<string, string> = {
+  "alla-lampara": "alla-lampara",
+  "da-dante": "da-dante",
+  "7su7": "7su7",
+  felice: "felice-a-testaccio",
+  "osteria-sole": "osteria-del-sole",
+};
+
 type Props = {
   limit?: number;
 };
@@ -34,26 +43,34 @@ export function CaseStudies({ limit }: Props) {
       </div>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((cs) => (
+        {items.map((cs) => {
+          const href = `/portfolio/${SLUG[cs.id] ?? cs.id}`;
+          return (
           <article
             key={cs.id}
             className="flex flex-col overflow-hidden border border-stone-200 bg-white"
           >
-            <div className="relative aspect-[4/3]">
+            <Link href={href} className="relative aspect-[4/3] block">
               <Image
                 src={cs.image}
-                alt={`${cs.locale} — ${cs.city}`}
+                alt={`Pannelli fonoassorbenti presso ${cs.locale} a ${cs.city} - NRS Acustica HoReCa`}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 33vw"
+                loading="lazy"
+                decoding="async"
               />
-            </div>
+            </Link>
             <div className="flex flex-1 flex-col p-6">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-nrs-accent">
                 {cs.city}
                 {cs.mqHint ? ` · ${cs.mqHint}` : ""}
               </p>
-              <h3 className="mt-1 font-serif text-xl font-bold text-nrs-hero">{cs.locale}</h3>
+              <h3 className="mt-1 font-serif text-xl font-bold text-nrs-hero">
+                <Link href={href} className="hover:text-nrs-accent">
+                  {cs.locale}
+                </Link>
+              </h3>
               <p className="mt-3 text-sm text-stone-600">
                 <span className="font-semibold text-nrs-hero">Problema: </span>
                 {cs.problema}
@@ -66,9 +83,16 @@ export function CaseStudies({ limit }: Props) {
                 <span className="font-semibold text-nrs-accent">Risultato: </span>
                 {cs.risultato}
               </p>
+              <Link
+                href={href}
+                className="mt-4 text-xs font-bold uppercase tracking-[0.14em] text-nrs-accent hover:underline"
+              >
+                Apri caso studio →
+              </Link>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-10 text-center">

@@ -1,13 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { SeoH1 } from "@/components/SeoH1";
 import { installLabels, standardProducts } from "@/data/products";
+import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
 
 /** Scheda 3 — catalogo con link reali */
 export function PanelProdotti() {
   return (
     <div className="nrs-concrete-bg flex h-full min-h-0 flex-col overflow-hidden p-4 md:p-6">
+      <SeoH1>{seoH1.prodotti}</SeoH1>
       <div className="mx-auto flex h-full w-full max-w-6xl min-h-0 flex-col">
         <div className="nrs-section-rule shrink-0">
           <h2 className="shrink-0 px-2 font-serif text-lg font-bold uppercase tracking-[0.18em] text-nrs-hero md:text-xl">

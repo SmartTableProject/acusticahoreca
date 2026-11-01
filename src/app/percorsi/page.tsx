@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
 import { DossierShell } from "@/components/dossier/DossierShell";
-import { site } from "@/data/site";
+import { seoMeta } from "@/data/seo-copy";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Percorsi — come interveniamo",
-  description: `Tre percorsi: acquisto online, progetto a distanza, chiavi in mano ${site.surveyArea}.`,
-};
+export const metadata = buildPageMetadata({
+  title: seoMeta.percorsi.title,
+  description: seoMeta.percorsi.description,
+  path: "/percorsi",
+});
 
-/** Scheda Percorsi — pagina vera (niente redirect) */
 export default function PercorsiPage() {
   return <DossierShell initialTab="percorsi" />;
 }

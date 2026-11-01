@@ -1,5 +1,7 @@
 "use client";
 
+import { SeoH1 } from "@/components/SeoH1";
+import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
 
 type Door = {
@@ -68,6 +70,7 @@ function Crosshair({ className = "" }: { className?: string }) {
 export function PanelPercorsi() {
   return (
     <div className="nrs-paper flex h-full min-h-0 flex-col overflow-hidden p-3 md:p-5">
+      <SeoH1>{seoH1.percorsi}</SeoH1>
       <div className="mx-auto flex h-full w-full max-w-6xl min-h-0 flex-col">
         {/* Intestazione dossier */}
         <div className="flex shrink-0 items-center justify-between gap-3 border border-stone-400/50 bg-white/80 px-3 py-2 md:px-4 md:py-2.5">

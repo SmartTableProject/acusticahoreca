@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { AcousticCalculator } from "@/components/AcousticCalculator";
 import {
   PreventivoWizard,
   type PreventivoQuery,
 } from "@/components/PreventivoWizard";
+import { SeoH1 } from "@/components/SeoH1";
 import { priceDisclaimer } from "@/data/products";
+import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
 
 const checklist = [
@@ -66,6 +69,7 @@ export function PanelPreventivo({ query = {} }: Props) {
         </aside>
 
         <div className="min-h-0 overflow-y-auto bg-white p-4 md:p-6">
+          <SeoH1>{seoH1.preventivo}</SeoH1>
           <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-nrs-accent">
             Preventivo · {site.responseTime}
           </p>
@@ -74,6 +78,9 @@ export function PanelPreventivo({ query = {} }: Props) {
           </h2>
           <p className="mt-2 text-xs text-stone-500">{priceDisclaimer}</p>
           <div className="mt-5">
+            <AcousticCalculator />
+          </div>
+          <div id="wizard" className="mt-6">
             <PreventivoWizard query={query} />
           </div>
           <p className="mt-5 text-center text-sm text-stone-500">

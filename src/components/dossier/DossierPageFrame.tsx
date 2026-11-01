@@ -7,6 +7,8 @@ type Props = {
   children: React.ReactNode;
   /** concrete = grigio puntinato · paper = carta tecnica */
   tone?: "concrete" | "paper";
+  /** Se false, il titolo visivo non è H1 (H1 SEO esterno) */
+  titleIsH1?: boolean;
 };
 
 /**
@@ -22,8 +24,11 @@ export function DossierPageFrame({
   rightSlot,
   children,
   tone = "concrete",
+  titleIsH1 = true,
 }: Props) {
   const bg = tone === "paper" ? "nrs-paper" : "nrs-concrete-bg";
+  const titleClass =
+    "line-clamp-2 font-serif text-base font-bold uppercase tracking-[0.06em] text-nrs-hero md:text-lg";
 
   return (
     <div className={`${bg} flex h-full min-h-0 flex-col overflow-hidden p-3 md:p-5`}>
@@ -33,9 +38,11 @@ export function DossierPageFrame({
             <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-nrs-accent md:text-[11px]">
               {eyebrow}
             </p>
-            <h1 className="truncate font-serif text-base font-bold uppercase tracking-[0.06em] text-nrs-hero md:text-lg">
-              {title}
-            </h1>
+            {titleIsH1 ? (
+              <h1 className={titleClass}>{title}</h1>
+            ) : (
+              <p className={titleClass}>{title}</p>
+            )}
           </div>
           <div className="flex flex-wrap items-center gap-3">
             {rightSlot}

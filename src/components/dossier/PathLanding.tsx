@@ -1,4 +1,5 @@
 import { DossierPageFrame } from "@/components/dossier/DossierPageFrame";
+import { SeoH1 } from "@/components/SeoH1";
 import { site } from "@/data/site";
 
 export type PathStep = {
@@ -10,6 +11,8 @@ export type PathStep = {
 type Props = {
   eyebrow: string;
   title: string;
+  /** H1 SEO lungo (sr-only); se assente usa title nel frame */
+  seoTitle?: string;
   lead: string;
   image: string;
   imagePos?: string;
@@ -26,6 +29,7 @@ type Props = {
 export function PathLanding({
   eyebrow,
   title,
+  seoTitle,
   lead,
   image,
   imagePos = "center 35%",
@@ -42,6 +46,7 @@ export function PathLanding({
       tone="paper"
       eyebrow={eyebrow}
       title={title}
+      titleIsH1={!seoTitle}
       backHref={secondaryHref}
       backLabel={secondaryLabel}
       rightSlot={
@@ -50,6 +55,7 @@ export function PathLanding({
         </span>
       }
     >
+      {seoTitle ? <SeoH1>{seoTitle}</SeoH1> : null}
       <div className="grid min-h-full gap-3 lg:grid-cols-[1.15fr_0.85fr] lg:gap-4">
         <div className="relative min-h-[220px] overflow-hidden border border-stone-400/50 bg-stone-300 lg:min-h-0">
           <div

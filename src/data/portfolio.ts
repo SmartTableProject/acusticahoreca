@@ -22,6 +22,7 @@ export {
   portfolioItemsGenerated,
   portfolioStats,
 } from "./portfolio.generated";
+export type { PortfolioProject } from "./portfolio.generated";
 
 import { portfolioItemsGenerated } from "./portfolio.generated";
 

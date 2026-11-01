@@ -1,18 +1,21 @@
-﻿import type { Metadata } from "next";
-import { PathLanding } from "@/components/dossier/PathLanding";
+﻿import { PathLanding } from "@/components/dossier/PathLanding";
+import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Progetto a distanza",
-  description: `Consulenza acustica da remoto con foto e planimetria. Preventivo entro ${site.responseTime}.`,
-};
+export const metadata = buildPageMetadata({
+  title: "Progetto Acustico a Distanza",
+  description: `Consulenza acustica da remoto con foto e planimetria. 44+ locali reali, SoundOff certificati, preventivo in 24-48h.`,
+  path: "/progetto-remoto",
+});
 
-/** Porta 02 — progetto a distanza (chrome = SiteChrome) */
+/** Porta 02 — progetto a distanza */
 export default function ProgettoRemotoPage() {
   return (
     <PathLanding
       eyebrow="Percorso 02 · Da remoto"
       title="Progetto a distanza"
+      seoTitle={seoH1.progettoRemoto}
       lead="Ci mandi foto e planimetria: un tecnico valuta mq, soffitto e layout. Ti indichiamo prodotti e quantità senza venire in sede."
       image="/portfolio/hotel-nazionale.jpg"
       imagePos="center 30%"

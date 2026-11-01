@@ -1,17 +1,13 @@
-import type { Metadata } from "next";
 import { DossierShell } from "@/components/dossier/DossierShell";
+import { seoMeta } from "@/data/seo-copy";
 import { isDossierTab, type DossierTabId } from "@/lib/dossier";
-import { site } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: site.heroHeadline,
-  description: `${site.tagline} ${site.clientSubline} Preventivo online entro ${site.responseTime}.`,
-  openGraph: {
-    title: `${site.name} | ${site.heroHeadline}`,
-    description: site.clientSubline,
-    url: site.domain,
-  },
-};
+export const metadata = buildPageMetadata({
+  title: seoMeta.home.title,
+  description: seoMeta.home.description,
+  path: "/",
+});
 
 type PageProps = {
   searchParams: Promise<{ tab?: string | string[] }>;

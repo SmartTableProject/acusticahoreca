@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import { DossierShell } from "@/components/dossier/DossierShell";
-import { site } from "@/data/site";
+import { seoMeta } from "@/data/seo-copy";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Prodotti SoundOff",
-  description: `Catalogo pannelli fonoassorbenti SoundOff per HoReCa. Preventivo entro ${site.responseTime}.`,
-};
+export const metadata = buildPageMetadata({
+  title: seoMeta.prodotti.title,
+  description: seoMeta.prodotti.description,
+  path: "/prodotti",
+  ogImage: "/prodotti/hexagon-kit.jpg",
+});
 
 /** Scheda Prodotti — pagina vera (niente redirect) */
 export default function ProdottiPage() {

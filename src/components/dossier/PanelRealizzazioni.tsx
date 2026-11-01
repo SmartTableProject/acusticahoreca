@@ -1,7 +1,9 @@
 "use client";
 
+import { SeoH1 } from "@/components/SeoH1";
 import { homeCollage, type CollageTile } from "@/data/home-collage";
 import { portfolioStats } from "@/data/portfolio";
+import { seoH1 } from "@/data/seo-copy";
 
 const areaClass: Record<CollageTile["area"], string> = {
   a: "nrs-collage-a",
@@ -19,6 +21,7 @@ const areaClass: Record<CollageTile["area"], string> = {
 export function PanelRealizzazioni() {
   return (
     <div className="flex h-full min-h-0 flex-col gap-3 p-3 md:gap-3.5 md:p-4">
+      <SeoH1>{seoH1.home}</SeoH1>
       <div className="nrs-collage nrs-collage-fill min-h-0 flex-1">
         {homeCollage.map((tile) => {
           const isBadgeHost = tile.area === "a";
@@ -91,6 +94,13 @@ export function PanelRealizzazioni() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2">
+          <a
+            href="/preventivo#calcolatore"
+            className="inline-flex cursor-pointer items-center gap-2 border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-nrs-hero transition hover:border-nrs-accent hover:text-nrs-accent"
+          >
+            Calcola mq SoundOff
+            <span aria-hidden>↗</span>
+          </a>
           <a
             href="/prodotti"
             className="inline-flex cursor-pointer items-center gap-2 border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-nrs-hero transition hover:border-nrs-accent hover:text-nrs-accent"

@@ -1,18 +1,19 @@
-import type { Metadata } from "next";
 import { PanelPreventivo } from "@/components/dossier/PanelPreventivo";
 import type { PreventivoQuery } from "@/components/PreventivoWizard";
-import { site } from "@/data/site";
+import { seoMeta } from "@/data/seo-copy";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Preventivo acustica HoReCa",
-  description: `Richiedi preventivo pannelli SoundOff. Risposta entro ${site.responseTime}.`,
-};
+export const metadata = buildPageMetadata({
+  title: seoMeta.preventivo.title,
+  description: seoMeta.preventivo.description,
+  path: "/preventivo",
+});
 
 type PageProps = {
   searchParams: Promise<PreventivoQuery>;
 };
 
-/** Scheda Preventivo — wizard guidato da URL (?step=) */
+/** Scheda Preventivo — wizard guidato da URL (?step=) + calcolatore */
 export default async function PreventivoPage({ searchParams }: PageProps) {
   const query = await searchParams;
   return <PanelPreventivo query={query} />;

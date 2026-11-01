@@ -1,18 +1,21 @@
-﻿import type { Metadata } from "next";
-import { PathLanding } from "@/components/dossier/PathLanding";
+﻿import { PathLanding } from "@/components/dossier/PathLanding";
+import { seoH1 } from "@/data/seo-copy";
 import { site } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Chiavi in mano Roma",
-  description: `Sopralluogo, posa e collaudo acustico in ${site.surveyArea}. Preventivo entro ${site.responseTime}.`,
-};
+export const metadata = buildPageMetadata({
+  title: "Chiavi in Mano Acustica Roma",
+  description: `Sopralluogo, posa e collaudo acustico in ${site.surveyArea}. 44+ locali reali, SoundOff certificati, preventivo in 24-48h.`,
+  path: "/chiavi-in-mano",
+});
 
-/** Porta 03 — chiavi in mano Roma (chrome = SiteChrome) */
+/** Porta 03 — chiavi in mano Roma */
 export default function ChiaviInManoPage() {
   return (
     <PathLanding
       eyebrow="Percorso 03 · Consigliato"
       title="Chiavi in mano Roma"
+      seoTitle={seoH1.chiaviInMano}
       lead={`Installazione completa in ${site.surveyArea}: veniamo in sede, progettiamo, posiamo e collaudiamo. Un solo interlocutore fino al locale silenzioso.`}
       image="/portfolio/alla-lampara.jpg"
       imagePos="center 42%"

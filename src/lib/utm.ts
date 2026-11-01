@@ -60,3 +60,13 @@ export function appendUtmToFormData(data: FormData) {
     if (value) data.set(key, value);
   }
 }
+
+/** Accoda UTM/gclid al testo WhatsApp (Ads attribution) */
+export function appendUtmToWhatsAppText(baseText: string): string {
+  const utm = readUtm();
+  const bits = KEYS.map((k) => (utm[k] ? `${k}=${utm[k]}` : ""))
+    .filter(Boolean)
+    .join(" ");
+  if (!bits) return baseText;
+  return `${baseText} [${bits}]`;
+}
