@@ -9,9 +9,41 @@ export type CaseStudy = {
   risultato: string;
   prodotti: string[];
   mqHint?: string;
+  /** Fatti chiave da mostrare come badge (solo dati reali) */
+  highlights?: string[];
 };
 
 export const caseStudies: CaseStudy[] = [
+  {
+    id: "taverna-latina",
+    locale: "Taverna Latina",
+    city: "Roma",
+    image: "/portfolio/taverna-latina.jpg",
+    problema:
+      "Rivestimenti duri e ampie vetrate: il riverbero in sala era molto alto e le conversazioni faticose.",
+    soluzione:
+      "Pannelli fonoassorbenti in resina melamminica ad alta capacità, con circa il 70% di copertura del soffitto. Realizzata anche una “tastiera di pianoforte” a soffitto fonoassorbente. Sala da circa 100 coperti; posa completata in 12 ore.",
+    risultato:
+      "Comfort acustico immediato: l’ambiente è diventato estremamente confortevole e, al tempo stesso, più curato grazie ai pannelli. Risultato eccellente.",
+    prodotti: ["basfon"],
+    mqHint: "Sala ~100 coperti · soffitto ~70%",
+    highlights: ["~100 coperti", "70% soffitto", "12 ore di posa"],
+  },
+  {
+    id: "remo",
+    locale: "Pizzeria Remo a Testaccio",
+    city: "Roma",
+    image: "/portfolio/remo.jpg",
+    problema:
+      "Riverbero molto alto sia nella cantinetta sia nella sala principale.",
+    soluzione:
+      "Sulla volta a botte: 1.200 “mattoni” in resina melamminica verniciati e lavorati per assomigliare ai mattoni veri (intervento di circa 20 ore). La sala interna è stata bonificata con pannelli in melammina ad alta capacità.",
+    risultato:
+      "Comfort acustico immediato. I mattoni fonoassorbenti hanno abbellito la sala senza togliere l’effetto accogliente della volta a botte.",
+    prodotti: ["basfon"],
+    mqHint: "Volta a botte + sala interna · ~20 ore",
+    highlights: ["1.200 mattoni fonoassorbenti", "volta a botte", "20 ore"],
+  },
   {
     id: "alla-lampara",
     locale: "Alla Lampara",

@@ -14,6 +14,7 @@ export type PortfolioCase = {
   risultato: string;
   prodotti: string[];
   mqHint?: string;
+  highlights?: string[];
   project: PortfolioProject;
   indexable: boolean;
 };
@@ -30,18 +31,14 @@ const NON_LOCALE = new Set([
   "lab-100",
 ]);
 
-/** Collega case study narrativi agli id portfolio */
+/** Collega case study narrativi agli id portfolio (se id diversi) */
 const NARRATIVE_BY_PROJECT: Record<string, string> = {
-  "alla-lampara": "alla-lampara",
-  "da-dante": "da-dante",
-  "7su7": "7su7",
   "felice-a-testaccio": "felice",
   "osteria-del-sole": "osteria-sole",
 };
 
 function narrativeFor(projectId: string) {
-  const key = NARRATIVE_BY_PROJECT[projectId];
-  if (!key) return null;
+  const key = NARRATIVE_BY_PROJECT[projectId] ?? projectId;
   return caseStudies.find((c) => c.id === key) ?? null;
 }
 
@@ -73,6 +70,7 @@ export function getPortfolioCase(slug: string): PortfolioCase | null {
         : `Riferimento tecnico per posa e progettazione.`),
     prodotti: story?.prodotti ?? ["isole", "basfon"],
     mqHint: story?.mqHint,
+    highlights: story?.highlights,
     project,
     indexable: true,
   };

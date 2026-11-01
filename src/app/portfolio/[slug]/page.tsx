@@ -60,25 +60,40 @@ export default async function PortfolioCasePage({ params }: Props) {
     >
       <PortfolioCaseTracker slug={c.slug} locale={c.locale} />
 
-      <p className="mb-4 max-w-3xl text-sm text-stone-600">
+      <p className="mb-3 max-w-3xl text-sm text-stone-600">
         Intervento NRS con prodotti {site.supplier}.{" "}
         {c.mqHint ? `${c.mqHint}.` : null}
       </p>
 
+      {c.highlights?.length ? (
+        <div className="mb-5 flex flex-wrap gap-2">
+          {c.highlights.map((h) => (
+            <span
+              key={h}
+              className="border border-nrs-accent/40 bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.14em] text-nrs-hero"
+            >
+              {h}
+            </span>
+          ))}
+        </div>
+      ) : null}
+
       <div className="mb-6 grid gap-3 md:grid-cols-3">
         {[
           { t: "Problema iniziale", d: c.problema },
-          { t: "Soluzione SoundOff", d: c.soluzione },
-          { t: "Risultato in sala", d: c.risultato },
+          { t: "Cosa abbiamo messo", d: c.soluzione },
+          { t: "Cosa è cambiato", d: c.risultato },
         ].map((block) => (
           <div
             key={block.t}
-            className="border border-stone-300 bg-white p-4"
+            className="border border-stone-300 bg-white p-4 md:p-5"
           >
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-nrs-accent">
               {block.t}
             </p>
-            <p className="mt-2 text-sm text-stone-700">{block.d}</p>
+            <p className="mt-2 text-sm leading-relaxed text-stone-700">
+              {block.d}
+            </p>
           </div>
         ))}
       </div>
