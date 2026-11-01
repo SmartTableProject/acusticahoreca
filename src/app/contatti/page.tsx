@@ -1,19 +1,20 @@
-import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { DossierPageFrame } from "@/components/dossier/DossierPageFrame";
 import { site } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contatti",
-  description: `Preventivo acustica HoReCa — ${site.marketArea}. Risposta entro ${site.responseTime}.`,
-};
+export const metadata = buildPageMetadata({
+  title: "Contatti Acustica HoReCa Roma",
+  description: `Scrivi o chiama NRS per un preventivo chiaro. ${site.surveyArea} in presenza, Italia da remoto. Risposta in ${site.responseTime}.`,
+  path: "/contatti",
+});
 
 type Props = {
   searchParams: Promise<{ tipo?: string; prodotto?: string }>;
 };
 
 const tipoLabel: Record<string, string> = {
-  "prodotto-online": "Acquisto / prodotto online",
+  "prodotto-online": "Preventivo / prodotto online",
   "consulenza-remota": "Progetto a distanza",
   "sopralluogo-roma": "Chiavi in mano Roma",
   "installazione-partner": "Installazione con partner",
@@ -36,7 +37,7 @@ export default async function ContattiPage({ searchParams }: Props) {
     <DossierPageFrame
       tone="paper"
       eyebrow={`Contatti · ${tipoLabel[tipo] ?? "Richiesta"}`}
-      title="Parliamone sul tuo locale"
+      title="Raccontaci il tuo locale"
       backHref="/percorsi"
       backLabel="Percorsi"
       rightSlot={
@@ -45,6 +46,12 @@ export default async function ContattiPage({ searchParams }: Props) {
         </span>
       }
     >
+      <p className="mb-4 max-w-3xl text-sm text-stone-600">
+        Preventivo onesto, tempi dichiarati, un solo referente. Sopralluogo in{" "}
+        {site.surveyArea}; altrove progetto a distanza o partner di posa. P.IVA{" "}
+        {site.piva}.
+      </p>
+
       <div className="grid gap-3 md:grid-cols-2 md:gap-4">
         <div className="border border-stone-400/50 bg-white/90 p-5 md:p-6">
           <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-nrs-accent">
@@ -53,7 +60,7 @@ export default async function ContattiPage({ searchParams }: Props) {
           <div className="mt-5 space-y-4 border-l-2 border-nrs-accent pl-4">
             <div>
               <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
-                Email
+                Email preventivi
               </p>
               <a
                 href={`mailto:${site.email}`}
@@ -75,15 +82,21 @@ export default async function ContattiPage({ searchParams }: Props) {
             </div>
             <div>
               <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
-                Sopralluoghi
+                Sopralluoghi in presenza
               </p>
               <p className="text-stone-700">{site.surveyArea}</p>
             </div>
             <div>
               <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
-                Area
+                Area operativa
               </p>
               <p className="text-stone-700">{site.marketArea}</p>
+            </div>
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-wide text-stone-500">
+                Partner tecnico
+              </p>
+              <p className="text-stone-700">{site.supplier}</p>
             </div>
           </div>
           <div className="mt-6 flex flex-wrap gap-2">
@@ -99,12 +112,16 @@ export default async function ContattiPage({ searchParams }: Props) {
               href="/preventivo"
               className="cursor-pointer border border-nrs-hero px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-nrs-hero hover:border-nrs-accent hover:text-nrs-accent"
             >
-              Wizard preventivo
+              Preventivo guidato
             </a>
           </div>
+          <p className="mt-4 text-xs text-stone-500">{site.partnerNote}</p>
         </div>
 
         <div className="border border-stone-400/50 bg-white p-5 md:p-6">
+          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-nrs-accent">
+            Modulo richiesta
+          </p>
           <ContactForm defaultTipo={tipo} defaultProdotto={params.prodotto} />
         </div>
       </div>

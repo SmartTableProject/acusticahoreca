@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
     slug: "riverbero-ristorante-perche-alzano-la-voce",
     title: "Riverbero in ristorante: perché alzano la voce",
     excerpt:
-      "Non è «atmosfera»: è acustica. Cosa succede in sala piena e perché i pannelli fonoassorbenti cambiano la serata.",
+      "Non è «atmosfera»: è riverbero. Cosa succede in sala piena e perché la correzione acustica cambia la serata senza chiudere il locale.",
     date: "2026-09-03",
     readingMinutes: 5,
     cover: "/portfolio/7su7-5.jpg",

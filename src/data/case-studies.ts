@@ -122,54 +122,149 @@ export const caseStudies: CaseStudy[] = [
     locale: "Alla Lampara",
     city: "Roma",
     image: "/portfolio/alla-lampara.jpg",
-    problema: "Sala piena la sera: conversazioni impossibili, clienti alzavano la voce.",
-    soluzione: "Pannelli a parete e isole a soffitto SoundOff, finiture integrate nell'arredo.",
-    risultato: "Si parla al tavolo senza gridare. Comfort percepibile dalla prima serata.",
+    problema:
+      "Nelle serate piene la sala diventava un unico rumore di fondo: al tavolo bisognava alzare la voce per farsi capire, con fatica per ospiti e servizio.",
+    soluzione:
+      "Correzione su pareti e soffitto con moduli Hexagon e isole SoundOff, scelte e finite per restare coerenti con l’arredo esistente — non «pannelli da cantiere».",
+    risultato:
+      "Si torna a parlare al tavolo senza gridare. Il comfort si sente dalla prima serata di lavoro, senza snaturare il locale.",
     prodotti: ["isole", "hexagon-kit"],
     mqHint: "Sala media · soffitto + pareti",
+    highlights: ["pareti + soffitto", "Hexagon + isole", "Roma"],
+    featuredTitle: "Intervento in sala",
+    featuredLead:
+      "Pareti e soffitto trattati insieme: meno riverbero, stesso carattere del locale.",
+    featuredShots: [
+      {
+        src: "/portfolio/alla-lampara.jpg",
+        caption: "Alla Lampara — correzione su superfici critiche",
+        alt: "Pannelli fonoassorbenti presso Alla Lampara a Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/la-lampara.jpg",
+        caption: "Dettaglio sala — finiture integrate nell’arredo",
+        alt: "Intervento acustico Alla Lampara Roma - NRS Acustica HoReCa",
+      },
+    ],
   },
   {
     id: "da-dante",
     locale: "Da Dante",
     city: "Roma",
     image: "/portfolio/da-dante.jpg",
-    problema: "Soffitto alto e superfici dure: riverbero lungo, atmosfera faticosa.",
-    soluzione: "Correzione a soffitto con prodotti SoundOff su misura per il volume della sala.",
-    risultato: "Meno eco, più ospitalità — senza snaturare l'estetica del locale.",
+    problema:
+      "Soffitto alto e superfici dure: il riverbero restava lungo e rendeva la sala faticosa, soprattutto nei picchi di servizio.",
+    soluzione:
+      "Focus a soffitto con pannelli Basfon e isole SoundOff dimensionati sul volume reale della sala, senza chiudere l’altezza architettonica.",
+    risultato:
+      "Meno eco, conversazioni più chiare, ospitalità più leggibile — l’estetica del locale resta quella di prima.",
     prodotti: ["basfon", "isole"],
     mqHint: "Volume alto · focus soffitto",
+    highlights: ["soffitto alto", "Basfon + isole", "Roma"],
+    featuredTitle: "Correzione a soffitto",
+    featuredLead:
+      "Il volume alto si governa dal soffitto: assorbimento dove il riverbero nasce.",
+    featuredShots: [
+      {
+        src: "/portfolio/da-dante.jpg",
+        caption: "Da Dante — intervento a soffitto",
+        alt: "Pannelli fonoassorbenti a soffitto Da Dante Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/da-dante-2.jpg",
+        caption: "Sala — comfort senza snaturare l’ambiente",
+        alt: "Correzione acustica Da Dante Roma - NRS Acustica HoReCa",
+      },
+    ],
   },
   {
     id: "7su7",
     locale: "Ristorante 7su7",
     city: "Roma",
     image: "/portfolio/7su7-5.jpg",
-    problema: "Cover alta: il parlato diventava rumore di fondo continuo.",
-    soluzione: "Intervento completo su superfici critiche con moduli e isole.",
-    risultato: "Serate più silenziose e confortevoli per ospiti e staff; locale più «rilassato» acusticamente.",
+    problema:
+      "Con cover alta il parlato diventava rumore continuo: difficile distinguere le conversazioni e tenere un servizio sereno.",
+    soluzione:
+      "Intervento multi-superficie: moduli Hexagon e Wave SoundOff sulle zone critiche, dove il riverbero colpiva di più ospiti e staff.",
+    risultato:
+      "Serate più sostenibili per chi lavora in sala e più chiare per chi siede al tavolo: il locale resta vivo, non «affogato» dal rumore.",
     prodotti: ["hexagon-kit", "wave"],
     mqHint: "Sala affollata · multi-superficie",
+    highlights: ["cover alta", "Hexagon + Wave", "multi-superficie"],
+    featuredTitle: "Sala ad alta densità",
+    featuredLead:
+      "Quando la cover sale, serve assorbimento mirato — non un trattamento generico.",
+    featuredShots: [
+      {
+        src: "/portfolio/7su7-5.jpg",
+        caption: "7su7 — sala in lavoro",
+        alt: "Correzione acustica Ristorante 7su7 Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/7su7.jpg",
+        caption: "Dettaglio intervento — moduli su superfici critiche",
+        alt: "Pannelli fonoassorbenti 7su7 Roma - NRS Acustica HoReCa",
+      },
+    ],
   },
   {
     id: "felice",
     locale: "Felice a Testaccio",
     city: "Roma",
     image: "/portfolio/felice-a-testaccio.jpg",
-    problema: "Trattoria storica: serve comfort senza pannelli «da ufficio».",
-    soluzione: "Soluzioni SoundOff discrete, coordinate con materiali e luci esistenti.",
-    risultato: "Acustica migliorata restando fedele all'identità del brand.",
+    problema:
+      "Trattoria storica: serviva ridurre il riverbero senza introdurre pannelli «da ufficio» che rompessero l’identità del locale.",
+    soluzione:
+      "Soluzioni SoundOff discrete (isole e Basfon) coordinate con materiali, luci e carattere esistente — intervento leggibile ma non invasivo.",
+    risultato:
+      "Comfort acustico migliorato restando fedele al brand: gli ospiti sentono la differenza, non «vedono il cantiere».",
     prodotti: ["isole", "basfon"],
     mqHint: "Identità forte · intervento discreto",
+    highlights: ["locale storico", "intervento discreto", "Testaccio"],
+    featuredTitle: "Identità del locale",
+    featuredLead:
+      "In una trattoria storica il vincolo estetico è parte del brief tecnico.",
+    featuredShots: [
+      {
+        src: "/portfolio/felice-a-testaccio.jpg",
+        caption: "Felice a Testaccio — sala",
+        alt: "Correzione acustica Felice a Testaccio Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/felice-a-testaccio-2.jpg",
+        caption: "Dettaglio — finiture discrete",
+        alt: "Pannelli fonoassorbenti Felice a Testaccio - NRS Acustica HoReCa",
+      },
+    ],
   },
   {
     id: "osteria-sole",
     locale: "Osteria del Sole",
     city: "Roma",
     image: "/portfolio/osteria-del-sole.jpg",
-    problema: "Ambiente raccolto ma rumoroso nei picchi di servizio.",
-    soluzione: "Posizionamento mirato dei pannelli dove il riverbero colpiva di più.",
-    risultato: "Conversazione più chiara ai tavoli, meno fatica per lo staff.",
+    problema:
+      "Ambiente raccolto ma rumoroso nei picchi: poche superfici, tanto riverbero dove le persone si concentrano.",
+    soluzione:
+      "Posizionamento mirato di Wave e Hexagon SoundOff sulle zone dove il riverbero colpiva conversazione e servizio — precisione di posa, non quantità a caso.",
+    risultato:
+      "Conversazioni più chiare ai tavoli e meno fatica per lo staff nelle ore piene.",
     prodotti: ["wave", "hexagon-kit"],
     mqHint: "Sala raccolta · precisione di posa",
+    highlights: ["posa mirata", "Wave + Hexagon", "Roma"],
+    featuredTitle: "Precisione di posa",
+    featuredLead:
+      "In sale raccolte conta dove metti i pannelli, non solo quanti ne metti.",
+    featuredShots: [
+      {
+        src: "/portfolio/osteria-del-sole.jpg",
+        caption: "Osteria del Sole — sala",
+        alt: "Correzione acustica Osteria del Sole Roma - NRS Acustica HoReCa",
+      },
+      {
+        src: "/portfolio/osteria-del-sole-2.jpg",
+        caption: "Dettaglio intervento",
+        alt: "Pannelli fonoassorbenti Osteria del Sole Roma - NRS Acustica HoReCa",
+      },
+    ],
   },
 ];

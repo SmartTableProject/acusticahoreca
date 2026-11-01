@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { DossierPageFrame } from "@/components/dossier/DossierPageFrame";
 import { blogPosts } from "@/data/blog";
 import { site } from "@/data/site";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog — Acustica HoReCa",
-  description: `Guide pratiche su riverbero, isole, posa e Roma. ${site.name}.`,
-};
+export const metadata = buildPageMetadata({
+  title: "Blog Acustica HoReCa Roma",
+  description: `Guide pratiche su riverbero, isole, posa e Roma. Per ristoratori, non per laboratori. ${site.name}.`,
+  path: "/blog",
+});
 
 export default function BlogIndexPage() {
   return (
@@ -26,6 +27,12 @@ export default function BlogIndexPage() {
         </a>
       }
     >
+      <p className="mb-4 max-w-3xl text-sm text-stone-600">
+        Articoli brevi e operativi: cosa succede in sala, quando servono le
+        isole, come scegliere tra posa e fai-da-te, cosa fare a Roma. Poi si
+        passa al preventivo.
+      </p>
+
       <div className="grid gap-4 md:grid-cols-2">
         {blogPosts.map((post) => (
           <Link
@@ -36,15 +43,17 @@ export default function BlogIndexPage() {
             <div className="relative aspect-[16/9] overflow-hidden bg-stone-100">
               <Image
                 src={post.cover}
-                alt=""
+                alt={`${post.title} — ${site.name}`}
                 fill
                 className="nrs-photo-bw object-cover transition duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="flex flex-1 flex-col p-4">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-stone-500">
-                {post.readingMinutes} min
+                {post.readingMinutes} min di lettura
               </p>
               <h2 className="mt-1 font-serif text-lg font-bold uppercase tracking-[0.02em] text-nrs-hero group-hover:text-nrs-accent">
                 {post.title}
