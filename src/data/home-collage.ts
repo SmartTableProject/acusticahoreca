@@ -42,14 +42,14 @@ export const homeCollage: CollageTile[] = [
   },
   {
     id: "galbi",
-    src: "/portfolio/galbi.jpg",
+    src: "/portfolio/galbi-4.jpg",
     title: "Galbi",
     area: "e",
     objectPosition: "center 25%",
   },
   {
     id: "cuccurucu",
-    src: "/portfolio/cuccurucu-5.jpg",
+    src: "/portfolio/cuccurucu-5-plus.jpg",
     title: "Cuccurucù",
     area: "f",
     objectPosition: "center 32%",

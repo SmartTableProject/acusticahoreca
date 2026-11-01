@@ -55,7 +55,7 @@ export function PanelPreventivo({ query = {} }: Props) {
             <div className="relative aspect-[16/10] overflow-hidden border border-stone-400/40">
               <Image
                 src="/portfolio/da-dante.jpg"
-                alt=""
+                alt="Correzione acustica a soffitto in locale HoReCa — NRS"
                 fill
                 className="nrs-photo-bw object-cover"
                 sizes="260px"

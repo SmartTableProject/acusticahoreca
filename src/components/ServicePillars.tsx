@@ -8,16 +8,16 @@ import { contactTierLinks, site } from "@/data/site";
 const doors = [
   {
     n: "1",
-    title: "Acquisto online",
-    text: "Scegli la soluzione acustica più adatta alla tua attività e procedi direttamente all’acquisto.",
-    cta: "Acquista ora",
+    title: "Preventivo online",
+    text: "Scegli la linea SoundOff più adatta al tuo locale e ricevi un preventivo chiaro, senza checkout improvvisato.",
+    cta: "Richiedi preventivo",
     href: contactTierLinks.preventivo,
     dominant: false,
   },
   {
     n: "2",
     title: "Progetto a distanza",
-    text: "Un nostro esperto ti guida da remoto per progettare la soluzione su misura per i tuoi spazi.",
+    text: "Un tecnico valuta foto e planimetria e ti indica mq, layout e fornitura — ovunque in Italia.",
     cta: "Inizia il progetto",
     href: contactTierLinks.remote,
     dominant: false,
@@ -25,8 +25,8 @@ const doors = [
   {
     n: "3",
     title: "Chiavi in mano Roma",
-    text: `Installazione completa e certificata a ${site.surveyArea}: pensiamo a tutto noi, tu ricevi un ambiente silenzioso e confortevole.`,
-    cta: "Richiedi preventivo",
+    text: `Installazione completa in ${site.surveyArea}: sopralluogo, posa e collaudo. Un solo interlocutore fino al comfort in sala.`,
+    cta: "Richiedi sopralluogo",
     href: contactTierLinks.roma,
     dominant: true,
   },
@@ -86,11 +86,11 @@ export function ServicePillars() {
 
         <div className="mt-8 flex flex-col gap-3 border-t border-stone-400/40 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="max-w-2xl text-xs font-bold uppercase leading-relaxed tracking-[0.14em] text-nrs-hero">
-            Tre porte. Tre percorsi. Una sola destinazione: locale silenzioso e
-            confortevole per il tuo HoReCa.
+            Tre percorsi. Una destinazione: locale più silenzioso e confortevole,
+            con tempi e responsabilità chiari.
           </p>
           <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-500">
-            Architettura funnel · NRS
+            NRS · Acustica HoReCa
           </p>
         </div>
       </div>

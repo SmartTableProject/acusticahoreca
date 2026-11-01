@@ -32,13 +32,14 @@ export default function ChiSiamoPage() {
             ristoranti, bar, hotel e spazi commerciali.
           </p>
           <p>
-            Siamo <strong>{site.partnerLabel}</strong> per prodotti certificati —
-            Basfon, Hexagon, Wave, isole sospese. Area commerciale:{" "}
-            <strong>{site.partnerMarket}</strong>.
+            Siamo <strong>{site.partnerLabel}</strong>: Basfon, Hexagon, Wave,
+            isole sospese — materiali certificati per locali pubblici. Area
+            operativa: <strong>{site.partnerMarket}</strong>.
           </p>
           <p>
-            Sopralluoghi diretti in <strong>{site.surveyArea}</strong>. Altrove:
-            prodotti online, progetto a distanza e partner di posa.
+            Sopralluoghi e posa diretta in <strong>{site.surveyArea}</strong>.
+            Fuori zona: preventivo online, progetto a distanza e partner di posa
+            selezionati.
           </p>
           <p className="border-l-2 border-nrs-accent pl-4 text-sm text-stone-600">
             {site.clientMessage} {site.clientSubline}

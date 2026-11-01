@@ -14,7 +14,7 @@ export function ProductTeaser() {
           </h2>
         </div>
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-stone-600">
-          Pannelli standard ordinabili senza sopralluogo. Risposta entro{" "}
+          Pannelli standard SoundOff: preventivo senza sopralluogo. Risposta entro{" "}
           {site.responseTime}.
         </p>
 

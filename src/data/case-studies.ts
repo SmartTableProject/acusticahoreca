@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
     soluzione:
       "Pannelli fonoassorbenti in resina melamminica ad alta capacità, con circa il 70% di copertura del soffitto. Realizzata anche una “tastiera di pianoforte” a soffitto fonoassorbente. Sala da circa 100 coperti; posa completata in 12 ore.",
     risultato:
-      "Comfort acustico immediato: l’ambiente è diventato estremamente confortevole e, al tempo stesso, più curato grazie ai pannelli. Risultato eccellente.",
+      "Comfort acustico immediato: in sala si parla senza alzare la voce e i pannelli risultano parte dell’arredo, non un intervento “tecnico” a vista.",
     prodotti: ["basfon"],
     mqHint: "Sala ~100 coperti · soffitto ~70%",
     highlights: ["~100 coperti", "70% soffitto", "12 ore di posa"],

@@ -126,7 +126,7 @@ export function AcousticCalculator({ compact = false }: Props) {
       aria-labelledby="calc-title"
     >
       <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-nrs-accent">
-        Lead magnet · stima orientativa
+        Stima orientativa · non è un preventivo
       </p>
       <h2
         id="calc-title"

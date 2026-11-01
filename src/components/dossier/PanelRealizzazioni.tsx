@@ -4,6 +4,20 @@ import { SeoH1 } from "@/components/SeoH1";
 import { homeCollage, type CollageTile } from "@/data/home-collage";
 import { portfolioStats } from "@/data/portfolio";
 import { seoH1 } from "@/data/seo-copy";
+import { site } from "@/data/site";
+
+/** Tile collage → scheda caso se esiste, altrimenti galleria */
+const CASE_HREF: Record<string, string> = {
+  "la-lampara": "/portfolio/alla-lampara",
+  felice: "/portfolio/felice-a-testaccio",
+  "hotel-nazionale": "/portfolio/hotel-nazionale",
+  "7su7": "/portfolio/7su7",
+  galbi: "/portfolio/galbi",
+  cuccurucu: "/portfolio/cuccurucu",
+  "pizzeria-ostiense": "/portfolio/pizzeria-ostiense",
+  "la-botte": "/portfolio/la-botte",
+  strozzaquintino: "/portfolio/strozzaquintino",
+};
 
 const areaClass: Record<CollageTile["area"], string> = {
   a: "nrs-collage-a",
@@ -28,7 +42,7 @@ export function PanelRealizzazioni() {
           return (
             <a
               key={tile.id}
-              href="/portfolio"
+              href={CASE_HREF[tile.id] ?? "/portfolio"}
               className={`group relative block h-full w-full min-h-0 cursor-pointer overflow-hidden bg-stone-300 ${areaClass[tile.area]}`}
             >
               <span
@@ -87,10 +101,11 @@ export function PanelRealizzazioni() {
       <div className="relative z-10 flex shrink-0 flex-col gap-3 border border-stone-200 bg-white px-4 py-3 md:flex-row md:items-center md:justify-between md:px-5">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.12em] text-nrs-hero">
-            Scopri le soluzioni acustiche per HoReCa
+            Correzione acustica per locali che lavorano sul serio
           </p>
           <p className="mt-0.5 text-sm text-stone-500">
-            Prodotti fonoassorbenti specifici per locali pubblici.
+            {portfolioStats.projects}+ locali documentati · SoundOff · preventivo
+            in {site.responseTime}
           </p>
         </div>
         <div className="flex flex-wrap gap-2">

@@ -33,13 +33,14 @@ export default function PortfolioPage() {
         </a>
       }
     >
-      <p className="mb-4 text-sm text-stone-600">
-        Ristoranti, bar, pizzerie e hotel — oltre {site.yearsExperience} anni di
-        interventi. {site.clientMessage}
+      <p className="mb-4 max-w-3xl text-sm text-stone-600">
+        Interventi reali su ristoranti, bar, pizzerie e hotel — oltre{" "}
+        {site.yearsExperience} anni di lavoro documentato. Apri un caso studio
+        per problema, soluzione e risultato. {site.clientMessage}
       </p>
 
       <h2 className="mb-3 font-serif text-base font-bold uppercase tracking-[0.08em] text-nrs-hero">
-        Casi studio indicizzabili
+        Casi studio
       </h2>
       <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         {cases.map((c) => (

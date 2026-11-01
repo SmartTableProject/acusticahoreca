@@ -18,7 +18,8 @@ export function PanelProdotti() {
           </h2>
         </div>
         <p className="mt-2 shrink-0 text-center text-sm text-stone-600">
-          Pannelli SoundOff · preventivo entro {site.responseTime}
+          Linee SoundOff per locali pubblici · preventivo entro{" "}
+          {site.responseTime} · fasce indicative, mai listino finto
         </p>
 
         <div className="mt-4 grid min-h-0 flex-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">

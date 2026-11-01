@@ -44,8 +44,8 @@ export const navLinks = [
 
 /** Allineati ai 3 livelli servizio (footer strip) */
 export const servicePillars = [
-  "Acquisto online",
-  "Consulenza remota",
+  "Preventivo online",
+  "Progetto a distanza",
   "Chiavi in mano Roma",
 ] as const;
 

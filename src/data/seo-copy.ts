@@ -3,11 +3,11 @@
 export const seoH1 = {
   home: "Correzione Acustica e Pannelli Fonoassorbenti per Ristoranti e Locali HoReCa a Roma e Centro Italia",
   percorsi:
-    "Servizi di Insonorizzazione e Correzione Acustica per Ristoranti: Kit Online, Progetto a Distanza e Chiavi in Mano Roma",
+    "Servizi di Correzione Acustica per Ristoranti: Preventivo Online, Progetto a Distanza e Chiavi in Mano Roma",
   prodotti:
     "Catalogo Pannelli Fonoassorbenti Ignifughi SoundOff per Ristoranti, Pizzerie e Locali Pubblici",
   portfolio:
-    "Portfolio Interventi Acustici HoReCa: 44 Ristoranti e Locali Insonorizzati a Roma e in Italia",
+    "Portfolio Interventi Acustici HoReCa: 44 Ristoranti e Locali Documentati a Roma e in Italia",
   acusticaRoma:
     "Correzione Acustica Ristoranti a Roma e Provincia: Sopralluogo, Progettazione e Posa Chiavi in Mano",
   preventivo: "Preventivo Rapido Correzione Acustica Locale HoReCa in 24–48 Ore",
@@ -26,7 +26,7 @@ export const seoMeta = {
   percorsi: {
     title: "Servizi Acustica HoReCa Roma",
     description:
-      "Kit online, progetto a distanza e chiavi in mano a Roma. 44+ locali reali, prodotti certificati SoundOff e preventivo in 24-48h.",
+      "Preventivo online, progetto a distanza e chiavi in mano a Roma. 44+ locali reali, prodotti certificati SoundOff e preventivo in 24-48h.",
   },
   prodotti: {
     title: "Pannelli Fonoassorbenti SoundOff",
