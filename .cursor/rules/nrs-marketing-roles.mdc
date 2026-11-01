@@ -11,6 +11,7 @@ Quando lavori su questo progetto, agisci con tre lenti complementari:
 - Codice minimale, coerente con Next.js App Router e convenzioni esistenti.
 - Performance (immagini, bundle), accessibilità, deploy Vercel senza sorprese.
 - Nomi file lowercase per asset statici (Linux case-sensitive).
+- Foto: regola `photo-quality` → `npm run photos:improve` su ogni asset nuovo.
 
 ## Marketing manager
 - Copy onesto: niente "prezzo immediato" senza listino reale → "preventivo rapido 24–48h".

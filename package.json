@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "sync-portfolio": "node scripts/sync-portfolio.mjs",
+    "photos:improve": "node scripts/improve-site-photos.mjs",
+    "photos:improve:force": "node scripts/improve-site-photos.mjs --force",
     "social:week": "node scripts/generate-social-week.mjs",
     "social:buffer-setup": "node scripts/buffer-setup.mjs",
     "social:buffer": "node scripts/buffer-schedule-week.mjs"
@@ -17,7 +19,8 @@
     "next": "16.3.4",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "resend": "^6.25.0"
+    "resend": "^6.25.0",
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

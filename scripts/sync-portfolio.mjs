@@ -243,3 +243,17 @@ console.log(`Sorgente ridotte: ${sourceFiles.length} file`);
 console.log(`Copiati: ${copied} | Già presenti: ${skipped}`);
 console.log(`Locali/progetti: ${projects.length} | Foto in galleria: ${flatItems.length}`);
 console.log(`Scritto: ${OUT}`);
+
+// Qualità foto obbligatoria (regola photo-quality)
+if (copied > 0) {
+  console.log("Avvio improve foto nuove/copiate…");
+  const { spawnSync } = await import("child_process");
+  const r = spawnSync(
+    process.execPath,
+    [path.join(__dirname, "improve-site-photos.mjs")],
+    { stdio: "inherit", cwd: ROOT },
+  );
+  if (r.status !== 0) {
+    console.warn("Attenzione: improve-site-photos ha restituito codice", r.status);
+  }
+}

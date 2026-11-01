@@ -1,0 +1,1837 @@
+{
+  "version": 1,
+  "files": {
+    "public/portfolio/20180215-141107.jpg": {
+      "preset": "photo",
+      "outputHash": "278cbded27436adde1da726b3e0911e012a49b26d5ec55298a49b87b40bdc3c2",
+      "width": 1500,
+      "height": 844,
+      "bytes": 107248,
+      "at": "2026-11-01T22:37:18.884Z"
+    },
+    "public/portfolio/20180215-141018.jpg": {
+      "preset": "photo",
+      "outputHash": "16cb0418329b2dcebb63820b1a02d8d2f585ed8e3f48b903166364b765145669",
+      "width": 844,
+      "height": 1500,
+      "bytes": 101790,
+      "at": "2026-11-01T22:37:19.420Z"
+    },
+    "public/portfolio/20180215-142359.jpg": {
+      "preset": "photo",
+      "outputHash": "aff711879078f859bb6169d9e50160ba9409da866a2229c36f2b5b1dc68e9dc1",
+      "width": 1500,
+      "height": 844,
+      "bytes": 160242,
+      "at": "2026-11-01T22:37:20.027Z"
+    },
+    "public/portfolio/20170802_134723.jpg": {
+      "preset": "photo",
+      "outputHash": "84f4696eee93077b56d89ca132cc9a77da4ae5e5705ead700a767594f96e7c6b",
+      "width": 918,
+      "height": 1632,
+      "bytes": 181157,
+      "at": "2026-11-01T22:37:20.202Z"
+    },
+    "public/portfolio/20180215_141107.jpg": {
+      "preset": "photo",
+      "outputHash": "278cbded27436adde1da726b3e0911e012a49b26d5ec55298a49b87b40bdc3c2",
+      "width": 1500,
+      "height": 844,
+      "bytes": 107248,
+      "at": "2026-11-01T22:37:20.806Z"
+    },
+    "public/portfolio/20180215_141018.jpg": {
+      "preset": "photo",
+      "outputHash": "16cb0418329b2dcebb63820b1a02d8d2f585ed8e3f48b903166364b765145669",
+      "width": 844,
+      "height": 1500,
+      "bytes": 101790,
+      "at": "2026-11-01T22:37:20.993Z"
+    },
+    "public/portfolio/20180215_142359.jpg": {
+      "preset": "photo",
+      "outputHash": "aff711879078f859bb6169d9e50160ba9409da866a2229c36f2b5b1dc68e9dc1",
+      "width": 1500,
+      "height": 844,
+      "bytes": 160242,
+      "at": "2026-11-01T22:37:21.508Z"
+    },
+    "public/portfolio/20190128-160113.jpg": {
+      "preset": "photo",
+      "outputHash": "9bf814882d18e2be7df1649a88c05fe26a3dcb8c2cbac2f22d88b3ac9094afd4",
+      "width": 1500,
+      "height": 844,
+      "bytes": 152269,
+      "at": "2026-11-01T22:37:21.753Z"
+    },
+    "public/portfolio/20190128-221416.jpg": {
+      "preset": "photo",
+      "outputHash": "0cfa5d9047c6c657b70742656d7cba6699a968800c5980246e7fa729427f145d",
+      "width": 1500,
+      "height": 844,
+      "bytes": 124791,
+      "at": "2026-11-01T22:37:21.829Z"
+    },
+    "public/portfolio/20180608_100932.jpg": {
+      "preset": "photo",
+      "outputHash": "287abd07c02546217572e3918991ccdb9837a91a6d1847e9e960cc77bb35d0a6",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 93744,
+      "at": "2026-11-01T22:37:21.929Z"
+    },
+    "public/portfolio/20190128-221500.jpg": {
+      "preset": "photo",
+      "outputHash": "4e6b7ddc357701b544f5da7d298742d76b28ae461aeb1a9b0dc3b7de87fb9c98",
+      "width": 1500,
+      "height": 844,
+      "bytes": 104247,
+      "at": "2026-11-01T22:37:22.153Z"
+    },
+    "public/portfolio/20190128-221516.jpg": {
+      "preset": "photo",
+      "outputHash": "20e4745b12521942c1cdf4f0fdfaf77054e9b479951ce9111576321b9b8e85a9",
+      "width": 1500,
+      "height": 844,
+      "bytes": 97845,
+      "at": "2026-11-01T22:37:22.358Z"
+    },
+    "public/portfolio/20190128_221416.jpg": {
+      "preset": "photo",
+      "outputHash": "0cfa5d9047c6c657b70742656d7cba6699a968800c5980246e7fa729427f145d",
+      "width": 1500,
+      "height": 844,
+      "bytes": 124791,
+      "at": "2026-11-01T22:37:22.604Z"
+    },
+    "public/portfolio/20190128_160113.jpg": {
+      "preset": "photo",
+      "outputHash": "9bf814882d18e2be7df1649a88c05fe26a3dcb8c2cbac2f22d88b3ac9094afd4",
+      "width": 1500,
+      "height": 844,
+      "bytes": 152269,
+      "at": "2026-11-01T22:37:22.648Z"
+    },
+    "public/portfolio/20190128_221500.jpg": {
+      "preset": "photo",
+      "outputHash": "4e6b7ddc357701b544f5da7d298742d76b28ae461aeb1a9b0dc3b7de87fb9c98",
+      "width": 1500,
+      "height": 844,
+      "bytes": 104247,
+      "at": "2026-11-01T22:37:22.670Z"
+    },
+    "public/portfolio/20190128_221516.jpg": {
+      "preset": "photo",
+      "outputHash": "20e4745b12521942c1cdf4f0fdfaf77054e9b479951ce9111576321b9b8e85a9",
+      "width": 1500,
+      "height": 844,
+      "bytes": 97845,
+      "at": "2026-11-01T22:37:22.940Z"
+    },
+    "public/portfolio/7su7-11.jpg": {
+      "preset": "photo",
+      "outputHash": "3da7cc6ee7ce37236189bd76f46ea5bc934311d27c79e631ad1b963ed48cc3ac",
+      "width": 1372,
+      "height": 772,
+      "bytes": 94888,
+      "at": "2026-11-01T22:37:23.289Z"
+    },
+    "public/portfolio/7su7-10.jpg": {
+      "preset": "photo",
+      "outputHash": "93eb50759dda294f386dd1e8a0f28dde136d8afc3236550028a53d0f12d50021",
+      "width": 1372,
+      "height": 772,
+      "bytes": 133140,
+      "at": "2026-11-01T22:37:23.329Z"
+    },
+    "public/portfolio/7su7-12.jpg": {
+      "preset": "photo",
+      "outputHash": "b35b2976e0c81aec5a80ee17c3b55058940666d4902231c9f2ae71a1c6b493e9",
+      "width": 1372,
+      "height": 772,
+      "bytes": 89219,
+      "at": "2026-11-01T22:37:23.381Z"
+    },
+    "public/portfolio/7ca8c9ec-8e9a-46cd-b295-157e6cd0f981.jpg": {
+      "preset": "photo",
+      "outputHash": "2679843bb11390bd7501ee2f90ba402e0df916916bf84e8420f93e93c058750f",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 258520,
+      "at": "2026-11-01T22:37:23.802Z"
+    },
+    "public/portfolio/7su7-13.jpg": {
+      "preset": "photo",
+      "outputHash": "2e66bbc0079070de7c0d5128d0eba6383ab26dca55cd1154892fa9231c40957f",
+      "width": 1372,
+      "height": 772,
+      "bytes": 124406,
+      "at": "2026-11-01T22:37:23.854Z"
+    },
+    "public/portfolio/7su7-3.jpg": {
+      "preset": "photo",
+      "outputHash": "02bdfc94cd01c3a764b13a1156bf5e47ed3e7450a6e5386dd6e78334d9f69a1d",
+      "width": 1372,
+      "height": 772,
+      "bytes": 131688,
+      "at": "2026-11-01T22:37:24.090Z"
+    },
+    "public/portfolio/7su7-2.jpg": {
+      "preset": "photo",
+      "outputHash": "942ff1d54ae08642ccd2581d749488fc4f54f3f49dac16b43458f474aef9650b",
+      "width": 1372,
+      "height": 772,
+      "bytes": 139073,
+      "at": "2026-11-01T22:37:24.215Z"
+    },
+    "public/portfolio/7su7-5.jpg": {
+      "preset": "photo",
+      "outputHash": "688df158393cda3795e123c63ac8dab280d722fabe3a8ceec30b46e1af26c5f8",
+      "width": 1372,
+      "height": 772,
+      "bytes": 102063,
+      "at": "2026-11-01T22:37:24.384Z"
+    },
+    "public/portfolio/7su7-4.jpg": {
+      "preset": "photo",
+      "outputHash": "7778ca9df5c923d3a5f92b51f11e062edbf5802d808c091ed6e37f5b337a566e",
+      "width": 1372,
+      "height": 772,
+      "bytes": 121597,
+      "at": "2026-11-01T22:37:24.446Z"
+    },
+    "public/portfolio/7su7-6.jpg": {
+      "preset": "photo",
+      "outputHash": "f154232bcfd139cd5211ebe80c625afd6e31d73f01b22a7872c26ce88f83a256",
+      "width": 1372,
+      "height": 772,
+      "bytes": 107206,
+      "at": "2026-11-01T22:37:24.480Z"
+    },
+    "public/portfolio/7su7-7.jpg": {
+      "preset": "photo",
+      "outputHash": "9611fd49911a19899d8273cd2a70544203577c0c88a7eac30516d76fcc86f26a",
+      "width": 1372,
+      "height": 772,
+      "bytes": 136206,
+      "at": "2026-11-01T22:37:24.713Z"
+    },
+    "public/portfolio/7su7-8.jpg": {
+      "preset": "photo",
+      "outputHash": "19905c7ba66fad2da40859c72e4ca0d22dcd2f5ebbe4202c099dc5204cbc9152",
+      "width": 1372,
+      "height": 772,
+      "bytes": 109663,
+      "at": "2026-11-01T22:37:24.997Z"
+    },
+    "public/portfolio/7su7-9.jpg": {
+      "preset": "photo",
+      "outputHash": "02fd9aaab0084c5d4f7c41b59ed06db89d4f8ec1b851e8a31a1b49f889dd356d",
+      "width": 1372,
+      "height": 772,
+      "bytes": 120324,
+      "at": "2026-11-01T22:37:25.169Z"
+    },
+    "public/portfolio/7su7.jpg": {
+      "preset": "photo",
+      "outputHash": "05085d690482ec2664a47cb23d8b06f8e22a2682553fb1242486ad70975ac292",
+      "width": 1372,
+      "height": 772,
+      "bytes": 136906,
+      "at": "2026-11-01T22:37:25.259Z"
+    },
+    "public/portfolio/98e0bdf0-dca2-41cb-9d54-5e1a51962c98.jpg": {
+      "preset": "photo",
+      "outputHash": "ca800f8c3d537d4033d3f1b6d42dee7c85eb484088d20fc7c59d7c458e98050c",
+      "width": 1125,
+      "height": 1500,
+      "bytes": 172173,
+      "at": "2026-11-01T22:37:25.300Z"
+    },
+    "public/portfolio/alla-lampara.jpg": {
+      "preset": "photo",
+      "outputHash": "752e036123fdc8f8bec4b3b1598e1c56fa68683968255ffb166db002b001b6f3",
+      "width": 1000,
+      "height": 665,
+      "bytes": 57465,
+      "at": "2026-11-01T22:37:25.671Z"
+    },
+    "public/portfolio/buono-2.jpg": {
+      "preset": "photo",
+      "outputHash": "ff494ac86277489b78e00f925f655a6685c9f6518f23893d06ec68974b40409b",
+      "width": 665,
+      "height": 1000,
+      "bytes": 90579,
+      "at": "2026-11-01T22:37:25.800Z"
+    },
+    "public/portfolio/buono-3.jpg": {
+      "preset": "photo",
+      "outputHash": "b188aa6dc2ac0fd2c4add58ddb03e08c5f411b172925fe48517267db4b5c8568",
+      "width": 665,
+      "height": 1000,
+      "bytes": 100728,
+      "at": "2026-11-01T22:37:25.835Z"
+    },
+    "public/portfolio/buono-4.jpg": {
+      "preset": "photo",
+      "outputHash": "80c7bbdd024ef42ab3fe69d4f88015843755af4da6ee0e697766a3a3df9104d2",
+      "width": 665,
+      "height": 1000,
+      "bytes": 65727,
+      "at": "2026-11-01T22:37:25.912Z"
+    },
+    "public/portfolio/agenzia.jpg": {
+      "preset": "photo",
+      "outputHash": "ff53b8cedd5a53ec3f3631ea7b5f99edd2708cf2fbe2b95b3938a4ab2635dea3",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 111322,
+      "at": "2026-11-01T22:37:25.983Z"
+    },
+    "public/portfolio/buono-6.jpg": {
+      "preset": "photo",
+      "outputHash": "3917c520d16f87bc9256308ad52912a78147b8a529cbd2af27ee5a7d7cf18bb8",
+      "width": 665,
+      "height": 1000,
+      "bytes": 94508,
+      "at": "2026-11-01T22:37:26.211Z"
+    },
+    "public/portfolio/buono-5.jpg": {
+      "preset": "photo",
+      "outputHash": "a76a41c2df9ac8551fec4118415b397775ed9c3af40a0e3dbc6822cd7327f482",
+      "width": 665,
+      "height": 1000,
+      "bytes": 82475,
+      "at": "2026-11-01T22:37:26.246Z"
+    },
+    "public/portfolio/buono.jpg": {
+      "preset": "photo",
+      "outputHash": "bf82666cdf3467e8a797968ec928ea0c78338c50a86aaf971a6e9c2870962ab2",
+      "width": 665,
+      "height": 1000,
+      "bytes": 71873,
+      "at": "2026-11-01T22:37:26.257Z"
+    },
+    "public/portfolio/burro-e-menta-2.jpg": {
+      "preset": "photo",
+      "outputHash": "37c7210b89b740e47b54ecb106a435a01f4ab59fae789d0fcc6565026ce64872",
+      "width": 1372,
+      "height": 772,
+      "bytes": 84548,
+      "at": "2026-11-01T22:37:26.286Z"
+    },
+    "public/portfolio/burro-e-menta-4.jpg": {
+      "preset": "photo",
+      "outputHash": "fc60e6c188a5b724a95976e7214f4d163cd81a461473f169e1d8ae4fede07b16",
+      "width": 1372,
+      "height": 772,
+      "bytes": 76911,
+      "at": "2026-11-01T22:37:26.747Z"
+    },
+    "public/portfolio/burro-e-menta-3.jpg": {
+      "preset": "photo",
+      "outputHash": "80e8738be81224e42234220692a56b2a5c8a73d595affda0722fd20baf2411fe",
+      "width": 1372,
+      "height": 772,
+      "bytes": 136456,
+      "at": "2026-11-01T22:37:26.821Z"
+    },
+    "public/portfolio/burro-e-menta-5.jpg": {
+      "preset": "photo",
+      "outputHash": "f427fa9275580fd9607f0c1e9148c411b626a69e96ebbcbe4ba1ec125c5700d4",
+      "width": 1372,
+      "height": 772,
+      "bytes": 110800,
+      "at": "2026-11-01T22:37:26.869Z"
+    },
+    "public/portfolio/burro-e-menta-6.jpg": {
+      "preset": "photo",
+      "outputHash": "2c27a08a27b870e2a058499490fda13a52530614ce5b189fca5d96abf42e6c39",
+      "width": 1372,
+      "height": 772,
+      "bytes": 85792,
+      "at": "2026-11-01T22:37:26.914Z"
+    },
+    "public/portfolio/burro-e-menta.jpg": {
+      "preset": "photo",
+      "outputHash": "901bff5a9246e69cfece386f7ee0d12527b9be850d0693bb6d966a07e86e4b33",
+      "width": 772,
+      "height": 1373,
+      "bytes": 132607,
+      "at": "2026-11-01T22:37:27.196Z"
+    },
+    "public/portfolio/caffe-millennium-3.jpg": {
+      "preset": "photo",
+      "outputHash": "0770b6a9453c1dca1b857fc92477de8c913bbd90ab369e0d6311ac6bec4e753e",
+      "width": 1000,
+      "height": 665,
+      "bytes": 83572,
+      "at": "2026-11-01T22:37:27.233Z"
+    },
+    "public/portfolio/caffe-millennium-2.jpg": {
+      "preset": "photo",
+      "outputHash": "acc1fedce9f5ab85c28d6da7d8c1cb405f54a7043bd5a7295f0a447763cc1983",
+      "width": 1085,
+      "height": 814,
+      "bytes": 95228,
+      "at": "2026-11-01T22:37:27.281Z"
+    },
+    "public/portfolio/caffe-millennium.jpg": {
+      "preset": "photo",
+      "outputHash": "45b6f5e678f50f9d611bfa954e9d9e838259c8ddd7d06a876a65ced07bfa42e9",
+      "width": 1085,
+      "height": 814,
+      "bytes": 102293,
+      "at": "2026-11-01T22:37:27.321Z"
+    },
+    "public/portfolio/caino-e-abele-2.jpg": {
+      "preset": "photo",
+      "outputHash": "6c27e1dbc4d9960577016a75cdb231688fd7c334bb153e618ca9cccfc6c72990",
+      "width": 1085,
+      "height": 814,
+      "bytes": 96510,
+      "at": "2026-11-01T22:37:27.663Z"
+    },
+    "public/portfolio/caino-e-abele-3.jpg": {
+      "preset": "photo",
+      "outputHash": "1a11e9f788ce4ecd280573b08b8581d4aa01ce8f1d387df3bb87d05b84a034cb",
+      "width": 1085,
+      "height": 814,
+      "bytes": 104524,
+      "at": "2026-11-01T22:37:27.712Z"
+    },
+    "public/portfolio/caino-e-abele-4.jpg": {
+      "preset": "photo",
+      "outputHash": "fe9b06fe3321055c73ab6ff1c1621fce4db73dd9bbf034a036bba1f8294ec5d2",
+      "width": 1085,
+      "height": 814,
+      "bytes": 117434,
+      "at": "2026-11-01T22:37:27.831Z"
+    },
+    "public/portfolio/caino-e-abele-5.jpg": {
+      "preset": "photo",
+      "outputHash": "2bcc9cb5d410b28c3e0f62f606117fabf988b4065913ffbea761c72441c4394e",
+      "width": 1085,
+      "height": 814,
+      "bytes": 111824,
+      "at": "2026-11-01T22:37:27.840Z"
+    },
+    "public/portfolio/caino-e-abele-6.jpg": {
+      "preset": "photo",
+      "outputHash": "7d2a108c9fe97029b35c28c0baf9c7b64021341d32338ecc80ae353e672770b1",
+      "width": 1085,
+      "height": 814,
+      "bytes": 103161,
+      "at": "2026-11-01T22:37:28.097Z"
+    },
+    "public/portfolio/caino-e-abele-7.jpg": {
+      "preset": "photo",
+      "outputHash": "f7e7b2fd7c50eece2ededd65d551f4ca0010c453b602987465981308ab2eefde",
+      "width": 1085,
+      "height": 814,
+      "bytes": 102333,
+      "at": "2026-11-01T22:37:28.121Z"
+    },
+    "public/portfolio/cuccurucu-4.jpg": {
+      "preset": "photo",
+      "outputHash": "2259cbbae35f3637c0f907f2c4df49c80e447942d093a120b46db7c3ac27e4e3",
+      "width": 1085,
+      "height": 814,
+      "bytes": 157099,
+      "at": "2026-11-01T22:37:28.283Z"
+    },
+    "public/portfolio/cuccurucu-4-plus.jpg": {
+      "preset": "photo",
+      "outputHash": "1c3618d2dd750a8dd56350a71e88bcdbcd9acddc0fe8a263dcad26458d5dab78",
+      "width": 1085,
+      "height": 814,
+      "bytes": 164354,
+      "at": "2026-11-01T22:37:28.503Z"
+    },
+    "public/portfolio/cuccurucu-6-plus.jpg": {
+      "preset": "photo",
+      "outputHash": "fbc6ab5036e79c52f6a8fa18439cb9afff5c81a264f1ceb6d3ce5a76b161e9ed",
+      "width": 1085,
+      "height": 814,
+      "bytes": 149099,
+      "at": "2026-11-01T22:37:28.717Z"
+    },
+    "public/portfolio/cuccurucu-6.jpg": {
+      "preset": "photo",
+      "outputHash": "8605972a92cbddec37d5fa21db5fe8aa55bea1761b1ea795862f996f77a93a6a",
+      "width": 1085,
+      "height": 814,
+      "bytes": 143450,
+      "at": "2026-11-01T22:37:28.866Z"
+    },
+    "public/portfolio/cuccurucu-5-plus.jpg": {
+      "preset": "photo",
+      "outputHash": "151f3ff5dfda41f125b11406f0f86edd0c6e9a085a94800a2340d90ef1de1414",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 274949,
+      "at": "2026-11-01T22:37:28.911Z"
+    },
+    "public/portfolio/cuccurucu-5.jpg": {
+      "preset": "photo",
+      "outputHash": "c0cf4166b07e8e61c606b0f0e03f563b1bfa04f7b8eb8e059ac8ce9148b5eb2f",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 265929,
+      "at": "2026-11-01T22:37:28.928Z"
+    },
+    "public/portfolio/cuccurucu-hero.jpg": {
+      "preset": "photo",
+      "outputHash": "b043e9402f303cc55d85e05c31cf01d7226351cd8bf6a6ca5784318203aeea1f",
+      "width": 768,
+      "height": 1024,
+      "bytes": 143371,
+      "at": "2026-11-01T22:37:29.031Z"
+    },
+    "public/portfolio/da-ciccillo.jpg": {
+      "preset": "photo",
+      "outputHash": "05078297b63f7ba7761e469baf8b4435d40c153ec530193d3d77a954238413c0",
+      "width": 1085,
+      "height": 814,
+      "bytes": 74441,
+      "at": "2026-11-01T22:37:29.356Z"
+    },
+    "public/portfolio/cuccurucu.jpg": {
+      "preset": "photo",
+      "outputHash": "b043e9402f303cc55d85e05c31cf01d7226351cd8bf6a6ca5784318203aeea1f",
+      "width": 768,
+      "height": 1024,
+      "bytes": 143371,
+      "at": "2026-11-01T22:37:29.390Z"
+    },
+    "public/portfolio/da-ciccillo-2.jpg": {
+      "preset": "photo",
+      "outputHash": "33a44d5163417223b5b8e8611f0b6cbd9ed698de27aaea6a6e18946771e4d584",
+      "width": 1085,
+      "height": 814,
+      "bytes": 73215,
+      "at": "2026-11-01T22:37:29.462Z"
+    },
+    "public/portfolio/da-dante-2.jpg": {
+      "preset": "photo",
+      "outputHash": "8c8750318f47a1e731abc1bdc7f9e76ffac9791f23a63e2246e0cfa5ccce0450",
+      "width": 1085,
+      "height": 814,
+      "bytes": 97454,
+      "at": "2026-11-01T22:37:29.511Z"
+    },
+    "public/portfolio/da-dante-3.jpg": {
+      "preset": "photo",
+      "outputHash": "595f5f518cb6c964a97882167b4d5762f973840050b60979a307f42e3e87489d",
+      "width": 1085,
+      "height": 814,
+      "bytes": 93386,
+      "at": "2026-11-01T22:37:29.807Z"
+    },
+    "public/portfolio/da-michele-2.jpg": {
+      "preset": "photo",
+      "outputHash": "d91984b6f878b77189544bc02d0f0bfe36f56d55631a2a43dd187a071cefb695",
+      "width": 665,
+      "height": 1000,
+      "bytes": 96383,
+      "at": "2026-11-01T22:37:29.907Z"
+    },
+    "public/portfolio/da-dante.jpg": {
+      "preset": "photo",
+      "outputHash": "4010d6bceedf78f660c3ad2b8950db75953925633a4cb94c8b1e2a1399f647e3",
+      "width": 1085,
+      "height": 814,
+      "bytes": 98593,
+      "at": "2026-11-01T22:37:29.962Z"
+    },
+    "public/portfolio/da-dante-4.jpg": {
+      "preset": "photo",
+      "outputHash": "e234c622ecfe4100a14fbc86be84f459b18017e9b68a17c636f5c8bedbad6197",
+      "width": 1085,
+      "height": 814,
+      "bytes": 111858,
+      "at": "2026-11-01T22:37:30.015Z"
+    },
+    "public/portfolio/da-michele-3.jpg": {
+      "preset": "photo",
+      "outputHash": "3089b404d9c048c06e29d3ad77387acacd457ce8c84413a76b291be6390e6d6d",
+      "width": 1000,
+      "height": 665,
+      "bytes": 77481,
+      "at": "2026-11-01T22:37:30.048Z"
+    },
+    "public/portfolio/da-michele-4.jpg": {
+      "preset": "photo",
+      "outputHash": "515aaa369b353b7bbfff2b8dae604105304fb1214c405ba1ae41755542260c2e",
+      "width": 665,
+      "height": 1000,
+      "bytes": 96690,
+      "at": "2026-11-01T22:37:30.567Z"
+    },
+    "public/portfolio/da-michele.jpg": {
+      "preset": "photo",
+      "outputHash": "a67a4fb5fe180ca5562ff326552b932091172f798ffd6646a234ce6aafc3a116",
+      "width": 665,
+      "height": 1000,
+      "bytes": 91715,
+      "at": "2026-11-01T22:37:30.680Z"
+    },
+    "public/portfolio/dal-vignola-3.jpg": {
+      "preset": "photo",
+      "outputHash": "7a78f91836d97961db1565fa7df822f51056d2afd03e7c24447e17cab057cd08",
+      "width": 1085,
+      "height": 814,
+      "bytes": 127066,
+      "at": "2026-11-01T22:37:30.817Z"
+    },
+    "public/portfolio/dal-vignola-2.jpg": {
+      "preset": "photo",
+      "outputHash": "2b321c1aa9b1474b6f45460f53d9c5ac5bf97ce6cfd4d531fcebfb8d95fce7a0",
+      "width": 1085,
+      "height": 814,
+      "bytes": 119069,
+      "at": "2026-11-01T22:37:30.998Z"
+    },
+    "public/portfolio/dal-vignola-4.jpg": {
+      "preset": "photo",
+      "outputHash": "73bc580cf22af4eb6daca45dc37a21a15045e220db36c468a4d8a81a052a74bd",
+      "width": 1085,
+      "height": 814,
+      "bytes": 125603,
+      "at": "2026-11-01T22:37:31.209Z"
+    },
+    "public/portfolio/dal-vignola-5.jpg": {
+      "preset": "photo",
+      "outputHash": "594b6e5de31054f3e5a953c9c848e0d010d6d784e88e649b3bd514b66df74c50",
+      "width": 1372,
+      "height": 772,
+      "bytes": 94905,
+      "at": "2026-11-01T22:37:31.371Z"
+    },
+    "public/portfolio/dal-vignola-6.jpg": {
+      "preset": "photo",
+      "outputHash": "c6765c631e59e68cc7bf170e52a18762a6c418659af9b4d721b59726b773d04b",
+      "width": 1372,
+      "height": 772,
+      "bytes": 94807,
+      "at": "2026-11-01T22:37:31.405Z"
+    },
+    "public/portfolio/dal-vignola-7.jpg": {
+      "preset": "photo",
+      "outputHash": "3bbe385302f47ff1aa3b727b5c03bd2c2e92e46a6a47b3ec54773f49f8bb9ccf",
+      "width": 1372,
+      "height": 772,
+      "bytes": 111432,
+      "at": "2026-11-01T22:37:31.433Z"
+    },
+    "public/portfolio/dish-2.jpg": {
+      "preset": "photo",
+      "outputHash": "6e3b9ed7aca6d890fdc9550f1c89786174f6c1e3a4b0e2d2d23e70549729c699",
+      "width": 1000,
+      "height": 665,
+      "bytes": 58911,
+      "at": "2026-11-01T22:37:31.817Z"
+    },
+    "public/portfolio/dish-3.jpg": {
+      "preset": "photo",
+      "outputHash": "e5d83d6a60d2374c41330ce631f7ba0306356eac8920556411a5311c725ea693",
+      "width": 1000,
+      "height": 665,
+      "bytes": 83282,
+      "at": "2026-11-01T22:37:31.839Z"
+    },
+    "public/portfolio/dettaglio-struttura-di-supporto-con-misure.jpg": {
+      "preset": "photo",
+      "outputHash": "6b6eef8a40771df5edaf34a178d6b8373b447ceb133ed0cb68ee848ce226e1df",
+      "width": 1280,
+      "height": 720,
+      "bytes": 57624,
+      "at": "2026-11-01T22:37:31.922Z"
+    },
+    "public/portfolio/dal-vignola.jpg": {
+      "preset": "photo",
+      "outputHash": "b1f2ebb4eb09f40d4c555d20e55327d644a1ac9d9dcc4b3ec57ab72e78684c50",
+      "width": 1085,
+      "height": 814,
+      "bytes": 121261,
+      "at": "2026-11-01T22:37:32.044Z"
+    },
+    "public/portfolio/dish-4.jpg": {
+      "preset": "photo",
+      "outputHash": "3594c4d454856dc4b08c77576aae813214121a181818de0c84631169ae5613de",
+      "width": 1000,
+      "height": 665,
+      "bytes": 76013,
+      "at": "2026-11-01T22:37:32.150Z"
+    },
+    "public/portfolio/dish.jpg": {
+      "preset": "photo",
+      "outputHash": "a1569d2ecdd7f166465e04974ce6c0318b75c0099c5107f7b659986fd77fc591",
+      "width": 665,
+      "height": 1000,
+      "bytes": 79965,
+      "at": "2026-11-01T22:37:32.212Z"
+    },
+    "public/portfolio/dsc-2059.jpg": {
+      "preset": "photo",
+      "outputHash": "37c2ad53449136af943c5a12f94b48e25209f511e50f41fd21e7c1d941483789",
+      "width": 722,
+      "height": 480,
+      "bytes": 49403,
+      "at": "2026-11-01T22:37:32.310Z"
+    },
+    "public/portfolio/dsc-1198.jpg": {
+      "preset": "photo",
+      "outputHash": "36560c74d0c252ce4c6fe21e9f937b25adcef6056d78593b763a84ca4f280140",
+      "width": 1000,
+      "height": 665,
+      "bytes": 82866,
+      "at": "2026-11-01T22:37:32.338Z"
+    },
+    "public/portfolio/felice-a-testaccio-2.jpg": {
+      "preset": "photo",
+      "outputHash": "0a764bcaaabfd078f3104595b528c9e023b22773ff3947cde147995451c005b5",
+      "width": 1000,
+      "height": 665,
+      "bytes": 83998,
+      "at": "2026-11-01T22:37:32.545Z"
+    },
+    "public/portfolio/felice-a-testaccio-3.jpg": {
+      "preset": "photo",
+      "outputHash": "313f35a781cf4241c086a874d8969a10a411723edcf545e0c7b564823ec19518",
+      "width": 665,
+      "height": 1000,
+      "bytes": 86463,
+      "at": "2026-11-01T22:37:32.636Z"
+    },
+    "public/portfolio/felice-a-testaccio.jpg": {
+      "preset": "photo",
+      "outputHash": "5631f37024c604812e0a499ac45ead7bc0bf79c73566d78100a2a1d69ce7b2f2",
+      "width": 1000,
+      "height": 665,
+      "bytes": 89326,
+      "at": "2026-11-01T22:37:32.656Z"
+    },
+    "public/portfolio/fiore.jpg": {
+      "preset": "photo",
+      "outputHash": "338464895ea884046cf3be38e53ebfbea37addf0bf1ae40a01ec4f2cc128e78c",
+      "width": 1085,
+      "height": 814,
+      "bytes": 123848,
+      "at": "2026-11-01T22:37:32.940Z"
+    },
+    "public/portfolio/fotomontaggio.jpg": {
+      "preset": "photo",
+      "outputHash": "bf8969d547e5e584d5789eb51336e63f4dbc0a6e9f27fa265e402ac3bfbc7e4c",
+      "width": 1000,
+      "height": 665,
+      "bytes": 94528,
+      "at": "2026-11-01T22:37:33.021Z"
+    },
+    "public/portfolio/galbi-3.jpg": {
+      "preset": "photo",
+      "outputHash": "61fbaa2eec17f03141df61557d4d64184b82ce716dd778cc94702ee7a6909e32",
+      "width": 1005,
+      "height": 1341,
+      "bytes": 160173,
+      "at": "2026-11-01T22:37:33.414Z"
+    },
+    "public/portfolio/galbi-4.jpg": {
+      "preset": "photo",
+      "outputHash": "49a5f1a594112abd9ab6982ac0475f45ac862fc1e63ca5dfbead9b1013f66385",
+      "width": 1005,
+      "height": 1341,
+      "bytes": 102959,
+      "at": "2026-11-01T22:37:33.514Z"
+    },
+    "public/portfolio/galbi-2.jpg": {
+      "preset": "photo",
+      "outputHash": "a2ad62be97ee2788118df6b4d49f9f3594d4d74fe75a48791c5220abe9441b7b",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 162785,
+      "at": "2026-11-01T22:37:33.559Z"
+    },
+    "public/portfolio/gaudi-2.jpg": {
+      "preset": "photo",
+      "outputHash": "0007154262fe440708727b911c194a0ac1eca321c7e97eb1865f2d6330b6a2c6",
+      "width": 1000,
+      "height": 665,
+      "bytes": 68471,
+      "at": "2026-11-01T22:37:33.739Z"
+    },
+    "public/portfolio/galbi.jpg": {
+      "preset": "photo",
+      "outputHash": "630903e8d906b098bbb773bb86b0c63a19ae4598b66f79e64ef10a14df12f75e",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 153829,
+      "at": "2026-11-01T22:37:33.772Z"
+    },
+    "public/portfolio/gaudi.jpg": {
+      "preset": "photo",
+      "outputHash": "3f0436400959fc87182cec273edc09fef4ba9f339ca122fa09d8b8dda87f5bb4",
+      "width": 1000,
+      "height": 665,
+      "bytes": 80494,
+      "at": "2026-11-01T22:37:34.139Z"
+    },
+    "public/portfolio/hotel-nazionale.jpg": {
+      "preset": "photo",
+      "outputHash": "7adb75a72fd440b631dd59eecdcdf4bf437fde18e8dc3d6b59e299ce0f3a41d5",
+      "width": 1085,
+      "height": 814,
+      "bytes": 95127,
+      "at": "2026-11-01T22:37:34.185Z"
+    },
+    "public/portfolio/img-20160323-wa0002.jpg": {
+      "preset": "photo",
+      "outputHash": "caf3c2be98b2eb09f163bd6e979a143c763518f90f4437d12ce52fd5e5368b8e",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 257415,
+      "at": "2026-11-01T22:37:34.737Z"
+    },
+    "public/portfolio/img-20160420-wa0000.jpg": {
+      "preset": "photo",
+      "outputHash": "162f8da6fb2b8b0bed7a07c287147d897fe10b211b3b0361e3547261a70c2de0",
+      "width": 1249,
+      "height": 1500,
+      "bytes": 168041,
+      "at": "2026-11-01T22:37:34.792Z"
+    },
+    "public/portfolio/img-20190104-wa0019.jpg": {
+      "preset": "photo",
+      "outputHash": "f70890ff2431373e9f916baf41bd7f76e37e19a5639d700d00a0b399d4467cd4",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 150038,
+      "at": "2026-11-01T22:37:34.865Z"
+    },
+    "public/portfolio/img-20191113-143448-1.jpg": {
+      "preset": "photo",
+      "outputHash": "c2400ed0a394914b72ba4970f1aef1404a8fbcd01b3dd78fc757b89bc155828e",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 220299,
+      "at": "2026-11-01T22:37:35.147Z"
+    },
+    "public/portfolio/isola-della-pizza.jpg": {
+      "preset": "photo",
+      "outputHash": "045e7f3198a74a2ee3ec5e4be0a32f9d6e8aceb293f83e16ea35669a248abd4e",
+      "width": 1000,
+      "height": 665,
+      "bytes": 109901,
+      "at": "2026-11-01T22:37:35.260Z"
+    },
+    "public/portfolio/img-20191113-143503.jpg": {
+      "preset": "photo",
+      "outputHash": "31b00b902edd8a0e3fdbf5ef68b0129055bde393868c1a1cf58d11a644b885f0",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 230941,
+      "at": "2026-11-01T22:37:35.636Z"
+    },
+    "public/portfolio/la-botte-10.jpg": {
+      "preset": "photo",
+      "outputHash": "1fe45beac1f3cd1575b6fe8ae462711c97bb612aeeccd9f49dac0d900b98f88e",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 179600,
+      "at": "2026-11-01T22:37:35.850Z"
+    },
+    "public/portfolio/la-botte-11.jpg": {
+      "preset": "photo",
+      "outputHash": "c0a19b046da18d98492d64acc2e82053853cf5e2e19574540c5f85078826960d",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 166648,
+      "at": "2026-11-01T22:37:35.880Z"
+    },
+    "public/portfolio/la-botte-2.jpg": {
+      "preset": "photo",
+      "outputHash": "07d9229367c8509b70fdaa6a273c613e395bc5e4cd8a0d42cd2ae1a6f2a1f575",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 150021,
+      "at": "2026-11-01T22:37:35.910Z"
+    },
+    "public/portfolio/la-forbice-2.jpg": {
+      "preset": "photo",
+      "outputHash": "286f9cb502d2b0b46b1689996b2f8ec74dedff2f42a5338b9ada2905ebcb6ca0",
+      "width": 1000,
+      "height": 665,
+      "bytes": 76016,
+      "at": "2026-11-01T22:37:36.550Z"
+    },
+    "public/portfolio/la-botte-6.jpg": {
+      "preset": "photo",
+      "outputHash": "da7a430d55379d1ae7f9a09eb51b2489613236f1a360d7dd97c9dc3804fbc4da",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 194549,
+      "at": "2026-11-01T22:37:36.719Z"
+    },
+    "public/portfolio/la-botte-7.jpg": {
+      "preset": "photo",
+      "outputHash": "44451d55ef7b8c27322c299baa3156b425077e39536a7be037e773e6b5bfd7e3",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 210826,
+      "at": "2026-11-01T22:37:36.774Z"
+    },
+    "public/portfolio/la-botte.jpg": {
+      "preset": "photo",
+      "outputHash": "493464e12fdb90d877595d1789e55d2b5444e22f91ca05620eb340e6f1708fbb",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 146583,
+      "at": "2026-11-01T22:37:36.803Z"
+    },
+    "public/portfolio/la-forbice-3.jpg": {
+      "preset": "photo",
+      "outputHash": "3737ba0ca5cf7379339e904c97c3747b5df47f0ff8d050a64ee5cec9774451e8",
+      "width": 665,
+      "height": 1000,
+      "bytes": 102267,
+      "at": "2026-11-01T22:37:36.927Z"
+    },
+    "public/portfolio/la-forbice-5.jpg": {
+      "preset": "photo",
+      "outputHash": "43890adafd5ab4cb69baa904ff7fbfb65c16f00987d1d2e5c4b65f51e8892bfd",
+      "width": 1000,
+      "height": 665,
+      "bytes": 81570,
+      "at": "2026-11-01T22:37:37.099Z"
+    },
+    "public/portfolio/la-forbice-4.jpg": {
+      "preset": "photo",
+      "outputHash": "2185e0dbdd73758ee5ff13f5a526686f4042791377f31f5276626b28673ac5be",
+      "width": 1000,
+      "height": 665,
+      "bytes": 106664,
+      "at": "2026-11-01T22:37:37.145Z"
+    },
+    "public/portfolio/la-forbice-6.jpg": {
+      "preset": "photo",
+      "outputHash": "2669db87903351817d0a7205911ac71c16ec505a7ce99ed14fc4f208adb3cc73",
+      "width": 665,
+      "height": 1000,
+      "bytes": 97536,
+      "at": "2026-11-01T22:37:37.188Z"
+    },
+    "public/portfolio/la-forbice-7.jpg": {
+      "preset": "photo",
+      "outputHash": "4454aba87ca9e8e6619a26636fd5d189fa36fed09d6abed64f95c1f8078def9f",
+      "width": 1000,
+      "height": 665,
+      "bytes": 130673,
+      "at": "2026-11-01T22:37:37.223Z"
+    },
+    "public/portfolio/la-forbice.jpg": {
+      "preset": "photo",
+      "outputHash": "d40548d07e65fe823ca0aa01bf9711b8f086b692bb1544462d7399b2a4893c23",
+      "width": 665,
+      "height": 1000,
+      "bytes": 93691,
+      "at": "2026-11-01T22:37:37.647Z"
+    },
+    "public/portfolio/lab-100-2.jpg": {
+      "preset": "photo",
+      "outputHash": "a536eaffe6469c2792b013960b956fd74c819c9d2bf76f426231f773d857efe8",
+      "width": 1000,
+      "height": 665,
+      "bytes": 88048,
+      "at": "2026-11-01T22:37:37.660Z"
+    },
+    "public/portfolio/lab-100-3.jpg": {
+      "preset": "photo",
+      "outputHash": "78db5ac4b839aa1e9eddf34d19db84beff1ddd0fa67345302a1dbb532c95e67c",
+      "width": 665,
+      "height": 1000,
+      "bytes": 98050,
+      "at": "2026-11-01T22:37:37.833Z"
+    },
+    "public/portfolio/lab-100-4.jpg": {
+      "preset": "photo",
+      "outputHash": "3f4041d98e8f84ac06ba1944fa4a0b908e0cc865a92db2b938ef3c53eb4d5818",
+      "width": 665,
+      "height": 1000,
+      "bytes": 90846,
+      "at": "2026-11-01T22:37:37.957Z"
+    },
+    "public/portfolio/lab-100-5.jpg": {
+      "preset": "photo",
+      "outputHash": "6a6b51b28513fb43da93bd50b7e821ad8d1274041452edec4955f21a20100027",
+      "width": 1000,
+      "height": 665,
+      "bytes": 90646,
+      "at": "2026-11-01T22:37:37.982Z"
+    },
+    "public/portfolio/lab-100-6.jpg": {
+      "preset": "photo",
+      "outputHash": "bb563fcd55d369b4d25645cfc6398d0fc512422630fcd797f80f9ca910d3558a",
+      "width": 665,
+      "height": 1000,
+      "bytes": 104676,
+      "at": "2026-11-01T22:37:38.183Z"
+    },
+    "public/portfolio/la-lampara.jpg": {
+      "preset": "photo",
+      "outputHash": "d334b6eaa4b087b1d77e199facf2a9bb866a4bdf034150b27308332662b03d5f",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 264034,
+      "at": "2026-11-01T22:37:38.231Z"
+    },
+    "public/portfolio/lab-100.jpg": {
+      "preset": "photo",
+      "outputHash": "fde69e9087194b5033487ff03c6f21112f4719826d31b5be7b734cb3bce1913c",
+      "width": 1000,
+      "height": 665,
+      "bytes": 87902,
+      "at": "2026-11-01T22:37:38.306Z"
+    },
+    "public/portfolio/laccattone-2.jpg": {
+      "preset": "photo",
+      "outputHash": "b36f3c9f916b7f616295e3cb37f2f5b01c7bc288f35f2c66a91f05b07ddd4c1f",
+      "width": 1372,
+      "height": 772,
+      "bytes": 83445,
+      "at": "2026-11-01T22:37:38.498Z"
+    },
+    "public/portfolio/laccattone-3.jpg": {
+      "preset": "photo",
+      "outputHash": "5f337b7b3ffcf41a77a079f785808a49ff7509a46960458f7ba8afda356f8cb6",
+      "width": 772,
+      "height": 1373,
+      "bytes": 87069,
+      "at": "2026-11-01T22:37:38.681Z"
+    },
+    "public/portfolio/laccattone-4.jpg": {
+      "preset": "photo",
+      "outputHash": "0a298e2ffba0e4b43b45f5cbcedb8837275d0ab574e4f3f53829d80b9a2cfe44",
+      "width": 1372,
+      "height": 772,
+      "bytes": 92664,
+      "at": "2026-11-01T22:37:38.805Z"
+    },
+    "public/portfolio/laccattone-5.jpg": {
+      "preset": "photo",
+      "outputHash": "780fde63185b214c9f14940eb539d401042cc6c6199a15f3385923ac3006f835",
+      "width": 1372,
+      "height": 772,
+      "bytes": 105758,
+      "at": "2026-11-01T22:37:38.829Z"
+    },
+    "public/portfolio/laccattone-6.jpg": {
+      "preset": "photo",
+      "outputHash": "43c305d2d008e10b96082a144489ec55ef9cfb945adbd2d72e1390b036bfb287",
+      "width": 1372,
+      "height": 772,
+      "bytes": 119930,
+      "at": "2026-11-01T22:37:38.847Z"
+    },
+    "public/portfolio/laccattone-7.jpg": {
+      "preset": "photo",
+      "outputHash": "ab052e2c528bfb99cf19768c387df4a97fd24c5217505e62ab91bfc6e0bae7e5",
+      "width": 1372,
+      "height": 772,
+      "bytes": 139494,
+      "at": "2026-11-01T22:37:39.187Z"
+    },
+    "public/portfolio/laccattone.jpg": {
+      "preset": "photo",
+      "outputHash": "0b556338c3b2049fd21997efaaa0d1b7ff2a0bcf7cbe3c87390e5dbd54741ff3",
+      "width": 1372,
+      "height": 772,
+      "bytes": 78358,
+      "at": "2026-11-01T22:37:39.300Z"
+    },
+    "public/portfolio/laltra-osteria-2.jpg": {
+      "preset": "photo",
+      "outputHash": "4beb3948b519d34c47d0d06475a22fca4cb01d4c0b8ab761561e33597b83ec36",
+      "width": 1372,
+      "height": 772,
+      "bytes": 109281,
+      "at": "2026-11-01T22:37:39.382Z"
+    },
+    "public/portfolio/laltra-osteria-3.jpg": {
+      "preset": "photo",
+      "outputHash": "eca68c8c5e2ca75356822a32a158622a80aa83afe61249c1793e4d7b9350f2c1",
+      "width": 1372,
+      "height": 772,
+      "bytes": 114738,
+      "at": "2026-11-01T22:37:39.535Z"
+    },
+    "public/portfolio/laltra-osteria-4.jpg": {
+      "preset": "photo",
+      "outputHash": "ff5c58d6bfd6d36a3956071b15b54e7c32892c792edccd66ac190066f87d6808",
+      "width": 1372,
+      "height": 772,
+      "bytes": 116061,
+      "at": "2026-11-01T22:37:39.706Z"
+    },
+    "public/portfolio/laltra-osteria.jpg": {
+      "preset": "photo",
+      "outputHash": "a9f053b22813664c9ca68a116acdba80cb62473e1ad359d627867cf90eba26f5",
+      "width": 1372,
+      "height": 772,
+      "bytes": 110360,
+      "at": "2026-11-01T22:37:39.879Z"
+    },
+    "public/portfolio/le-palme-2.jpg": {
+      "preset": "photo",
+      "outputHash": "87cf66c7b6d4c80b50f25e65584f4c315e91a6b4b1a8f7a4bfab036677bef114",
+      "width": 1372,
+      "height": 772,
+      "bytes": 107702,
+      "at": "2026-11-01T22:37:40.094Z"
+    },
+    "public/portfolio/le-palme-3.jpg": {
+      "preset": "photo",
+      "outputHash": "910ab1c42897883217f15b2715602351874323f52ffa0e4c31f9133464ae9252",
+      "width": 1372,
+      "height": 772,
+      "bytes": 130642,
+      "at": "2026-11-01T22:37:40.364Z"
+    },
+    "public/portfolio/le-palme-4.jpg": {
+      "preset": "photo",
+      "outputHash": "a55ff5df6854b70dc1aa96920473e4246c27865c13c8f89fb7d09a7a9a291626",
+      "width": 1372,
+      "height": 772,
+      "bytes": 140334,
+      "at": "2026-11-01T22:37:40.543Z"
+    },
+    "public/portfolio/le-palme-5.jpg": {
+      "preset": "photo",
+      "outputHash": "033595e8a4334d1977db4e4586212a2dced7e060481831b24b6bdd96ddaef73e",
+      "width": 1372,
+      "height": 772,
+      "bytes": 147748,
+      "at": "2026-11-01T22:37:40.770Z"
+    },
+    "public/portfolio/mad-cow-2.jpg": {
+      "preset": "photo",
+      "outputHash": "e4ad1a380cc5cb79b54f5d33868dda4cba08e9a4b977d6ac410e6643afb260c1",
+      "width": 1000,
+      "height": 665,
+      "bytes": 111815,
+      "at": "2026-11-01T22:37:41.319Z"
+    },
+    "public/portfolio/le-palme.jpg": {
+      "preset": "photo",
+      "outputHash": "b1bdd91a92c405081f9f90176d0024991596575c77a5de203f337bb9acfdad79",
+      "width": 1372,
+      "height": 772,
+      "bytes": 117443,
+      "at": "2026-11-01T22:37:41.330Z"
+    },
+    "public/portfolio/mad-cow-3.jpg": {
+      "preset": "photo",
+      "outputHash": "c74d2f2b138a6609cd0792f8b4320beb8164661c42212ba626df424a4903f865",
+      "width": 1000,
+      "height": 665,
+      "bytes": 80396,
+      "at": "2026-11-01T22:37:41.341Z"
+    },
+    "public/portfolio/le-palme-6.jpg": {
+      "preset": "photo",
+      "outputHash": "572f8e14b91eaf64a3a02ff7bd6f4fc6c54b89e01c093805bd525a03b5797f14",
+      "width": 1372,
+      "height": 772,
+      "bytes": 130435,
+      "at": "2026-11-01T22:37:41.389Z"
+    },
+    "public/portfolio/mad-cow-6.jpg": {
+      "preset": "photo",
+      "outputHash": "ee215f0c58143d5e888c2d274800b1600f1f01857b12e5232ee8b2556d16f1e6",
+      "width": 1000,
+      "height": 665,
+      "bytes": 70166,
+      "at": "2026-11-01T22:37:41.732Z"
+    },
+    "public/portfolio/mad-cow.jpg": {
+      "preset": "photo",
+      "outputHash": "56155ad462bb19a3b191ff5d8d40112bac5aa927d0cfc0e6bc891c3c99e8c694",
+      "width": 1000,
+      "height": 665,
+      "bytes": 65436,
+      "at": "2026-11-01T22:37:41.748Z"
+    },
+    "public/portfolio/mad-cow-4.jpg": {
+      "preset": "photo",
+      "outputHash": "0fbf6fdec4ed32914221e5b10b242fc21ca09fc59dd068e76d36d27e68fed759",
+      "width": 1000,
+      "height": 665,
+      "bytes": 72509,
+      "at": "2026-11-01T22:37:41.767Z"
+    },
+    "public/portfolio/mad-cow-5.jpg": {
+      "preset": "photo",
+      "outputHash": "5e40c84cace9f6962075c15d36705c6805390302a205a493385e4dc575f27378",
+      "width": 1000,
+      "height": 665,
+      "bytes": 84669,
+      "at": "2026-11-01T22:37:41.812Z"
+    },
+    "public/portfolio/max-a-trigoria-2.jpg": {
+      "preset": "photo",
+      "outputHash": "5a461e821ad0733b4deb48e8d7673211d43dedae2a7c18a5ed8d0a5369ac9295",
+      "width": 1000,
+      "height": 665,
+      "bytes": 94162,
+      "at": "2026-11-01T22:37:42.142Z"
+    },
+    "public/portfolio/max-a-trigoria-3.jpg": {
+      "preset": "photo",
+      "outputHash": "8ecaf59226f48db2479fbe2bbf08fefd164100c1c35992d5ca797d268c1b3b75",
+      "width": 1000,
+      "height": 665,
+      "bytes": 91109,
+      "at": "2026-11-01T22:37:42.267Z"
+    },
+    "public/portfolio/max-a-trigoria.jpg": {
+      "preset": "photo",
+      "outputHash": "6f70338c7d03df543198f9fc4cd71f714a3ca2c84c396ff6d0f4460445654785",
+      "width": 1000,
+      "height": 665,
+      "bytes": 124153,
+      "at": "2026-11-01T22:37:42.401Z"
+    },
+    "public/portfolio/osteria-del-sole-2.jpg": {
+      "preset": "photo",
+      "outputHash": "9e9746641e4a6b0437c0a033925c9a780857aac8199682d81fc8cc4b4d281bc8",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 178124,
+      "at": "2026-11-01T22:37:42.711Z"
+    },
+    "public/portfolio/osteria-del-sole-3.jpg": {
+      "preset": "photo",
+      "outputHash": "b41e10fed2b54306562053ea04179d190754d5d72fbd84a7043f9549de3ce494",
+      "width": 1125,
+      "height": 1500,
+      "bytes": 100688,
+      "at": "2026-11-01T22:37:42.925Z"
+    },
+    "public/portfolio/osteria-del-sole-4.jpg": {
+      "preset": "photo",
+      "outputHash": "82f1144b8fdd1e7d6ebc7931df0fbd6abc4ecefcfc0c6983f89976e058973d9a",
+      "width": 1125,
+      "height": 1500,
+      "bytes": 217567,
+      "at": "2026-11-01T22:37:43.037Z"
+    },
+    "public/portfolio/peperoncino-dispettoso-2.jpg": {
+      "preset": "photo",
+      "outputHash": "f4491482b24c3267b8fd345f4d6c76220d074e224770e1936faaaae646daa1c5",
+      "width": 1000,
+      "height": 665,
+      "bytes": 116545,
+      "at": "2026-11-01T22:37:43.088Z"
+    },
+    "public/portfolio/osteria-del-sole.jpg": {
+      "preset": "photo",
+      "outputHash": "4d93ec831585adf61a7040616857a20f0c45552fabd3888ca069ef9ae2271b59",
+      "width": 1500,
+      "height": 1125,
+      "bytes": 215988,
+      "at": "2026-11-01T22:37:43.193Z"
+    },
+    "public/portfolio/peperoncino-dispettoso.jpg": {
+      "preset": "photo",
+      "outputHash": "673a4f7b502ac021cf0de0b7417423a7fe9d38569d56845ba768d4bf58ccacd6",
+      "width": 1000,
+      "height": 665,
+      "bytes": 128805,
+      "at": "2026-11-01T22:37:43.316Z"
+    },
+    "public/portfolio/pic-1.jpg": {
+      "preset": "photo",
+      "outputHash": "6d42f0439053f488547c8def0c715acbeb525e9ed8e0c284d9ff3f8a7f3abc99",
+      "width": 722,
+      "height": 480,
+      "bytes": 39384,
+      "at": "2026-11-01T22:37:43.383Z"
+    },
+    "public/portfolio/piatto-romano.jpg": {
+      "preset": "photo",
+      "outputHash": "e1d8694245629e6e71f249650378844fc4e758b775dd7101c4971e4acaaa8c6c",
+      "width": 665,
+      "height": 1000,
+      "bytes": 91617,
+      "at": "2026-11-01T22:37:43.435Z"
+    },
+    "public/portfolio/piatto-romano-2.jpg": {
+      "preset": "photo",
+      "outputHash": "1a5cc79e5d432e4312cfa8bacb3ce99dba873680b893d0ea0c0d85f47a02d5b4",
+      "width": 665,
+      "height": 1000,
+      "bytes": 84135,
+      "at": "2026-11-01T22:37:43.490Z"
+    },
+    "public/portfolio/pizzeria-ostiense-2.jpg": {
+      "preset": "photo",
+      "outputHash": "c493e1b81eaaf3a9d34c94f534be426965dd011238c5d89a61e693c64c40d705",
+      "width": 1000,
+      "height": 665,
+      "bytes": 95094,
+      "at": "2026-11-01T22:37:43.741Z"
+    },
+    "public/portfolio/pizzeria-ostiense-3.jpg": {
+      "preset": "photo",
+      "outputHash": "72b1cdbb5759dc1f93b71a99ef4f90f58bbc47a368d9d48f9ac7f46638bee491",
+      "width": 665,
+      "height": 1000,
+      "bytes": 108911,
+      "at": "2026-11-01T22:37:43.814Z"
+    },
+    "public/portfolio/pizzeria-ostiense-5.jpg": {
+      "preset": "photo",
+      "outputHash": "128cac47168c91c4c11305ac8fd27fd7365b2c9c4bb16827c3800ea40ba6eb92",
+      "width": 1000,
+      "height": 665,
+      "bytes": 96085,
+      "at": "2026-11-01T22:37:43.862Z"
+    },
+    "public/portfolio/pizzeria-ostiense-4.jpg": {
+      "preset": "photo",
+      "outputHash": "c9dd4f62731997fa3dbde51344995dc21c65145419d969a42b939b6726b304e3",
+      "width": 1000,
+      "height": 665,
+      "bytes": 124977,
+      "at": "2026-11-01T22:37:44.095Z"
+    },
+    "public/portfolio/pizzeria-ostiense-6.jpg": {
+      "preset": "photo",
+      "outputHash": "78b1ac455a93281509413a6ae59b681de6437417c1e7dc93a3256fecce681107",
+      "width": 1000,
+      "height": 665,
+      "bytes": 77165,
+      "at": "2026-11-01T22:37:44.284Z"
+    },
+    "public/portfolio/pizzeria-ostiense-7.jpg": {
+      "preset": "photo",
+      "outputHash": "e454762f6051ec325f0bf346488d714a1c23527d9f1ca464a4d21f7a20b5fd31",
+      "width": 1000,
+      "height": 665,
+      "bytes": 98190,
+      "at": "2026-11-01T22:37:44.344Z"
+    },
+    "public/portfolio/pizzeria-ostiense-8.jpg": {
+      "preset": "photo",
+      "outputHash": "5e1ed98ac7f2661cc187de80900fd093ae10cadb696de1b976b94343bd4202e5",
+      "width": 665,
+      "height": 1000,
+      "bytes": 112889,
+      "at": "2026-11-01T22:37:44.373Z"
+    },
+    "public/portfolio/pizzeria-ostiense-9.jpg": {
+      "preset": "photo",
+      "outputHash": "7f079f4ca17c06ec9df9145dea515592b0ab516915c0e8833a6d855fefcd6518",
+      "width": 1000,
+      "height": 665,
+      "bytes": 103279,
+      "at": "2026-11-01T22:37:44.398Z"
+    },
+    "public/portfolio/remo-2.jpg": {
+      "preset": "photo",
+      "outputHash": "bf2392362ab9d8831d30ef680774a1dfe94be7c404d3f02becf74f01ba73f5bf",
+      "width": 1000,
+      "height": 665,
+      "bytes": 66789,
+      "at": "2026-11-01T22:37:44.886Z"
+    },
+    "public/portfolio/remo-3.jpg": {
+      "preset": "photo",
+      "outputHash": "19b88d0f50abf43c7efc1fca53d39472493523ebe0ae72e4b13d7886b37fac6e",
+      "width": 1000,
+      "height": 665,
+      "bytes": 95234,
+      "at": "2026-11-01T22:37:44.926Z"
+    },
+    "public/portfolio/remo.jpg": {
+      "preset": "photo",
+      "outputHash": "788d6b8ce4775dc1715c0b5ba4a608af8cba32023fa0baa3616ec5043c18e6af",
+      "width": 1000,
+      "height": 665,
+      "bytes": 88715,
+      "at": "2026-11-01T22:37:44.939Z"
+    },
+    "public/portfolio/pizzeria-ostiense.jpg": {
+      "preset": "photo",
+      "outputHash": "ba5d5dea8945e5ca2ce7f1327bc4ceb2e19918112466eb9ac387b4fa5528fe93",
+      "width": 1000,
+      "height": 665,
+      "bytes": 107951,
+      "at": "2026-11-01T22:37:44.968Z"
+    },
+    "public/portfolio/sapore-di-mare-3.jpg": {
+      "preset": "photo",
+      "outputHash": "2e90d989be817016bdac12d8b0fe49480c30ee515d232b7b04587895d0929a9d",
+      "width": 1000,
+      "height": 665,
+      "bytes": 68496,
+      "at": "2026-11-01T22:37:45.380Z"
+    },
+    "public/portfolio/sapore-di-mare-2.jpg": {
+      "preset": "photo",
+      "outputHash": "9d0f874bb14a61fe27fd2e9c36c82cc1ce08b0235073fc7c1fc5a983a7c56350",
+      "width": 1000,
+      "height": 665,
+      "bytes": 62618,
+      "at": "2026-11-01T22:37:45.410Z"
+    },
+    "public/portfolio/sapore-di-mare.jpg": {
+      "preset": "photo",
+      "outputHash": "e78ea6fd726375a4374b65faad81e16cacaac24badddc2bcd85642d90fe0e2f1",
+      "width": 1000,
+      "height": 665,
+      "bytes": 71873,
+      "at": "2026-11-01T22:37:45.439Z"
+    },
+    "public/portfolio/render_v1_21_060812.jpg": {
+      "preset": "photo",
+      "outputHash": "6964b9a42ee8003b51ddc3088c137243d41699c744e58bb02b60c81d58a315d4",
+      "width": 1280,
+      "height": 720,
+      "bytes": 73187,
+      "at": "2026-11-01T22:37:45.482Z"
+    },
+    "public/portfolio/stella-gemella-2.jpg": {
+      "preset": "photo",
+      "outputHash": "19004f53400ee720d4dab8c33af256827496aa9400199ea1ca3c79381e0bec10",
+      "width": 1000,
+      "height": 665,
+      "bytes": 76272,
+      "at": "2026-11-01T22:37:45.807Z"
+    },
+    "public/portfolio/stella-gemella-3.jpg": {
+      "preset": "photo",
+      "outputHash": "496be44ad8bd44774cb89f58918cafa35d1ca47da6cdceef3e0cc83838bd399f",
+      "width": 665,
+      "height": 1000,
+      "bytes": 78419,
+      "at": "2026-11-01T22:37:45.817Z"
+    },
+    "public/portfolio/stella-gemella-4.jpg": {
+      "preset": "photo",
+      "outputHash": "23b44788f1d54c78bbcb2728eda99aa364b2710a5194f6782367b558ae2c951d",
+      "width": 1000,
+      "height": 665,
+      "bytes": 105466,
+      "at": "2026-11-01T22:37:45.848Z"
+    },
+    "public/portfolio/stella-gemella-5.jpg": {
+      "preset": "photo",
+      "outputHash": "5ae8a003a5090fc7c4fad8031294c963b3c4b07813a2cc15260f8150eb34ed3d",
+      "width": 1000,
+      "height": 665,
+      "bytes": 103362,
+      "at": "2026-11-01T22:37:45.892Z"
+    },
+    "public/portfolio/stella-gemella.jpg": {
+      "preset": "photo",
+      "outputHash": "d9b3995832f777793b02cabcd931e9cf808591fcca23ce68460a87b505f675a5",
+      "width": 1000,
+      "height": 665,
+      "bytes": 58012,
+      "at": "2026-11-01T22:37:46.508Z"
+    },
+    "public/portfolio/strozzaquintino-4.jpg": {
+      "preset": "photo",
+      "outputHash": "07b1fb87f919abf7b55285688d6a64ce77b58e6b8d432438744d8b62625b2b8b",
+      "width": 1372,
+      "height": 772,
+      "bytes": 134830,
+      "at": "2026-11-01T22:37:46.659Z"
+    },
+    "public/portfolio/strozzaquintino-3.jpg": {
+      "preset": "photo",
+      "outputHash": "cf982aaaef2665ab24683d01d5182fefc76dd6116b0e4c74be411f13ac1131aa",
+      "width": 1372,
+      "height": 772,
+      "bytes": 134118,
+      "at": "2026-11-01T22:37:46.694Z"
+    },
+    "public/portfolio/strozzaquintino-2.jpg": {
+      "preset": "photo",
+      "outputHash": "05a820bfe1a1747de79ed45e14333da95076ba32fff06cf4b1e5c74f70a34be1",
+      "width": 1372,
+      "height": 772,
+      "bytes": 118466,
+      "at": "2026-11-01T22:37:46.721Z"
+    },
+    "public/portfolio/strozzaquintino-5.jpg": {
+      "preset": "photo",
+      "outputHash": "e484be520f8f70d941a75bcc2b12daef3c6bb1c8a9980d01522a8176449e5a67",
+      "width": 1372,
+      "height": 772,
+      "bytes": 82767,
+      "at": "2026-11-01T22:37:47.360Z"
+    },
+    "public/portfolio/strozzaquintino-6.jpg": {
+      "preset": "photo",
+      "outputHash": "8c0d61f2b1bb2cf2e3fe525c7a95f8aced07e29bbf925701aeabfa2ba371fb6d",
+      "width": 1372,
+      "height": 772,
+      "bytes": 123143,
+      "at": "2026-11-01T22:37:47.400Z"
+    },
+    "public/portfolio/strozzaquintino-7.jpg": {
+      "preset": "photo",
+      "outputHash": "d3b84c9794df70c18a087f4de6aeebe2176678fa5f0a99207d6b9ce2eeac9cf6",
+      "width": 772,
+      "height": 1373,
+      "bytes": 122385,
+      "at": "2026-11-01T22:37:47.429Z"
+    },
+    "public/portfolio/strozzaquintino.jpg": {
+      "preset": "photo",
+      "outputHash": "eaacd3c23f7e844af3f2500163891fe9f99b221dbb1359d4266fadc026a191d5",
+      "width": 1372,
+      "height": 772,
+      "bytes": 115063,
+      "at": "2026-11-01T22:37:47.459Z"
+    },
+    "public/portfolio/tana-del-diavolo-6.jpg": {
+      "preset": "photo",
+      "outputHash": "d86b4e89ca5e6f27f61fb321155c19ed897b01b0ddf42a4a80ca7f0be5b5b652",
+      "width": 1000,
+      "height": 665,
+      "bytes": 67663,
+      "at": "2026-11-01T22:37:47.979Z"
+    },
+    "public/portfolio/tana-del-diavolo-8.jpg": {
+      "preset": "photo",
+      "outputHash": "450b5489193392281edd57065643048a9a47c837f64049689d168b5d306ba132",
+      "width": 1000,
+      "height": 665,
+      "bytes": 59607,
+      "at": "2026-11-01T22:37:48.043Z"
+    },
+    "public/portfolio/tana-del-diavolo-13.jpg": {
+      "preset": "photo",
+      "outputHash": "761fe45724e518367ea161d3b6d549c372883b952ff5969af2bbb02b4d216ab0",
+      "width": 1000,
+      "height": 665,
+      "bytes": 62017,
+      "at": "2026-11-01T22:37:48.092Z"
+    },
+    "public/portfolio/t-bone-station.jpg": {
+      "preset": "photo",
+      "outputHash": "4cb6ac73950d06e618099041b6a5bd9025567700683556104d7585cc8dd75f8d",
+      "width": 1085,
+      "height": 814,
+      "bytes": 88173,
+      "at": "2026-11-01T22:37:48.116Z"
+    },
+    "public/portfolio/tana-del-diavolo.jpg": {
+      "preset": "photo",
+      "outputHash": "44ea55dbdc0306d91434f49af99a0baad85a3a04f6e2d20f5d59d68a277ba63f",
+      "width": 1085,
+      "height": 814,
+      "bytes": 101895,
+      "at": "2026-11-01T22:37:48.748Z"
+    },
+    "public/portfolio/taverna-latina-2.jpg": {
+      "preset": "photo",
+      "outputHash": "ba152e6df0cea44c3a3200772ead7d004fd34f94cf75adb0ae8b10aa092d4e32",
+      "width": 1085,
+      "height": 814,
+      "bytes": 103028,
+      "at": "2026-11-01T22:37:48.848Z"
+    },
+    "public/portfolio/taverna-latina-5.jpg": {
+      "preset": "photo",
+      "outputHash": "b551dfda37b2c6bc60bde6348a4b9d4b99f813e55f8d8cf1294dc675ae0b1b19",
+      "width": 1085,
+      "height": 814,
+      "bytes": 93247,
+      "at": "2026-11-01T22:37:48.961Z"
+    },
+    "public/portfolio/taverna-latina-3.jpg": {
+      "preset": "photo",
+      "outputHash": "d47fd010d6db91d3b0b68185c3df5b10d3237f2abf2742970c72ad6905d4ceb7",
+      "width": 1085,
+      "height": 814,
+      "bytes": 87409,
+      "at": "2026-11-01T22:37:49.034Z"
+    },
+    "public/portfolio/taverna-latina-6.jpg": {
+      "preset": "photo",
+      "outputHash": "dc426879f12f279384a3cc9064ba04d4b3964d228d5fc7a4743ae0c821f06caf",
+      "width": 1085,
+      "height": 814,
+      "bytes": 102891,
+      "at": "2026-11-01T22:37:49.617Z"
+    },
+    "public/portfolio/taverna-latina.jpg": {
+      "preset": "photo",
+      "outputHash": "9ca90fa07527075b889085166781a4488c2b204ed967cdc234631ceb9334c176",
+      "width": 1085,
+      "height": 814,
+      "bytes": 112277,
+      "at": "2026-11-01T22:37:49.649Z"
+    },
+    "public/portfolio/v2-2.jpg": {
+      "preset": "photo",
+      "outputHash": "9793369fdd9580e14b23f5ce79b4c7fcb08c4f42f528be9329fbf9d8e5b14d83",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 156399,
+      "at": "2026-11-01T22:37:50.122Z"
+    },
+    "public/prodotti/basfon-2.jpg": {
+      "preset": "product",
+      "outputHash": "606b03752ec2fc557fc928703f28c1c4300cb9d9a83228f62596654052f9a033",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 223542,
+      "at": "2026-11-01T22:37:50.175Z"
+    },
+    "public/prodotti/basfon-4.jpg": {
+      "preset": "product",
+      "outputHash": "2a7c2ce9f3933da0f4b690aeca1be9e210e8d229ce5c108544b2522e0fa14669",
+      "width": 1020,
+      "height": 1360,
+      "bytes": 125474,
+      "at": "2026-11-01T22:37:50.480Z"
+    },
+    "public/prodotti/basfon-3.jpg": {
+      "preset": "product",
+      "outputHash": "558980a9c5d4bec675873bdd3c212bc43e5fbdb670b2c9a19d84901e6a33c710",
+      "width": 1600,
+      "height": 1068,
+      "bytes": 174476,
+      "at": "2026-11-01T22:37:50.659Z"
+    },
+    "public/prodotti/basfon-det.jpg": {
+      "preset": "product",
+      "outputHash": "8847979406fba374bdf62c95da629196e22d4cc1883d78dacf65426bfef8cfdc",
+      "width": 1292,
+      "height": 832,
+      "bytes": 86567,
+      "at": "2026-11-01T22:37:50.877Z"
+    },
+    "public/prodotti/basfon-inst.jpg": {
+      "preset": "product",
+      "outputHash": "04bf299d9a45443293222851ac20837650518d7b89926877ffc54f9ab2a36b2a",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 216841,
+      "at": "2026-11-01T22:37:51.166Z"
+    },
+    "public/prodotti/basfon-pack.jpg": {
+      "preset": "product",
+      "outputHash": "2a7c2ce9f3933da0f4b690aeca1be9e210e8d229ce5c108544b2522e0fa14669",
+      "width": 1020,
+      "height": 1360,
+      "bytes": 125474,
+      "at": "2026-11-01T22:37:51.201Z"
+    },
+    "public/prodotti/basfon-white.jpg": {
+      "preset": "product",
+      "outputHash": "29ad01128ba995184a7558bbd1508af0bea19114a3e9f6b0e8fc352ead207dc2",
+      "width": 904,
+      "height": 1360,
+      "bytes": 160440,
+      "at": "2026-11-01T22:37:51.268Z"
+    },
+    "public/prodotti/basfon.jpg": {
+      "preset": "product",
+      "outputHash": "29ad01128ba995184a7558bbd1508af0bea19114a3e9f6b0e8fc352ead207dc2",
+      "width": 904,
+      "height": 1360,
+      "bytes": 160440,
+      "at": "2026-11-01T22:37:51.361Z"
+    },
+    "public/prodotti/hexagon.jpg": {
+      "preset": "product",
+      "outputHash": "a1584809208eddf5099d8cb39643fe88577157daabf906ff70a84d7c70daf0c9",
+      "width": 1600,
+      "height": 1200,
+      "bytes": 199061,
+      "at": "2026-11-01T22:37:52.307Z"
+    },
+    "public/prodotti/hexagon-2.jpg": {
+      "preset": "product",
+      "outputHash": "dac26927a4e5ddb35e0b3e9d2f897243f9c5bd41210006876bc16cb64346ec70",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 281248,
+      "at": "2026-11-01T22:37:52.362Z"
+    },
+    "public/prodotti/hexagon-kit.jpg": {
+      "preset": "product",
+      "outputHash": "c5741be3c5e3d2720450d84c173077a0978f412123841ad80ae716967b45c3ce",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 274696,
+      "at": "2026-11-01T22:37:52.553Z"
+    },
+    "public/prodotti/hexagon-kit-2.jpg": {
+      "preset": "product",
+      "outputHash": "2785acac9b23875825e5e56209190e3a65f6c06e8ddfd95f7a00102532af54a6",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 315569,
+      "at": "2026-11-01T22:37:52.909Z"
+    },
+    "public/prodotti/isole-2.jpg": {
+      "preset": "product",
+      "outputHash": "64576551d368d7535d596a3bd9b32295afa08443e5c8c4a37f720e2dc0064693",
+      "width": 765,
+      "height": 1360,
+      "bytes": 97296,
+      "at": "2026-11-01T22:37:53.018Z"
+    },
+    "public/prodotti/isole-3.jpg": {
+      "preset": "product",
+      "outputHash": "1cd039a6f2b365e5e1df75c62c11d5be914b8237f692913c6a11cd8361624055",
+      "width": 1020,
+      "height": 1360,
+      "bytes": 210880,
+      "at": "2026-11-01T22:37:53.426Z"
+    },
+    "public/prodotti/isole-4.jpg": {
+      "preset": "product",
+      "outputHash": "28dfaf84bf7dce3af968ed52b81bab7a51732391d6dc441373ec0a48ee13e4fb",
+      "width": 1600,
+      "height": 1067,
+      "bytes": 251664,
+      "at": "2026-11-01T22:37:53.487Z"
+    },
+    "public/prodotti/isole.jpg": {
+      "preset": "product",
+      "outputHash": "0d45b4c7c81be6990080484db1e2f16b13f772ee644f6ac2cf29fb8dd3a49fa2",
+      "width": 906,
+      "height": 1360,
+      "bytes": 114689,
+      "at": "2026-11-01T22:37:54.091Z"
+    },
+    "public/prodotti/isole-soffitto.jpg": {
+      "preset": "product",
+      "outputHash": "8930cdf744c070b1033c261423ba869c2335d32611ea515d0d421d4349e3309e",
+      "width": 1360,
+      "height": 1360,
+      "bytes": 167365,
+      "at": "2026-11-01T22:37:54.122Z"
+    },
+    "public/prodotti/melammina.jpg": {
+      "preset": "product",
+      "outputHash": "1e391e2087647147d6bf1c70a3b46dd073876ae732800d7fb42b236d0ceb5353",
+      "width": 1300,
+      "height": 1300,
+      "bytes": 106367,
+      "at": "2026-11-01T22:37:54.140Z"
+    },
+    "public/prodotti/wave-3.jpg": {
+      "preset": "product",
+      "outputHash": "318ec6b98bd570328b09811b3c73352572d1fe05ea0f70f621b51a090a52bb87",
+      "width": 470,
+      "height": 760,
+      "bytes": 36334,
+      "at": "2026-11-01T22:37:54.472Z"
+    },
+    "public/prodotti/isole-5.jpg": {
+      "preset": "product",
+      "outputHash": "f666e75069dab5e09f2a6339afaaf009623352cfa6f534c526a736b940c76db6",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 362203,
+      "at": "2026-11-01T22:37:54.532Z"
+    },
+    "public/prodotti/wave-2.jpg": {
+      "preset": "product",
+      "outputHash": "8bb776ee06a41e64dad8b342165f158413cbc10c151ab8af91bc2e9dd613130b",
+      "width": 1600,
+      "height": 1064,
+      "bytes": 147144,
+      "at": "2026-11-01T22:37:55.248Z"
+    },
+    "public/prodotti/wave-hp.jpg": {
+      "preset": "product",
+      "outputHash": "e25396a4af6e55ce7af3619be37ce39208ad84bb8b333e91157fab16b0553a0a",
+      "width": 1133,
+      "height": 1360,
+      "bytes": 135031,
+      "at": "2026-11-01T22:37:55.317Z"
+    },
+    "public/prodotti/wave-rosa.jpg": {
+      "preset": "product",
+      "outputHash": "4388018bece1b2a31ae2f27bf2690cef83f8ddfd88dc89a5fb9a917430cd4082",
+      "width": 1133,
+      "height": 1360,
+      "bytes": 97268,
+      "at": "2026-11-01T22:37:55.429Z"
+    },
+    "public/prodotti/wave.jpg": {
+      "preset": "product",
+      "outputHash": "648794c593e400ecc55e9ad3064c5e8e3c2eb399053ef141a0fbb8e3645455fc",
+      "width": 1600,
+      "height": 1063,
+      "bytes": 230228,
+      "at": "2026-11-01T22:37:55.510Z"
+    },
+    "public/brand/nrs-logo-ufficiale-dark.png": {
+      "preset": "logo",
+      "outputHash": "38a095b139224ca3cfa1fe909a44a361f67a6f5f61c8802a159988d121cdab42",
+      "width": 332,
+      "height": 171,
+      "bytes": 39437,
+      "at": "2026-11-01T22:37:55.535Z"
+    },
+    "public/brand/nrs-logo-ufficiale.png": {
+      "preset": "logo",
+      "outputHash": "2989c6af1c55dbc7867ccdf5b920c5e5e38c918b582211f6c3f4dae83d0c94e6",
+      "width": 332,
+      "height": 171,
+      "bytes": 51322,
+      "at": "2026-11-01T22:37:55.645Z"
+    },
+    "public/brand/nrs-logo-ufficiale-sfondo.png": {
+      "preset": "logo",
+      "outputHash": "5201aa123b3f0844944f6a971f94a7226979072becbfec69ba32a827bc216b6c",
+      "width": 357,
+      "height": 178,
+      "bytes": 54337,
+      "at": "2026-11-01T22:37:55.672Z"
+    },
+    "public/brand/nrs-logo-v2-dark.png": {
+      "preset": "logo",
+      "outputHash": "38a095b139224ca3cfa1fe909a44a361f67a6f5f61c8802a159988d121cdab42",
+      "width": 332,
+      "height": 171,
+      "bytes": 39437,
+      "at": "2026-11-01T22:37:55.729Z"
+    },
+    "public/brand/nrs-logo-v2.png": {
+      "preset": "logo",
+      "outputHash": "2989c6af1c55dbc7867ccdf5b920c5e5e38c918b582211f6c3f4dae83d0c94e6",
+      "width": 332,
+      "height": 171,
+      "bytes": 51322,
+      "at": "2026-11-01T22:37:55.736Z"
+    },
+    "public/tessuti/pugi-convert-d7000.jpg": {
+      "preset": "product",
+      "outputHash": "a24fb98ae45e6c23c08d425c8d0efa75200ac9935749ff5621240354de76ff59",
+      "width": 841,
+      "height": 1190,
+      "bytes": 247500,
+      "at": "2026-11-01T22:37:55.981Z"
+    },
+    "public/brand/nrs-ig-avatar.png": {
+      "preset": "logo",
+      "outputHash": "3b1a4ba0436018e23d9f55f1ecf209e364a57c3f1bd3fcf71c9bd954276228b7",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 637393,
+      "at": "2026-11-01T22:37:56.637Z"
+    }
+  }
+}

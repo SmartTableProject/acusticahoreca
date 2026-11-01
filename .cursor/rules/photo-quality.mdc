@@ -1,0 +1,39 @@
+---
+description: Qualità obbligatoria foto sito — improve-site-photos su ogni asset nuovo o sostituito
+alwaysApply: true
+---
+
+# Qualità foto (acusticahoreca)
+
+Ogni immagine in `public/portfolio`, `public/prodotti`, `public/tessuti` (e logo in `public/brand`) deve passare dal pipeline prima di considerarla “pronta”.
+
+## Obbligo operativo
+
+1. **Dopo** aver aggiunto o sostituito una foto in `public/`, esegui:
+   ```bash
+   npm run photos:improve
+   ```
+   oppure solo il file:
+   ```bash
+   npm run photos:improve -- --only=public/portfolio/nome.jpg
+   ```
+2. Se sync portfolio (`npm run sync-portfolio`), il improve parte in coda: verifica comunque l’output.
+3. Non pubblicare JPG “grezzi” da telefono (underexposed, rumore alto, flare forte) senza improve.
+4. **Brand/logo** (`public/brand`): solo ottimizzazione file, niente grade colore aggressivo.
+5. Non inventare dettagli nelle schede dalle foto; usa solo ciò che si vede o dati di Pasquale.
+
+## Preset
+
+| Cartella | Preset | Max lato |
+|---|---|---|
+| `public/portfolio` | photo (luminosità/contrasto/nitidezza leggeri) | 1920 |
+| `public/prodotti` | product | 1600 |
+| `public/tessuti` | product | 1400 |
+| `public/brand` | logo (compressione sicura) | 1200 |
+
+Manifest: `scripts/photo-quality-manifest.json` (skip se già processata; `--force` per rifare tutto).
+
+## In scheda caso studio
+
+- Foto chiave → `featuredShots` + didascalia.
+- Alt descrittivi: prodotto/intervento + locale + città + NRS.
