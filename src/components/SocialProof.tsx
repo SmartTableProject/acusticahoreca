@@ -10,14 +10,14 @@ export function SocialProof() {
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-nrs-grey">
-              Dicono di noi
+              Note dai locali
             </p>
             <h2 className="mt-2 font-serif text-3xl font-bold text-nrs-hero">
               Fiducia sul campo, non a parole
             </h2>
             <p className="mt-2 max-w-xl text-sm text-stone-600">
               {portfolioStats.projects} locali documentati · {site.yearsExperience}+ anni ·
-              sopralluoghi in {site.surveyArea}.
+              sopralluoghi in {site.surveyArea}. Niente stelle inventate: solo note e casi reali.
             </p>
           </div>
           {googleReviewsUrl ? (
@@ -30,9 +30,12 @@ export function SocialProof() {
               Leggi le recensioni su Google →
             </a>
           ) : (
-            <p className="text-xs text-stone-500">
-              Presto anche su Google Business Profile
-            </p>
+            <a
+              href="/portfolio"
+              className="text-sm font-semibold text-nrs-accent underline underline-offset-4 hover:text-nrs-accent-hover"
+            >
+              Vedi i casi studio →
+            </a>
           )}
         </div>
 
@@ -42,13 +45,9 @@ export function SocialProof() {
               key={r.id}
               className="flex flex-col border border-stone-200 bg-nrs-body p-6"
             >
-              <div className="flex gap-0.5 text-nrs-accent" aria-label={`${r.rating} su 5`}>
-                {Array.from({ length: r.rating }).map((_, i) => (
-                  <span key={i} className="text-sm">
-                    ★
-                  </span>
-                ))}
-              </div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-nrs-accent">
+                Nota dal locale
+              </p>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-stone-700">
                 «{r.text}»
               </p>

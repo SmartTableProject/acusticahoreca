@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { caseStudyHref } from "@/components/FeaturedCaseStrip";
 import { DossierPageFrame } from "@/components/dossier/DossierPageFrame";
 import { PortfolioGallery } from "@/components/PortfolioGallery";
 import { caseStudies } from "@/data/case-studies";
@@ -7,7 +8,6 @@ import { portfolioStats } from "@/data/portfolio";
 import { seoH1, seoMeta } from "@/data/seo-copy";
 import { site } from "@/data/site";
 import { buildPageMetadata } from "@/lib/seo";
-import { caseStudyHref } from "@/components/FeaturedCaseStrip";
 
 export const metadata = buildPageMetadata({
   title: seoMeta.portfolio.title,
@@ -15,19 +15,22 @@ export const metadata = buildPageMetadata({
   path: "/portfolio",
 });
 
-export default function PortfolioPage() {
-  const narrativeIds = new Set(caseStudies.map((c) => c.id));
-  const slugAliases: Record<string, string> = {
-    felice: "felice-a-testaccio",
-    "osteria-sole": "osteria-del-sole",
-  };
+const SLUG_ALIAS: Record<string, string> = {
+  felice: "felice-a-testaccio",
+  "osteria-sole": "osteria-del-sole",
+};
 
+export default function PortfolioPage() {
   const all = allPortfolioCases().filter(
     (c) => c.project.category === "ristorante" || c.project.category === "ufficio",
   );
 
-  const featured = caseStudies.map((cs) => {
-    const slug = slugAliases[cs.id] ?? cs.id;
+  const narrativeSlugs = new Set(
+    caseStudies.map((cs) => SLUG_ALIAS[cs.id] ?? cs.id),
+  );
+
+  const featured = caseStudies.slice(0, 12).map((cs) => {
+    const slug = SLUG_ALIAS[cs.id] ?? cs.id;
     const fromPortfolio = all.find((c) => c.slug === slug);
     return {
       slug,
@@ -40,12 +43,18 @@ export default function PortfolioPage() {
     };
   });
 
-  const others = all.filter((c) => {
-    const matchesNarrative = [...narrativeIds].some(
-      (id) => c.slug === id || c.slug === slugAliases[id],
-    );
-    return !matchesNarrative;
+  const moreNarrative = caseStudies.slice(12).map((cs) => {
+    const slug = SLUG_ALIAS[cs.id] ?? cs.id;
+    return {
+      slug,
+      locale: cs.locale,
+      href: caseStudyHref(cs),
+      image: cs.image,
+      highlight: cs.highlights?.[0],
+    };
   });
+
+  const others = all.filter((c) => !narrativeSlugs.has(c.slug));
 
   return (
     <DossierPageFrame
@@ -69,7 +78,7 @@ export default function PortfolioPage() {
       </p>
 
       <h2 className="mb-3 font-serif text-base font-bold uppercase tracking-[0.08em] text-nrs-hero">
-        In evidenza — casi con scheda completa
+        In evidenza — schede complete
       </h2>
       <div className="mb-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         {featured.map((c) => (
@@ -104,10 +113,42 @@ export default function PortfolioPage() {
         ))}
       </div>
 
+      {moreNarrative.length ? (
+        <>
+          <h2 className="mb-3 font-serif text-base font-bold uppercase tracking-[0.08em] text-nrs-hero">
+            Altri casi con scheda
+          </h2>
+          <div className="mb-8 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+            {moreNarrative.map((c) => (
+              <a
+                key={c.slug}
+                href={c.href}
+                className="group relative aspect-[4/3] overflow-hidden border border-stone-300 bg-stone-200"
+              >
+                <Image
+                  src={c.image}
+                  alt={`Caso studio ${c.locale} - NRS Acustica HoReCa`}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                  sizes="(max-width:768px) 50vw, 25vw"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-nrs-hero/80 to-transparent px-2 pb-2 pt-6">
+                  <span className="block text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                    {c.locale}
+                  </span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </>
+      ) : null}
+
       {others.length ? (
         <>
           <h2 className="mb-3 font-serif text-base font-bold uppercase tracking-[0.08em] text-nrs-hero">
-            Altri locali documentati
+            Altri locali e archivio
           </h2>
           <div className="mb-6 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
             {others.map((c) => (

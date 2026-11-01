@@ -46,17 +46,12 @@ export function JsonLd() {
           "Pannelli fonoassorbenti HoReCa",
           "SoundOff 2B Resine",
         ],
+        // Niente AggregateRating / stelle: solo note testuali dai locali documentati
         review: reviews.map((r) => ({
           "@type": "Review",
           author: {
             "@type": "Organization",
             name: `${r.author} — ${r.role}`,
-          },
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: String(r.rating),
-            bestRating: "5",
-            worstRating: "1",
           },
           reviewBody: r.text,
         })),
