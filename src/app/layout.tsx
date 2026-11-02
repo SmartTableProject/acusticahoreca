@@ -53,6 +53,9 @@ export const metadata: Metadata = {
     description: `44+ locali reali, prodotti certificati SoundOff e preventivo in 24-48h.`,
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: "6IHDASktm1DyvGmZGywFDUk0Ha_j96j56b8lUorh0II",
+  },
   other: {
     "geo.region": "IT-RM",
     "geo.placename": "Roma",
